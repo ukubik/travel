@@ -18,3 +18,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Section ADMIN
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {
+  Route::get('/', 'Admin\IndexController@index')->name('admin.index');
+  // Фото для главной страницы сайта
+  Route::resource('/images', 'Admin\ImagesController');
+});

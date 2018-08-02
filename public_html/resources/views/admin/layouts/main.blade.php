@@ -19,6 +19,9 @@
   <body>
 
     <div id="app">
+
+      @include('admin.layouts.nav')
+
       @yield('content')
     </div>
 

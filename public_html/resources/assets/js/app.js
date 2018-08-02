@@ -18,7 +18,7 @@ window.Vue = require('vue');
   Vue.component('header-component', require('./components/HeaderComponent.vue'));
 
   // Секция админа
-  Vue.component('navigation', require('./components/admin/Navigation.vue'));
+  // Vue.component('navigation', require('./components/admin/Navigation.vue'));
 
 const app = new Vue({
     el: '#app'
