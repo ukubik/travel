@@ -18,7 +18,8 @@ window.Vue = require('vue');
   Vue.component('header-component', require('./components/HeaderComponent.vue'));
 
   // Секция админа
-  // Vue.component('navigation', require('./components/admin/Navigation.vue'));
+  Vue.component('img-category', require('./components/admin/ImgCategory.vue'));
+  Vue.component('images-component', require('./components/admin/ImagesComponent.vue'));
 
 const app = new Vue({
     el: '#app'

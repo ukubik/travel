@@ -28,7 +28,7 @@
                         <a class="nav-link" href="{{ route('admin.index') }}">{{ __('HomeAdmin') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('images.index') }}">{{ __('Images') }}</a>
+                        <a class="nav-link" href="{{ route('admin.images.index') }}">{{ __('Images') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>

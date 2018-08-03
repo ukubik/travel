@@ -12,3 +12,20 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+// Окно ошибок и уведомлений сервера
+#alert {
+  position: fixed;
+  width: 30%;
+  top: 10px;
+  right: 40%;
+  z-index: 9999;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+// --------------------------------------------------------------------------

@@ -6,6 +6,7 @@ use App\Image;
 use App\ImgCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ImagesController extends Controller
 {
@@ -19,6 +20,12 @@ class ImagesController extends Controller
         //
         $img_categories = ImgCategory::all();
         return view('admin.images', compact('img_categories'));
+    }
+
+    // Вывод картинок в компоненте ImagesComponent
+    public function getImages($id)
+    {
+      return Image::whereImgCategoryId($id)->get();
     }
 
     /**
@@ -39,7 +46,26 @@ class ImagesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      // dd($request->desc);
+      $this->validate($request, [
+        'img_category_id' => 'required|integer',
+        'files.*' => 'required|image|max:1000',
+        'description' => 'string|nullable'
+      ],
+      [
+        'img_category_id.required' => 'Выберите файлы изображений!!!',
+        'files.*.image' => 'Файл должен быть изображением'
+      ]);
+      if(is_array($request->file('files'))) {
+      foreach($request->file('files') as $file) {
+          $path = $file->store('site_' . $request->img_category_id, 'public');
+          Image::create([
+            'img_category_id' => $request->img_category_id,
+            'description' => $request->description,
+            'path' => $path
+          ]);
+        }
+      }
     }
 
     /**
@@ -48,9 +74,9 @@ class ImagesController extends Controller
      * @param  \App\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function show(Image $image)
+    public function show($id)
     {
-        //
+        return Image::whereId($id)->first();
     }
 
     /**
@@ -82,8 +108,13 @@ class ImagesController extends Controller
      * @param  \App\Image  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Image $image)
+    public function destroy($id)
     {
-        //
+      $file = Image::whereId($id)->first();
+      // dd($file->path);
+      if($file) {
+        Storage::delete('public/' . $file->path);
+        $file->delete();
+      }
     }
 }

@@ -19,7 +19,26 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Section ADMIN
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {
+
   Route::get('/', 'Admin\IndexController@index')->name('admin.index');
-  // Фото для главной страницы сайта
-  Route::resource('/images', 'Admin\ImagesController');
+  // Фотографии для главной страницы сайта
+  Route::resource('/images', 'Admin\ImagesController', ['only' => [
+        'index', 'store', 'update', 'destroy', 'show'],
+        'names' => [
+        'index' => 'admin.images.index',
+        'store' => 'admin.images.store',
+        'update' => 'admin.image.update',
+        'destroy' => 'admin.image.destroy',
+        'show' => 'admin.image.show'
+    ]]);
+  // Получение каринок в компонент ImagesComponent
+  Route::get('/get-images/{cat_id}', 'Admin\ImagesController@getImages');
+  // Категории фотографий
+  Route::resource('/img-categories', 'Admin\ImgCategoriesController', [
+    'only' => ['index', 'store', 'update', 'destroy'],
+    'names' => ['index' => 'admin.img-categories.index',
+                'store' => 'admin.img-categories.store',
+                'update' => 'admin.img-categories.update',
+                'destroy' => 'admin.img-categories.destroy',
+    ]]);
 });
