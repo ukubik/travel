@@ -1,6 +1,6 @@
 <template lang="html">
   <div v-if="screenWidth">
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" style="height:100%">
       <!--Carousel Wrapper-->
       <div id="carousel-example-1z" class="carousel slide carousel-fade z-depth-3" data-ride="carousel">
           <!--Slides-->

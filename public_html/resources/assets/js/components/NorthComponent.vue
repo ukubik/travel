@@ -1,6 +1,6 @@
 <template lang="html">
 
-  <div class="container mt-5 pt-5" style="height:600px">
+  <div class="container-fluid mt-5 pt-5" style="height:600px">
     <div class="row my-5">
       <div class="col text-center">
         <h1 class="display-3 text-uppercase mb-5">северные территории</h1>
@@ -47,6 +47,7 @@ export default {
 <style lang="css">
 .carusel-categories {
   opacity: 0.1;
-  box-shadow: 0 0 8px 8px white inset;
+  height: 100%;
+  overflow: hidden;
 }
 </style>

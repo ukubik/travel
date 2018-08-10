@@ -31,7 +31,7 @@
                         <a class="nav-link" href="{{ route('admin.images.index') }}">{{ __('Images') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link" href="{{ route('categories.index') }}">{{ __('Categories') }}</a>
                     </li>
 
                     <li class="nav-item dropdown">

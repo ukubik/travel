@@ -41,4 +41,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
                 'update' => 'admin.img-categories.update',
                 'destroy' => 'admin.img-categories.destroy',
     ]]);
+  // Ресурс обработки категрий статей
+  Route::resource('/categories', 'Admin\CategoryController', ['only' => ['index', 'store', 'update', 'destroy']]);
 });
