@@ -41,7 +41,7 @@
             </div>
             <div class="col-3 border-bottom">
               <button type="button" class="btn btn-sm btn-success" @click.prevent="updateCat(category)">изменить</button>
-              <button type="button" class="btn btn-sm btn-danger" @click.prevent="delCat(category)">удалить</button>
+              <button type="button" class="btn btn-sm btn-danger float-right" @click.prevent="delCat(category)">удалить</button>
             </div>
           </div>
         </div>

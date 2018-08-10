@@ -4,6 +4,6 @@
 
 <header-component v-bind:images="{{ json_encode($images) }}"></header-component>
 
-<north-component></north-component>
+<north-component v-bind:images="{{ json_encode($north_imgs) }}"></north-component>
 
 @endsection
