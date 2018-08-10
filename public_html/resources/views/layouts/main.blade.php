@@ -16,17 +16,20 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @stack('styles')
 </head>
-  <body>
+  <body style="height:2000px">
+
+    @include('layouts.navbar')
 
     <div id="app">
+      <!-- <navbar-component></navbar-component> -->
       @yield('content')
     </div>
 
 
     <!-- Scripts -->
-    <script src="{{ asset('js/jquery-3.3.1.min.js') }}" defer></script>
-    <script src="{{ asset('js/mdb.min.js') }}" defer></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/mdb.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     @stack('scripts')
   </body>
 </html>

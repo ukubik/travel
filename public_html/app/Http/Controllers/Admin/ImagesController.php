@@ -58,7 +58,7 @@ class ImagesController extends Controller
       ]);
       if(is_array($request->file('files'))) {
       foreach($request->file('files') as $file) {
-          $path = $file->store('site_' . $request->img_category_id, 'public');
+          $path = $file->store('images/site_' . $request->img_category_id, 'public');
           Image::create([
             'img_category_id' => $request->img_category_id,
             'description' => $request->description,

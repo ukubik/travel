@@ -58,8 +58,8 @@
               <img v-bind:src="'/public/storage/' + img.path" class="img-fluid" style="height:100%">
                 <div class="modal-footer">
                     <span class="black-text"> {{ img.description }}</span>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                    <button type="button" class="btn btn-danger waves-effect" @click="destroyImage(img.id)">Удалить</button>
+                    <button type="button" class="btn btn-sm btn-success" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-sm btn-danger" @click="destroyImage(img.id)">Удалить</button>
                 </div>
             </div>
         </div>
