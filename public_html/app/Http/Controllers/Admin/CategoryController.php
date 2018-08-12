@@ -64,7 +64,7 @@ class CategoryController extends Controller
       ]);
       $category = Category::whereId($id)->first();
       $category->update($request->all());
-      return Category::all();
+      return abort(200, 'Изменено');
     }
 
     /**
