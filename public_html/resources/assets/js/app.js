@@ -17,6 +17,7 @@ window.Vue = require('vue');
 
   Vue.component('navbar-component', require('./components/NavbarComponent.vue'));
   Vue.component('header-component', require('./components/HeaderComponent.vue'));
+  Vue.component('newheader-component', require('./components/NewheaderComponent.vue'));
   Vue.component('north-component', require('./components/NorthComponent.vue'));
 
   // Секция админа

@@ -21,8 +21,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <ul>
-            <li v-for="message in this.messages">
-                {{ message }}
+            <li>
+                {{ messages }}
             </li>
         </ul>
       </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="col border-bottom">
               <button type="button" class="btn btn-sm btn-success" @click.prevent="updateCat(category)">изменить</button>
-              <button type="button" class="btn btn-sm btn-danger float-right" @click.prevent="delCat(category)">удалить</button>
+              <button type="button" class="btn btn-sm btn-danger" @click.prevent="delCat(category)">удалить</button>
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.images)
+    // console.log(this.images)
   }
 }
 </script>

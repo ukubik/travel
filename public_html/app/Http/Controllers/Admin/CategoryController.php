@@ -29,7 +29,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-          'file' => 'required|image|max:1200',
+          'file' => 'required|image|max:1500',
           'link_name' => 'required|cyrillic|string',
           'menu_name' => 'required|string',
           'header' => 'required|string',
@@ -60,6 +60,7 @@ class CategoryController extends Controller
         'link_name' => 'required|cyrillic|string',
         'menu_name' => 'required|string',
         'header' => 'required|string',
+        'added_menu' => 'required|string',
         'description' => 'required|string',
       ]);
       $category = Category::whereId($id)->first();

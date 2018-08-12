@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Image;
+use App\Category;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -12,6 +13,8 @@ class IndexController extends Controller
     {
       $images = Image::whereImgCategoryId(11)->get();
       $north_imgs = Image::whereImgCategoryId(12)->get();
-      return view('index', compact('images', 'north_imgs'));
+      $categories = Category::all();
+      // dd($categories);
+      return view('index', compact('images', 'north_imgs', 'categories'));
     }
 }

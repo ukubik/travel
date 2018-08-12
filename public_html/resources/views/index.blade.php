@@ -2,7 +2,7 @@
 
 @section('content')
 
-<header-component v-bind:images="{{ json_encode($images) }}"></header-component>
+<newheader-component v-bind:categories="{{ json_encode($categories) }}"></newheader-component>
 
 <north-component v-bind:images="{{ json_encode($north_imgs) }}"></north-component>
 
