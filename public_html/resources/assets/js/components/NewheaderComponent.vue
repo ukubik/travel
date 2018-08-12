@@ -9,40 +9,45 @@
                   <img class="d-block" :src="'/public/storage/' + category.img_path" alt="First slide">
                   <div class="mask flex-center waves-effect waves-light rgba-black-strong">
                   </div>
-                  <div class="row slogan mt-5 mr-0">
-                    <div class="col-md-8">
-                      <h1 class="display-3 text-uppercase white-text">
-                        {{ category.header }}
-                      </h1>
-                      <h1 class="dispaly-4 text-uppercase white-text my-5">
-                        {{ category.description }}
-                      </h1>
-                    </div>
-                    <div class="col-md-4 globus text-center">
-                      <img src="/public/storage/images/site_0/Russia-2.png" class="img-fluid" style="max-height:450px" alt="Rossia">
+                  <div class="row slogan d-flex pt-5">
+                    <div class="col-md-7">
+                      <div class="row justify-content-center">
+                        <div class="col-md-9">
+                          <h1 class="display-3 text-uppercase white-text">
+                            {{ category.header }}
+                          </h1>
+                          <h1 class="dispaly-4 text-uppercase white-text my-5">
+                            {{ category.description }}
+                          </h1>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-10 d-flex justify-content-end">
+                          <a href="#" class="btn btn-outline-white btn-lg waves-effect" role="button"> перейти к разделу <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                        </div>
+                      </div>
                     </div>
                   </div>
               </div>
+          </div>
+          <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <div class="row globus">
+            <div class="col-md-4 offset-md-8">
+              <img src="/public/storage/images/site_0/Russia-2.png" class="img-fluid" style="max-height:450px" alt="Rossia">
+            </div>
           </div>
           <!--/.Slides-->
       </div>
       <!--/.Carousel Wrapper-->
     </div>
 
-    <!-- <div class="container"> -->
-
-    <!-- </div> -->
-
-    <!-- кнопка вниз -->
-    <div class="arrow-scroll">
-      <div class="arrow-scroll__wrap arrow-scroll__wrap_animated">
-        <svg style="fill:#ffffff;" x="0px" y="0px" width="38.417px" height="18.592px" viewbox="0 0 38.417 18.592">
-          <g>
-            <path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path>
-          </g>
-        </svg>
-      </div>
-    </div>
   </div>
 
 </template>
@@ -82,17 +87,19 @@ export default {
 
 <style lang="css">
 .slogan {
+  z-index: 0;
   position: absolute;
+  width: 100%;
   top: 20%;
-  left: 5%;
-}
-
-.slogan h1 {
-  font-weight: 700;
+  left: 4%;
 }
 
 .globus {
-  opacity: 0.6;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  opacity: 0.7;
 }
 
 .d-block {
@@ -104,38 +111,19 @@ export default {
   background-color: rgba(0,0,0,.29);
 }
 
-.arrow-scroll {
-  position: absolute;
-  text-align: center;
-  z-index: 9;
-  right: 0;
-  left: 0;
-  bottom: 180px;
-}
-.arrow-scroll__wrap {
-  display: inline-block;
-  transition: all ease-in-out 0.2s;
-  cursor: pointer;
-}
-.arrow-scroll__wrap:hover {
-  opacity: 0.5;
-}
-.arrow-scroll__wrap_animated {
-  animation: arrow-scroll 1.7s infinite ease;
-}
-@keyframes arrow-scroll {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-7px);
-  }
-  55% {
-    transform: translateY(-7px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.carousel-control-prev, .carousel-control-next {
+  z-index: 999;
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.btn-outline-white {
+  z-index: 9999;
+  border: 2px solid #ffffff !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
 </style>

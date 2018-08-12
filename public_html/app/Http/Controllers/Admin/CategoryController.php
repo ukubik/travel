@@ -30,8 +30,8 @@ class CategoryController extends Controller
     {
         $this->validate($request, [
           'file' => 'required|image|max:1500',
-          'link_name' => 'required|cyrillic|string',
-          'menu_name' => 'required|string',
+          'link_name' => 'required|cyrillic|string|unique:categories',
+          'menu_name' => 'required|string|unique:categories',
           'header' => 'required|string',
           'description' => 'required|string',
         ]);
