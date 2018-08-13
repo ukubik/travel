@@ -23,7 +23,7 @@
                       </div>
                       <div class="row" style="z-index:9999;">
                         <div class="col-md-10 d-flex justify-content-end" style="z-index:9999;">
-                          <a href="#" class="btn btn-outline-white btn-lg waves-effect" role="button"> перейти к разделу
+                          <a :href="'/' + category.link_name" class="btn btn-outline-white btn-lg waves-effect" role="button"> перейти к разделу
                             <i class="fa fa-angle-double-down fa-15x ml-2" aria-hidden="true"></i>
                           </a>
                         </div>

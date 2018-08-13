@@ -48524,7 +48524,46 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(0, true)
+                      _c(
+                        "div",
+                        {
+                          staticClass: "row",
+                          staticStyle: { "z-index": "9999" }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "col-md-10 d-flex justify-content-end",
+                              staticStyle: { "z-index": "9999" }
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "btn btn-outline-white btn-lg waves-effect",
+                                  attrs: {
+                                    href: "/" + category.link_name,
+                                    role: "button"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    " перейти к разделу\n                          "
+                                  ),
+                                  _c("i", {
+                                    staticClass:
+                                      "fa fa-angle-double-down fa-15x ml-2",
+                                    attrs: { "aria-hidden": "true" }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
                     ])
                   ])
                 ]
@@ -48532,53 +48571,19 @@ var render = function() {
             })
           ),
           _vm._v(" "),
-          _vm._m(1),
+          _vm._m(0),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       ),
       _vm._v(" "),
       _vm.screenWidth
-        ? _c("div", { staticClass: "row globus" }, [_vm._m(3)])
+        ? _c("div", { staticClass: "row globus" }, [_vm._m(2)])
         : _vm._e()
     ])
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "row", staticStyle: { "z-index": "9999" } },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "col-md-10 d-flex justify-content-end",
-            staticStyle: { "z-index": "9999" }
-          },
-          [
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-outline-white btn-lg waves-effect",
-                attrs: { href: "#", role: "button" }
-              },
-              [
-                _vm._v(" перейти к разделу\n                          "),
-                _c("i", {
-                  staticClass: "fa fa-angle-double-down fa-15x ml-2",
-                  attrs: { "aria-hidden": "true" }
-                })
-              ]
-            )
-          ]
-        )
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

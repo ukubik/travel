@@ -99,8 +99,8 @@
   padding-left: 2.5rem;
   background-color: rgba(255,255,255,.2);
   margin: 0.2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 .navbar.navbar-dark .breadcrumb .nav-item.active > .nav-link, .navbar.navbar-dark .navbar-nav .nav-item.active > .nav-link {
@@ -110,4 +110,12 @@
 .nav-flex-icons .nav-item .nav-link {
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+.carousel-control-prev {
+  justify-content: start;
+}
+
+.carousel-control-next {
+  justify-content: end;
 }

@@ -10563,8 +10563,8 @@ a.text-dark:focus {
   padding-left: 2.5rem;
   background-color: rgba(255, 255, 255, 0.2);
   margin: 0.2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 .navbar.navbar-dark .breadcrumb .nav-item.active > .nav-link,
@@ -10575,5 +10575,17 @@ a.text-dark:focus {
 .nav-flex-icons .nav-item .nav-link {
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+.carousel-control-prev {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.carousel-control-next {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 

@@ -9,21 +9,24 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          @if($categories && $categories->isNotEmpty())
             <ul class="navbar-nav mr-auto">
+              @foreach($categories as $category)
+              @if($category->added_menu === 'В меню')
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ '/' . $category->link_name }}"> {{ $category->menu_name }} <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" >Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Opinions</a>
-                </li>
+              @endif
+              @endforeach
             </ul>
+            @endif
             <ul class="navbar-nav nav-flex-icons d-flex justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-odnoklassniki"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-vk"></i></a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link"><i class="fa fa-facebook"></i></a>
                 </li>
