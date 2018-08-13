@@ -9,9 +9,9 @@
                   <img class="d-block" :src="'/public/storage/' + category.img_path" alt="First slide">
                   <div class="mask flex-center waves-effect waves-light rgba-black-strong">
                   </div>
-                  <div class="row slogan d-flex pt-5">
+                  <div class="row slogan pt-5">
                     <div class="col-md-7">
-                      <div class="row justify-content-center">
+                      <div class="row d-flex justify-content-center">
                         <div class="col-md-9">
                           <h1 class="display-3 text-uppercase white-text">
                             {{ category.header }}
@@ -21,8 +21,8 @@
                           </h1>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-md-10 d-flex justify-content-end">
+                      <div class="row" style="z-index:9999;">
+                        <div class="col-md-10 d-flex justify-content-end" style="z-index:9999;">
                           <a href="#" class="btn btn-outline-white btn-lg waves-effect" role="button"> перейти к разделу <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
                         </div>
                       </div>
@@ -38,14 +38,14 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-          <div class="row globus">
-            <div class="col-md-4 offset-md-8">
-              <img src="/public/storage/images/site_0/Russia-2.png" class="img-fluid" style="max-height:450px" alt="Rossia">
-            </div>
-          </div>
           <!--/.Slides-->
       </div>
       <!--/.Carousel Wrapper-->
+      <div class="row globus">
+        <div class="col-auto">
+          <img src="/public/storage/images/site_0/Russia-2.png" class="img-fluid" style="max-height:450px" alt="Rossia">
+        </div>
+      </div>
     </div>
 
   </div>
@@ -97,8 +97,9 @@ export default {
 .globus {
   z-index: 0;
   position: absolute;
-  width: 100%;
+  width: 20%;
   top: 20%;
+  right: 20%;
   opacity: 0.7;
 }
 
@@ -123,7 +124,14 @@ export default {
 .btn-outline-white {
   z-index: 9999;
   border: 2px solid #ffffff !important;
-  background-color: transparent !important;
+  border-radius: 25px;
+  background-color: rgba(255,255,255,.2) !important;
   color: #ffffff !important;
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(255,255,255,.7) !important;
+  color: rgb(233, 30, 99) !important;
+  border: 2px solid rgb(233, 30, 99) !important;
 }
 </style>

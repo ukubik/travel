@@ -48322,7 +48322,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.slogan {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 100%;\r\n  top: 20%;\r\n  left: 4%;\n}\n.globus {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 100%;\r\n  top: 20%;\r\n  opacity: 0.7;\n}\n.d-block {\r\n  min-height: 300px;\r\n  overflow: hidden;\n}\n.rgba-black-strong, .rgba-black-strong::after {\r\n  background-color: rgba(0,0,0,.29);\n}\n.carousel-control-prev, .carousel-control-next {\r\n  z-index: 999;\n}\n.carousel-control-prev-icon, .carousel-control-next-icon {\r\n  width: 100px !important;\r\n  height: 100px !important;\n}\n.btn-outline-white {\r\n  z-index: 9999;\r\n  border: 2px solid #ffffff !important;\r\n  background-color: transparent !important;\r\n  color: #ffffff !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.slogan {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 100%;\r\n  top: 20%;\r\n  left: 4%;\n}\n.globus {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 20%;\r\n  top: 20%;\r\n  right: 20%;\r\n  opacity: 0.7;\n}\n.d-block {\r\n  min-height: 300px;\r\n  overflow: hidden;\n}\n.rgba-black-strong, .rgba-black-strong::after {\r\n  background-color: rgba(0,0,0,.29);\n}\n.carousel-control-prev, .carousel-control-next {\r\n  z-index: 999;\n}\n.carousel-control-prev-icon, .carousel-control-next-icon {\r\n  width: 100px !important;\r\n  height: 100px !important;\n}\n.btn-outline-white {\r\n  z-index: 9999;\r\n  border: 2px solid #ffffff !important;\r\n  border-radius: 25px;\r\n  background-color: rgba(255,255,255,.2) !important;\r\n  color: #ffffff !important;\n}\n.btn-outline-white:hover {\r\n  background-color: rgba(255,255,255,.7) !important;\r\n  color: rgb(233, 30, 99) !important;\r\n  border: 2px solid rgb(233, 30, 99) !important;\n}\r\n", ""]);
 
 // exports
 
@@ -48459,11 +48459,13 @@ var render = function() {
                             "mask flex-center waves-effect waves-light rgba-black-strong"
                         }),
                         _vm._v(" "),
-                        _c("div", { staticClass: "row slogan d-flex pt-5" }, [
+                        _c("div", { staticClass: "row slogan pt-5" }, [
                           _c("div", { staticClass: "col-md-7" }, [
                             _c(
                               "div",
-                              { staticClass: "row justify-content-center" },
+                              {
+                                staticClass: "row d-flex justify-content-center"
+                              },
                               [
                                 _c("div", { staticClass: "col-md-9" }, [
                                   _c(
@@ -48509,11 +48511,11 @@ var render = function() {
                 _vm._v(" "),
                 _vm._m(1),
                 _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
-                _vm._m(3)
+                _vm._m(2)
               ]
-            )
+            ),
+            _vm._v(" "),
+            _vm._m(3)
           ]
         )
       ])
@@ -48524,24 +48526,35 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-10 d-flex justify-content-end" }, [
+    return _c(
+      "div",
+      { staticClass: "row", staticStyle: { "z-index": "9999" } },
+      [
         _c(
-          "a",
+          "div",
           {
-            staticClass: "btn btn-outline-white btn-lg waves-effect",
-            attrs: { href: "#", role: "button" }
+            staticClass: "col-md-10 d-flex justify-content-end",
+            staticStyle: { "z-index": "9999" }
           },
           [
-            _vm._v(" перейти к разделу "),
-            _c("i", {
-              staticClass: "fa fa-arrow-down",
-              attrs: { "aria-hidden": "true" }
-            })
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-outline-white btn-lg waves-effect",
+                attrs: { href: "#", role: "button" }
+              },
+              [
+                _vm._v(" перейти к разделу "),
+                _c("i", {
+                  staticClass: "fa fa-arrow-down",
+                  attrs: { "aria-hidden": "true" }
+                })
+              ]
+            )
           ]
         )
-      ])
-    ])
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -48596,7 +48609,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row globus" }, [
-      _c("div", { staticClass: "col-md-4 offset-md-8" }, [
+      _c("div", { staticClass: "col-auto" }, [
         _c("img", {
           staticClass: "img-fluid",
           staticStyle: { "max-height": "450px" },

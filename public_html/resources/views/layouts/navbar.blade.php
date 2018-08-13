@@ -57,9 +57,5 @@
       }
     }
   }
-
-  // if(window.screen.width < 990) {
-  //   $('.window-lg').hide();
-  // }
 </script>
 @endpush
