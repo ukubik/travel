@@ -53,7 +53,7 @@
               <button class="btn btn-sm btn-default" v-if="category.added_menu === 'Не в меню'" @click="updAddMenu(category)">
                 {{ category.added_menu }}
               </button>
-              <button class="btn btn-sm btn-success" v-if="category.added_menu === 'В меню'">
+              <button class="btn btn-sm btn-success" v-if="category.added_menu === 'В меню'" @click="updAddMenu(category)">
                 {{ category.added_menu }}
               </button>
             </div>
@@ -205,7 +205,8 @@ export default {
 
     // Обновление поля added_menu
     updAddMenu(category) {
-      axios.put('/category/added_menu/' + category.id, {
+      this.added_menu = category.added_menu === 'Не в меню' ? 'В меню' : 'Не в меню';
+      axios.put('category/added_menu/' + category.id, {
         added_menu: this.added_menu
       }).then(response => {
         this.localCategories = response.data

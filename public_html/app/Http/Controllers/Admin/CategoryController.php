@@ -80,7 +80,7 @@ class CategoryController extends Controller
       $category->update([
         'added_menu' => $request->added_menu
       ]);
-      return Catgegory::all();
+      return Category::all();
     }
 
     /**
