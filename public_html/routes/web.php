@@ -43,4 +43,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     ]]);
   // Ресурс обработки категрий статей
   Route::resource('/categories', 'Admin\CategoryController', ['only' => ['index', 'store', 'update', 'destroy']]);
+  // Обновление added_menu
+  Route::put('/category/added_menu/{id}', 'Admin\CategoryController@updAddMenu');
 });

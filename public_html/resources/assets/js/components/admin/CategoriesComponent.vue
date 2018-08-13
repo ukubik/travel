@@ -50,10 +50,12 @@
               <textarea class="form-control form-control-sm mb-1" rows="2" v-model="category.description"></textarea>
             </div>
             <div class="col border-bottom border-right">
-              <select class="form-cobtrol form-control-sm" v-model="added_menu">
-                <option disabled value="">{{ category.added_menu }}</option>
-                <option v-for="option in options" v-bind:value="option.value">{{ option.text }}</option>
-              </select>
+              <button class="btn btn-sm btn-default" v-if="category.added_menu === 'Не в меню'" @click="updAddMenu(category)">
+                {{ category.added_menu }}
+              </button>
+              <button class="btn btn-sm btn-success" v-if="category.added_menu === 'В меню'">
+                {{ category.added_menu }}
+              </button>
             </div>
             <div class="col border-bottom">
               <button type="button" class="btn btn-sm btn-success" @click.prevent="updateCat(category)">изменить</button>
@@ -121,10 +123,6 @@ export default {
       header: '',
       description: '',
       added_menu: '',
-      options: [
-        { text: 'Не в меню', value: 'Не в меню' },
-        { text: 'В меню', value: 'В меню' }
-      ],
       file: '',
       showError: false,
       errors: [],
@@ -193,12 +191,24 @@ export default {
         link_name: category.link_name,
         menu_name: category.menu_name,
         header: category.header,
-        added_menu: this.added_menu,
         description: category.description
       }).then(response => {
         this.showMessage = true;
         this.messages = response.data.message;
         this.hiddenTimeOutMess();
+      }).catch(error => {
+        this.showError = true;
+        this.errors = _.flatten(_.toArray(error.response.data.errors));
+        this.hiddenTimeOutErr();
+      });
+    },
+
+    // Обновление поля added_menu
+    updAddMenu(category) {
+      axios.put('/category/added_menu/' + category.id, {
+        added_menu: this.added_menu
+      }).then(response => {
+        this.localCategories = response.data
       }).catch(error => {
         this.showError = true;
         this.errors = _.flatten(_.toArray(error.response.data.errors));

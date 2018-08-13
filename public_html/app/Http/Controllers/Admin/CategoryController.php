@@ -60,12 +60,27 @@ class CategoryController extends Controller
         'link_name' => 'required|cyrillic|string',
         'menu_name' => 'required|string',
         'header' => 'required|string',
-        'added_menu' => 'required|string',
+
         'description' => 'required|string',
       ]);
       $category = Category::whereId($id)->first();
       $category->update($request->all());
       return abort(200, 'Изменено');
+    }
+
+    /**
+    * Обновление поля added_menu
+    */
+    public function updAddMenu(Request $request, $id)
+    {
+      $this->validate($request, [
+        'added_menu' => 'required|string',
+      ]);
+      $category = Category::whereId($id)->first();
+      $category->update([
+        'added_menu' => $request->added_menu
+      ]);
+      return Catgegory::all();
     }
 
     /**

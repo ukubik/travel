@@ -1,12 +1,12 @@
 <template lang="html">
-  <div v-if="screenWidth">
-    <div class="container-fluid p-0" style="height:100%">
+  <div>
+    <div class="container-fluid p-0">
       <!--Carousel Wrapper-->
       <div id="carousel-example-1z" class="carousel slide carousel-fade z-depth-3" data-ride="carousel">
           <!--Slides-->
           <div class="carousel-inner" role="listbox">
               <div class="carousel-item view" v-for="(category, index) in categories" :class="{active: index === 0}">
-                  <img class="d-block" :src="'/public/storage/' + category.img_path" alt="First slide">
+                  <img class="d-block" :class="{'img-fluid': screenWidth}" :src="'/public/storage/' + category.img_path" alt="First slide">
                   <div class="mask flex-center waves-effect waves-light rgba-black-strong">
                   </div>
                   <div class="row slogan pt-5">
@@ -23,7 +23,9 @@
                       </div>
                       <div class="row" style="z-index:9999;">
                         <div class="col-md-10 d-flex justify-content-end" style="z-index:9999;">
-                          <a href="#" class="btn btn-outline-white btn-lg waves-effect" role="button"> перейти к разделу <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                          <a href="#" class="btn btn-outline-white btn-lg waves-effect" role="button"> перейти к разделу
+                            <i class="fa fa-angle-double-down fa-15x ml-2" aria-hidden="true"></i>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -41,7 +43,7 @@
           <!--/.Slides-->
       </div>
       <!--/.Carousel Wrapper-->
-      <div class="row globus">
+      <div class="row globus" v-if="screenWidth">
         <div class="col-auto">
           <img src="/public/storage/images/site_0/Russia-2.png" class="img-fluid" style="max-height:450px" alt="Rossia">
         </div>
@@ -66,7 +68,7 @@ export default {
 
   mounted() {
     // console.log(this.cats);
-    console.log(this.categories);
+    // console.log(this.categories);
   },
 
   computed: {
@@ -86,6 +88,10 @@ export default {
 </script>
 
 <style lang="css">
+.btn .fa-15x {
+  font-size: 1.5em !important;
+}
+
 .slogan {
   z-index: 0;
   position: absolute;
