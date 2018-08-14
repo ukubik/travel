@@ -15,10 +15,7 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-  Vue.component('navbar-component', require('./components/NavbarComponent.vue'));
-  Vue.component('header-component', require('./components/HeaderComponent.vue'));
   Vue.component('newheader-component', require('./components/NewheaderComponent.vue'));
-  Vue.component('north-component', require('./components/NorthComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));

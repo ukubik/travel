@@ -11,10 +11,7 @@ class IndexController extends Controller
     //
     public function index()
     {
-      $images = Image::whereImgCategoryId(11)->get();
-      $north_imgs = Image::whereImgCategoryId(12)->get();
       $categories = Category::all();
-      // dd($categories);
-      return view('index', compact('images', 'north_imgs', 'categories'));
+      return view('index', compact('categories'));
     }
 }
