@@ -45,4 +45,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   Route::resource('/categories', 'Admin\CategoryController', ['only' => ['index', 'store', 'update', 'destroy']]);
   // Обновление added_menu
   Route::put('/category/added_menu/{id}', 'Admin\CategoryController@updAddMenu');
+  // Контроллер ресурса статей
+  Route::resource('/article', 'Admin\ArticleController', [
+    'names' => [
+      'index' => 'admin.article.index',
+      'create' => 'admin.article.create',
+      'store' => 'admin.article.store',
+      'show' => 'admin.article.show',
+      'edit' => 'admin.article.edit',
+      'update' => 'admin.article.update',
+      'destroy' => 'admin.article.destroy'
+    ]
+  ]);
 });

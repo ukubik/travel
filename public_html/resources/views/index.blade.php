@@ -6,11 +6,19 @@
 
 <newheader-component v-bind:categories="{{ json_encode($categories) }}"></newheader-component>
 
-@foreach($categories as $category)
+<div class="container-fluid">
+  <div class="row">
 
-<category-component :category="{{ json_encode($category) }}"></category-component>
+    <div class="col-md-9 my-4">
+      <h1>Основная область</h1>
+    </div>
 
-@endforeach
+    <div class="col-md-3 mb-4 pt-4 bg-dark white-text">
+      <h3>Раздел Интересное</h3>
+    </div>
+
+  </div>
+</div>
 
 @endif
 
