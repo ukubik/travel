@@ -20,4 +20,9 @@ class Article extends Model
     {
       return $this->belongsTo('App\Category');
     }
+
+    public function meta_tag()
+    {
+      return $this->hasOne('App\MetaTag');
+    }
 }

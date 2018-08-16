@@ -57,4 +57,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
       'destroy' => 'admin.article.destroy'
     ]
   ]);
+  // Контроллер ресурса метатегов статей
+  Route::resource('/metatag', 'Admin\MetaTagController', [
+    'names' => [
+      'index' => 'admin.metatag.index',
+      'create' => 'admin.metatag.create',
+      'store' => 'admin.metatag.store',
+      'show' => 'admin.metatag.show',
+      'edit' => 'admin.metatag.edit',
+      'update' => 'admin.metatag.update',
+      'destroy' => 'admin.metatag.destroy'
+    ]
+  ]);
 });
