@@ -5,7 +5,7 @@
       <div id="carousel-example-1z" class="carousel slide carousel-fade z-depth-3" data-ride="carousel">
           <!--Slides-->
           <div class="carousel-inner" role="listbox">
-              <div class="carousel-item view" v-for="(category, index) in categories" :class="{active: index === 0}">
+              <div class="carousel-item view" v-for="(category, index) in categories" :class="{active: index === 0}" v-if="category.link_name !== 'article_index'">
                   <img class="d-block" :class="{'img-fluid': screenWidth}" :src="'/public/storage/' + category.img_path" alt="First slide">
                   <div class="mask flex-center waves-effect waves-light rgba-black-strong">
                   </div>

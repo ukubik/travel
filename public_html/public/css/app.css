@@ -10529,3 +10529,7 @@ a.text-dark:focus {
           justify-content: end;
 }
 
+ul li {
+  list-style-type: none;
+}
+

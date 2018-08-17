@@ -17,6 +17,7 @@ window.Vue = require('vue');
 
   Vue.component('newheader-component', require('./components/NewheaderComponent.vue'));
   Vue.component('category-component', require('./components/CategoryComponent.vue'));
+  Vue.component('new-article', require('./components/NewArticleComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));
