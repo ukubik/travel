@@ -19,6 +19,13 @@
   <body style="height:2000px">
 
     @include('layouts.navbar')
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          @include('layouts.message')
+        </div>
+      </div>
+    </div>
 
     <div id="app">
       <!-- <navbar-component></navbar-component> -->

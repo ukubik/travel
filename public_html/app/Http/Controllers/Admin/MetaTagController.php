@@ -13,9 +13,11 @@ class MetaTagController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        // dump($request->id);
+        return MetaTag::whereArticleId($request->id)->first();
     }
 
     /**
@@ -37,6 +39,19 @@ class MetaTagController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, [
+          'article_id' => 'required|integer',
+          'title' => 'required|string',
+          'keywords' => 'required|string',
+          'description' => 'required|string'
+        ]);
+
+        return MetaTag::create([
+          'article_id' => $request->article_id,
+          'title' => $request->title,
+          'keywords' => $request->keywords,
+          'description' => $request->description
+        ]);
     }
 
     /**
@@ -79,8 +94,9 @@ class MetaTagController extends Controller
      * @param  \App\MetaTag  $metaTag
      * @return \Illuminate\Http\Response
      */
-    public function destroy(MetaTag $metaTag)
+    public function destroy($id)
     {
         //
+        MetaTag::whereId($id)->delete();
     }
 }

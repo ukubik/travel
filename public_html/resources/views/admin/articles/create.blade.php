@@ -2,7 +2,44 @@
 
 @section('content')
 
-<new-article></new-article>
+<div class="container-fluid">
+
+  <div class="row my-3">
+    <div class="col text-center">
+      <h1>{{ $article->title or 'Новая статья' }}</h1>
+    </div>
+  </div>
+
+  <form action="{{ route('admin.article.store') }}" method="post">
+    {{ csrf_field() }}
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <label for="cat-id"> <small>Выберите категорию статьи</small> <i class="fa fa-exclamation ml-2 red-text" aria-hidden="true"></i> </label>
+        <select class="form-control form-control-sm" name="category_id">
+          @foreach($categories as $category)
+          <option value="{{ $category->id }}">{{ $category->header }}</option>
+          @endforeach
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label for="article-title"> <small>Введите заголовок статьи</small> <i class="fa fa-exclamation ml-2 red-text" aria-hidden="true"></i> </label>
+        <input type="text" class="form-control form-control-sm" name="art_title">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-12">
+       <textarea id="editor" name="content"></textarea>
+     </div>
+   </div>
+
+   <div class="row mb-4">
+     <div class="col d-flex justify-content-end">
+       <button type="submit" class="btn btn-success waves-effect border rounded">сохранить</button>
+     </div>
+   </div>
+  </form>
+</div>
 
 @endsection
 
@@ -14,10 +51,8 @@
     filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
     filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
     filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
-    // extraPlugins: 'bootstrapVisibility',
-    // extraPlugins: 'justify',
   };
 
-  var editor = CKEDITOR.replace( 'editor1', options);
+  var editor = CKEDITOR.replace( 'editor', options);
 </script>
 @endpush

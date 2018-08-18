@@ -40,7 +40,7 @@
             <div class="col border rounded z-depth-3 py-2">
               <h5>Добавить фото</h5>
                 <div class="custom-file">
-                  <input type="file" id="files" ref="files"  multiple accept="image/*" v-on:change="handleFilesUpload()"/>
+                  <input type="file" id="files" ref="files" multiple accept="image/*" v-on:change="handleFilesUpload()"/>
                 </div>
                 <label for="desc"> <small> Добавьте описание под фото <span class="red-text" style="font-size:200%">*</span> (при выборе нескольких фото описание добавляется ко всем)</small> </label>
                 <textarea class="form-control form-control-sm bg-dark white-text" rows="3" id="desc" v-model="description"></textarea>

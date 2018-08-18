@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Article;
+use App\Category;
+// use App\Http\Controllers\Admin\MetaTagController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -13,11 +17,11 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Category $category)
     {
         //
-        $articles = Article::all();
-        return view('admin.articles.index', compact('articles'));
+        $articles = Article::whereCategoryId($category->id)->orderBy('id', 'desc')->paginate(4);
+        return view('admin.articles.index', compact('articles', 'category'));
     }
 
     /**
@@ -28,7 +32,8 @@ class ArticleController extends Controller
     public function create()
     {
         //
-        return view('admin.articles.create');
+        $categories = Category::all();
+        return view('admin.articles.create', compact('categories'));
     }
 
     /**
@@ -40,6 +45,23 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         //
+        $user_id = Auth::user()->id;
+        $this->validate($request, [
+          'category_id' => 'required|integer',
+          'art_title' => 'required|string',
+          'content' => 'required|string'
+        ]);
+
+        $article = Article::create([
+          'user_id' => $user_id,
+          'category_id' => $request->category_id,
+          'title' => $request->art_title,
+          'content' => $request->content
+        ]);
+        //
+        // $meta = new MetaTagController;
+        // $meta->store($request, $article);
+        return redirect()->back();
     }
 
     /**
@@ -71,9 +93,50 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, $id)
     {
-        //
+        $article = Article::whereId($id)->first();
+
+        $this->validate($request, [
+          'file' => 'required|image|max:1500',
+        ]);
+
+        $path = $request->file('file')->store('images/articles', 'public');
+        $article->update(['img_prew_path' => $path]);
+
+        return $article;
+    }
+
+    /**
+    * Удаление превью фото
+    */
+    public function delImg(Request $request)
+    {
+      $article = Article::whereId($request->id)->first();
+
+      if($article) {
+        Storage::delete('public/' . $article->img_prew_path);
+        $article->update([
+          'img_prew_path' => null
+        ]);
+        return $article;
+      }
+    }
+
+    /**
+    * Публикация
+    */
+    public function published(Request $request)
+    {
+      $article = Article::whereId($request->id)->first();
+      // dd($article);
+      $this->validate($request, [
+        'published' => 'required|string'
+      ]);
+      $article->update([
+        'published' => $request->published
+      ]);
+      return $article;
     }
 
     /**

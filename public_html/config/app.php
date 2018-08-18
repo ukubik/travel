@@ -159,6 +159,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\CategoryServiceProvider::class,
         // File manager
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
 

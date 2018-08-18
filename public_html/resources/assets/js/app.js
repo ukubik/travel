@@ -17,12 +17,12 @@ window.Vue = require('vue');
 
   Vue.component('newheader-component', require('./components/NewheaderComponent.vue'));
   Vue.component('category-component', require('./components/CategoryComponent.vue'));
-  Vue.component('new-article', require('./components/NewArticleComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));
   Vue.component('images-component', require('./components/admin/ImagesComponent.vue'));
   Vue.component('categories-component', require('./components/admin/CategoriesComponent.vue'));
+  Vue.component('article-component', require('./components/admin/ArticleComponent.vue'));
 
 const app = new Vue({
     el: '#app'

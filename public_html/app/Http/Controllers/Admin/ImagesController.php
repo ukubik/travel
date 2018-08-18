@@ -46,7 +46,7 @@ class ImagesController extends Controller
      */
     public function store(Request $request)
     {
-      // dd($request->desc);
+      // dd($request->files);
       $this->validate($request, [
         'img_category_id' => 'required|integer',
         'files.*' => 'required|image|max:1000',

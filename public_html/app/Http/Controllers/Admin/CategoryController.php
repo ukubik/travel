@@ -28,6 +28,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+      // dd($request);
         $this->validate($request, [
           'file' => 'required|image|max:1500',
           'link_name' => 'required|cyrillic|string|unique:categories',

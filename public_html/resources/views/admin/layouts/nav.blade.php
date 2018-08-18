@@ -37,10 +37,12 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                           {{ __('Articles') }}</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('admin.article.index') }}">Список статей</a>
                             <a class="dropdown-item" href="{{ route('admin.article.create') }}">Новая статья</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <a class="dropdown-item" href="#">Separated link</a>
+                            @if(isset($categories) && $categories->isNotEmpty())
+                            @foreach($categories as $category)
+                            <a class="dropdown-item" href="{{ route('admin.article.index', $category->id) }}">{{ $category->menu_name }}</a>
+                            @endforeach
+                            @endif
                         </div>
                     </li>
 
