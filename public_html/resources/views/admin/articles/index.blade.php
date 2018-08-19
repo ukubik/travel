@@ -9,7 +9,7 @@
     </div>
   </div>
   @if(isset($articles) && $articles->isNotEmpty())
-  <div class="row">
+  <div class="row text-center font-weight-bold grey-text">
     <div class="col">
       Фотография для превью
     </div>

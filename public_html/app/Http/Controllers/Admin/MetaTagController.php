@@ -83,9 +83,16 @@ class MetaTagController extends Controller
      * @param  \App\MetaTag  $metaTag
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, MetaTag $metaTag)
+    public function update(Request $request, $id)
     {
-        //
+      $meta = MetaTag::whereId($id)->first();
+      $this->validate($request, [
+        'title' => 'required|string',
+        'keywords' => 'required|string',
+        'description' => 'required|string'
+      ]);
+      $meta->update($request->all());
+      return $meta;
     }
 
     /**

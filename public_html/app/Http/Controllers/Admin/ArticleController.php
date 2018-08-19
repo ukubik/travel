@@ -61,7 +61,7 @@ class ArticleController extends Controller
         //
         // $meta = new MetaTagController;
         // $meta->store($request, $article);
-        return redirect()->back();
+        return redirect()->route('admin.article.index', $request->category_id);
     }
 
     /**
@@ -70,9 +70,13 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show($id)
     {
-        //
+      $article = Article::whereId($id)->first();
+      if(view()->exists('admin.articles.show')) {
+        return view('admin.articles.show', compact('article'));
+      }
+      abort(404);
     }
 
     /**
@@ -145,8 +149,11 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        //
+        $article = Article::whereId($id)->first();
+        if($article && !$article->metatag) {
+          $article->delete();
+        }
     }
 }

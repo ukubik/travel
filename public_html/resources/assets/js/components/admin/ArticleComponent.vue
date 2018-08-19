@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="row m-2 border rounded">
+  <div class="row m-2 border rounded z-depth-2">
     <!-- Errors -->
     <transition name="fade">
       <div class="alert alert-danger z-depth-3" v-if="this.errors.length > 0" v-show="showError" id="alert">
@@ -20,8 +20,8 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <ul>
-            <li>
-                {{ messages }}
+            <li v-for="message in messages">
+                {{ message }}
             </li>
         </ul>
       </div>
@@ -29,13 +29,13 @@
 
 
     <div class="col border m-1">
-      <img :src="'/public/storage/' + localArticle.img_prew_path" :alt="localArticle.menu_name" v-if="localArticle.img_prew_path" class="img-fluid m-1" style="max-height:100px"> <br>
+      <img :src="'/public/storage/' + localArticle.img_prew_path" :alt="localArticle.menu_name" v-if="localArticle.img_prew_path" class="img-fluid m-1 z-depth-1" style="max-height:100px"> <br>
       <h6 v-if="!localArticle.img_prew_path">Добавить фото</h6>
       <div class="custom-file" v-if="!localArticle.img_prew_path">
         <input type="file" id="file" ref="file" accept="image/*" v-on:change="handleFilesUpload()"/>
       </div>
-      <button type="button" class="btn btn-default btn-sm" v-if="!localArticle.img_prew_path" @click="addImg()">save foto</button>
-      <button type="button" class="btn btn-danger btn-sm" v-if="localArticle.img_prew_path" @click="delImg()">delete foto</button>
+      <button type="button" class="btn btn-default btn-sm" v-if="!localArticle.img_prew_path" @click="addImg()">save image</button>
+      <button type="button" class="btn btn-danger btn-sm" v-if="localArticle.img_prew_path" @click="delImg()">delete image</button>
     </div>
 
 
@@ -54,10 +54,10 @@
     <div class="col border m-1">
       <button type="button" class="btn btn-sm btn-success" v-if="localArticle.published === 'Не опубликована'" @click="published('Опубликована')">опубликовать</button>
       <button type="button" class="btn btn-sm btn-success" v-if="localArticle.published === 'Опубликована'" @click="published('Не опубликована')">снять с публикации</button>
-      <button type="button" class="btn btn-sm btn-secondary">просмотр</button>
+      <a :href="'/admin/article/' + localArticle.id" class="btn btn-sm btn-secondary">просмотр</a>
       <button type="button" class="btn btn-sm btn-primary" @click="storeMeta" v-if="meta.id === 0">save metatags</button>
       <button type="button" class="btn btn-sm btn-purple" @click="updMeta" v-if="meta.id !== 0">update metatags</button>
-      <button type="button" class="btn btn-sm btn-danger" v-if="meta.id === 0 && !localArticle.img_prew_path">удалить статью</button>
+      <button type="button" class="btn btn-sm btn-danger" v-if="meta.id === 0 && !localArticle.img_prew_path" @click="destroyArt">удалить статью</button>
       <button type="button" class="btn btn-sm btn-danger" v-if="meta.id !== 0" @click="destroyMeta">удалить metatags</button>
     </div>
   </div>
@@ -88,7 +88,6 @@ export default {
 
   mounted() {
     this.getMeta();
-    console.log(this.meta)
   },
 
   methods: {
@@ -150,7 +149,21 @@ export default {
     },
 
     updMeta() {
-
+      axios.put('/admin/metatag/' + this.meta.id, {
+        title: this.meta.title,
+        keywords: this.meta.keywords,
+        description: this.meta.description,
+      }).then(response => {
+        this.meta = response.data;
+        this.showMessage = true;
+        this.messages = ['Изменено'];
+        this.hiddenTimeOutMess();
+      }).catch(error => {
+        this.errors = error.response.data;
+        this.showError = true;
+        this.errors = _.flatten(_.toArray(error.response.data.errors));
+        this.hiddenTimeOutErr()
+      });
     },
 
     destroyMeta() {
@@ -162,6 +175,12 @@ export default {
           this.meta.description = '';
         });
       }
+    },
+
+    destroyArt() {
+      axios.delete('/admin/article/' + this.localArticle.id).then(response => {
+        location.reload();
+      });
     },
 
     delImg() {
