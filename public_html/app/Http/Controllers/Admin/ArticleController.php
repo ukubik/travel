@@ -49,6 +49,7 @@ class ArticleController extends Controller
         $this->validate($request, [
           'category_id' => 'required|integer',
           'art_title' => 'required|string',
+          'description' => 'required|string|max:1000',
           'content' => 'required|string'
         ]);
 
@@ -56,6 +57,7 @@ class ArticleController extends Controller
           'user_id' => $user_id,
           'category_id' => $request->category_id,
           'title' => $request->art_title,
+          'description' => $request->description,
           'content' => $request->content
         ]);
         //
