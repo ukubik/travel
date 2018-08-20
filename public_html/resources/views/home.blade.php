@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in! <br> <br>
+                    @if(Auth::user()->role->name === 'Администратор')
+                    <a href="{{ route('admin.index') }}">Перейти в админку</a>
+                    @endif
                 </div>
             </div>
         </div>

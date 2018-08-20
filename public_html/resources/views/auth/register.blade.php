@@ -38,7 +38,7 @@
                                 @endif
                             </div>
                         </div>
-
+                        {{--
                         <div class="form-group row">
                             <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Роль') }}</label>
 
@@ -55,7 +55,7 @@
                                 @endif
                             </div>
                         </div>
-
+                        --}}
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
