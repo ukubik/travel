@@ -20,6 +20,22 @@
               @endforeach
             </ul>
             @endif
+
+            <ul class="navbar-nav nav-flex-icons mr-5">
+              @guest
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-users" aria-hidden="true"></i></a>
+                </li>
+              @else
+              <li class="nav-item">
+                  <a class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
+              </li>
+              @endguest
+            </ul>
+
             <ul class="navbar-nav nav-flex-icons d-flex justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link"><i class="fa fa-odnoklassniki"></i></a>
@@ -37,6 +53,7 @@
                     <a class="nav-link"><i class="fa fa-instagram"></i></a>
                 </li>
             </ul>
+
         </div>
     </nav>
 

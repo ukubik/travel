@@ -12,7 +12,7 @@
     <div class="col-md-9">
       <div class="row bg-white" style="min-height:500px">
         <div class="col z-depth-3">
-          <h1>Основная область</h1>
+          <intro-component></intro-component>
         </div>
       </div>
 
