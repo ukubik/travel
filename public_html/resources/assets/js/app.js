@@ -18,6 +18,10 @@ window.Vue = require('vue');
   Vue.component('newheader-component', require('./components/NewheaderComponent.vue'));
   Vue.component('category-component', require('./components/CategoryComponent.vue'));
   Vue.component('intro-component', require('./components/IntroComponent.vue'));
+  Vue.component('second-component', require('./components/SecondComponent.vue'));
+  Vue.component('now-reading', require('./components/NowReadingComponent.vue'));
+  Vue.component('preview-component', require('./components/PreviewComponent.vue'));
+  Vue.component('lower-block', require('./components/LowerBlockComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));

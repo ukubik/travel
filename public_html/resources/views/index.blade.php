@@ -18,26 +18,31 @@
 
       <div class="row" style="min-height:600px">
         <div class="col d-flex justify-content-center">
-          <h1>Что-то еще</h1>
+          <second-component></second-component>
         </div>
       </div>
 
       <div class="row" style="min-height:700px; background-color:#cfd8dc;">
         <div class="col z-depth-3">
-
+          <preview-component></preview-component>
         </div>
       </div>
     </div>
 
     <div class="col-md-3 pt-4 bg-dark white-text z-depth-3">
-      <h3>Раздел Интересное</h3>
+      <div class="row my-5">
+        <div class="col text-center">
+          <h3>Раздел Интересное</h3>
+        </div>
+      </div>
+      <now-reading></now-reading>
     </div>
 
   </div>
 
   <div class="row" style="min-height:700px">
     <div class="col">
-
+      <lower-block></lower-block>
     </div>
   </div>
 

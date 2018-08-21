@@ -9,7 +9,7 @@
 
     <div class="row mb-5">
       <div class="col-md-7 border-bottom">
-        <blockquote class="blockquote intro">
+        <blockquote class="blockquote">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -20,17 +20,17 @@
           </p>
         </blockquote>
       </div>
-      <div class="col-md-5">
-        <img src="/public/storage/images/site_12/north.png" alt="north" class="img-fluid">
+      <div class="col-md-5 py-2">
+        <img src="/public/storage/images/site_12/north.png" alt="north" class="img-fluid z-depth-2">
       </div>
     </div>
 
     <div class="row mb-5">
-      <div class="col-md-5">
-        <img src="/public/storage/images/site_12/port.png" alt="north" class="img-fluid">
+      <div class="col-md-5 py-2">
+        <img src="/public/storage/images/site_12/port.png" alt="north" class="img-fluid z-depth-2">
       </div>
       <div class="col-md-7 border-bottom">
-        <blockquote class="blockquote intro">
+        <blockquote class="blockquote">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="css">
-.blockquote, .intro {
+.blockquote {
   border-left: .25rem solid #e91e63 !important;
 }
 </style>
