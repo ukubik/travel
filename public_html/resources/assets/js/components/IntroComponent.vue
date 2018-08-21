@@ -27,7 +27,7 @@
 
     <div class="row mb-5">
       <div class="col-md-5">
-        <img src="/public/storage/images/site_12/aMnDUdFsgqEe90xwdUuBv39eyVERGA2BEdZV2eX6.png" alt="north" class="img-fluid">
+        <img src="/public/storage/images/site_12/port.png" alt="north" class="img-fluid">
       </div>
       <div class="col-md-7 border-bottom">
         <blockquote class="blockquote intro">

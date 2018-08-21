@@ -51098,8 +51098,7 @@ var staticRenderFns = [
           _c("img", {
             staticClass: "img-fluid",
             attrs: {
-              src:
-                "/public/storage/images/site_12/aMnDUdFsgqEe90xwdUuBv39eyVERGA2BEdZV2eX6.png",
+              src: "/public/storage/images/site_12/port.png",
               alt: "north"
             }
           })
