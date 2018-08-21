@@ -51955,7 +51955,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -51966,6 +51966,31 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -51981,9 +52006,59 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container white-text" }, [
+      _c("div", { staticClass: "row my-5 pt-5" }, [
+        _c("div", { staticClass: "col" }, [
+          _c("h1", { staticClass: "display-3" }, [_vm._v(" Еще какой-то блок")])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row my-5" }, [
+        _c("p", { staticClass: "h3-responsive" }, [
+          _c("ul", [
+            _c("li", { staticClass: "my-4" }, [
+              _vm._v(
+                "1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "my-4" }, [
+              _vm._v(
+                "2. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row my-5" }, [
+        _c("div", { staticClass: "col text-center" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-white btn-lg waves-effect",
+              attrs: { href: "#", role: "button" }
+            },
+            [
+              _vm._v(" читать\n        "),
+              _c("i", {
+                staticClass: "fa fa-angle-double-right fa-15x ml-2",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
