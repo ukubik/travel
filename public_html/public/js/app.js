@@ -47695,7 +47695,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.btn .fa-15x {\r\n  font-size: 1.5em !important;\n}\n.slogan {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 100%;\r\n  top: 20%;\r\n  left: 4%;\n}\n.globus {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 20%;\r\n  top: 20%;\r\n  right: 20%;\r\n  opacity: 0.7;\n}\n.d-block {\r\n  min-height: 300px;\r\n  overflow: hidden;\n}\n.rgba-black-strong, .rgba-black-strong::after {\r\n  background-color: rgba(0,0,0,.29);\n}\n.carousel-control-prev, .carousel-control-next {\r\n  z-index: 999;\n}\n.carousel-control-prev-icon, .carousel-control-next-icon {\r\n  width: 100px !important;\r\n  height: 100px !important;\n}\n.btn-outline-white {\r\n  z-index: 9999;\r\n  border: 2px solid #ffffff !important;\r\n  border-radius: 25px;\r\n  background-color: rgba(255,255,255,.2) !important;\r\n  color: #ffffff !important;\n}\n.btn-outline-white:hover {\r\n  background-color: rgba(255,255,255,.7) !important;\r\n  color: rgb(233, 30, 99) !important;\r\n  border: 2px solid rgb(233, 30, 99) !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.btn .fa-15x {\r\n  font-size: 1.5em !important;\n}\n.slogan {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 100%;\r\n  top: 20%;\r\n  left: 4%;\n}\n.globus {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 20%;\r\n  top: 20%;\r\n  right: 20%;\r\n  opacity: 0.7;\n}\n.d-block {\r\n  min-height: 300px;\r\n  overflow: hidden;\n}\n.rgba-black-strong, .rgba-black-strong::after {\r\n  background-color: rgba(0,0,0,.29);\n}\n.carousel-control-prev, .carousel-control-next {\r\n  z-index: 999;\n}\n.carousel-control-prev-icon, .carousel-control-next-icon {\r\n  width: 100px !important;\r\n  height: 100px !important;\n}\n.btn-outline-white {\r\n  /* z-index: 9999; */\r\n  border: 2px solid #ffffff !important;\r\n  border-radius: 25px;\r\n  background-color: rgba(255,255,255,.2) !important;\r\n  color: #ffffff !important;\n}\n.btn-outline-white:hover {\r\n  background-color: rgba(255,255,255,.7) !important;\r\n  color: rgb(233, 30, 99) !important;\r\n  border: 2px solid rgb(233, 30, 99) !important;\n}\r\n", ""]);
 
 // exports
 
@@ -51831,7 +51831,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n#art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\n}\n.img-preview {\r\n  height: 100%;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -51846,8 +51846,61 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {};
+  },
+  mounted: function mounted() {
+    console.log(this.divHeight);
+  },
+
+
+  computed: {
+    divWidth: function divWidth() {
+      return $('.col-md-3')[0].offsetWidth;
+    },
+    divHeight: function divHeight() {
+      return $('.col-md-3')[5].offsetHeight;
+    }
+  },
+
+  methods: {}
+});
 
 /***/ }),
 /* 96 */
@@ -51857,7 +51910,127 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", { staticClass: "container-fluid p-5" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-3 border", attrs: { id: "art-prev" } }, [
+        _c("img", {
+          staticClass: "img-preview",
+          style: { width: _vm.divWidth + "px" },
+          attrs: {
+            src: "/public/storage/images/previews/1 (1).jpg",
+            alt: "preview"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-3 border-bottom border-top",
+          attrs: { id: "art-prev" }
+        },
+        [
+          _c("img", {
+            staticClass: "img-preview",
+            style: { width: _vm.divWidth + "px" },
+            attrs: {
+              src: "/public/storage/images/previews/1 (2).jpg",
+              alt: "preview"
+            }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-3 border", attrs: { id: "art-prev" } }, [
+        _c("img", {
+          staticClass: "img-preview",
+          style: { width: _vm.divWidth + "px" },
+          attrs: {
+            src: "/public/storage/images/previews/1 (3).jpg",
+            alt: "preview"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-3 border border-left-0",
+          attrs: { id: "art-prev" }
+        },
+        [
+          _c("img", {
+            staticClass: "img-preview",
+            style: { width: _vm.divWidth + "px" },
+            attrs: {
+              src: "/public/storage/images/previews/1 (4).jpg",
+              alt: "preview"
+            }
+          })
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-3 border", attrs: { id: "art-prev" } }, [
+        _c("img", {
+          staticClass: "img-preview",
+          style: { width: _vm.divWidth + "px" },
+          attrs: {
+            src: "/public/storage/images/previews/1 (6).jpg",
+            alt: "preview"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-3 border-bottom border-top",
+          attrs: { id: "art-prev" }
+        },
+        [
+          _c("img", {
+            staticClass: "img-preview",
+            style: { width: _vm.divWidth + "px" },
+            attrs: {
+              src: "/public/storage/images/previews/1 (12).jpg",
+              alt: "preview"
+            }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-3 border", attrs: { id: "art-prev" } }, [
+        _c("img", {
+          staticClass: "img-preview",
+          style: { width: _vm.divWidth + "px" },
+          attrs: {
+            src: "/public/storage/images/previews/1 (8).jpg",
+            alt: "preview"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-md-3 border border-left-0",
+          attrs: { id: "art-prev" }
+        },
+        [
+          _c("img", {
+            staticClass: "img-preview",
+            style: { width: _vm.divWidth + "px" },
+            attrs: {
+              src: "/public/storage/images/previews/1 (9).jpg",
+              alt: "preview"
+            }
+          })
+        ]
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

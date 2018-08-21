@@ -128,7 +128,7 @@ export default {
 }
 
 .btn-outline-white {
-  z-index: 9999;
+  /* z-index: 9999; */
   border: 2px solid #ffffff !important;
   border-radius: 25px;
   background-color: rgba(255,255,255,.2) !important;
