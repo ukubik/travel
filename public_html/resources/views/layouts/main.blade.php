@@ -14,10 +14,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/my-styles.css') }}" rel="stylesheet">
     @stack('styles')
 </head>
-  <body style="height:2000px">
-
+  <body style="height:3000px">
+    <!-- <div class="bg-img">
+      <img src="{{ asset('storage/images/site_0/fone.jpg') }}" alt="site fone" class="img-fluid">
+    </div> -->
     @include('layouts.navbar')
     <div class="container">
       <div class="row">
@@ -32,7 +35,7 @@
       @yield('content')
     </div>
 
-
+    @include('layouts.footer')
     <!-- Scripts -->
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/mdb.min.js') }}"></script>
