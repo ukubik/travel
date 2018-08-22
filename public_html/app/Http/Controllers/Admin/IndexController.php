@@ -10,6 +10,6 @@ class IndexController extends Controller
     //
     public function index()
     {
-      return view('admin.index', compact('categories'));
+      return view('admin.index');
     }
 }

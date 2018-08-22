@@ -21,6 +21,7 @@ window.Vue = require('vue');
   Vue.component('second-component', require('./components/SecondComponent.vue'));
   Vue.component('now-reading', require('./components/NowReadingComponent.vue'));
   Vue.component('preview-component', require('./components/PreviewComponent.vue'));
+  Vue.component('article-preview', require('./components/ArtPrevComponent.vue'));
   Vue.component('lower-block', require('./components/LowerBlockComponent.vue'));
 
   // Секция админа

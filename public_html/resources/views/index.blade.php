@@ -24,7 +24,22 @@
 
       <div class="row" style="min-height:700px; background-color:#cfd8dc;">
         <div class="col z-depth-3">
-          <preview-component></preview-component>
+          <div class="container-fluid p-5">
+            @if($previews1 && $previews1->isNotEmpty())
+            <div class="row white-text">
+              @foreach($previews1 as $preview)
+                <article-preview :article="{{ json_encode($preview) }}"></article-preview>
+              @endforeach
+            </div>
+            @endif
+            @if($previews2 && $previews2->isNotEmpty())
+            <div class="row white-text">
+              @foreach($previews2 as $preview)
+                <article-preview :article="{{ json_encode($preview) }}"></article-preview>
+              @endforeach
+            </div>
+            @endif
+          </div>
         </div>
       </div>
     </div>
