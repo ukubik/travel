@@ -94,12 +94,13 @@ class CategoryController extends Controller
     {
         //
         $category = Category::whereId($id)->first();
-        if($category) {
+        // dd($category->articles);
+        if($category && $category->articles->isEmpty()) {
           Storage::delete('public/' . $category->img_path);
           $category->delete();
           return Category::all();
         } else {
-          return abort(406, 'No search');
+          return abort(406, 'Категория не найдена или имеет статьи...');
         }
 
     }
