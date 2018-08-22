@@ -26,8 +26,9 @@ window.Vue = require('vue');
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));
   Vue.component('images-component', require('./components/admin/ImagesComponent.vue'));
-  Vue.component('categories-component', require('./components/admin/CategoriesComponent.vue'));
+  Vue.component('category-component', require('./components/admin/CategoryComponent.vue'));
   Vue.component('article-component', require('./components/admin/ArticleComponent.vue'));
+  Vue.component('new-category', require('./components/admin/NewCategoryComponent.vue'));
 
 const app = new Vue({
     el: '#app'

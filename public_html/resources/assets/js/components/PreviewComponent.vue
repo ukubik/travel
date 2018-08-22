@@ -3,13 +3,26 @@
   <div class="container-fluid p-5">
 
     <div class="row white-text">
-      <div class="col-md-3 border" id="art-prev">
-        <img src="/public/storage/images/previews/1 (1).jpg" class="img-preview" alt="preview" v-bind:style="{width: divWidth + 'px'}">
-        <div class="row preview-title">
-          <div class="col">
-            <h2 class="h2-responsive">Какой-то заголовок b tot ntrcn</h2>
+      <div class="col-md-3 border" id="art-prev" v-on:mouseover="testF()"  v-on:mouseout="testT()">
+        <transition name="fade">
+          <div class="front" v-show="test">
+            <img src="/public/storage/images/previews/1 (1).jpg" class="img-preview" alt="preview" v-bind:style="{width: divWidth + 'px'}">
+            <div class="row preview-title">
+              <div class="col">
+                <h2 class="h2-responsive">Какой-то заголовок b tot ntrcn</h2>
+              </div>
+            </div>
           </div>
-        </div>
+        </transition>
+        <transition name="fade">
+          <div class="back p-2" v-show="!test">
+            <p>
+              Применяется оными товарищами в случае, когда в их
+              наполовину готовое поделие необходимо воткнуть
+              человеческий текст, пригодный для демонстрации заказчику
+            </p>
+          </div>
+        </transition>
       </div>
       <div class="col-md-3 border-bottom border-top" id="art-prev">
         <img src="/public/storage/images/previews/1 (2).jpg" class="img-preview" alt="preview" v-bind:style="{width: divWidth + 'px'}">
@@ -80,25 +93,27 @@
 export default {
   data() {
     return {
-
+      test: true
     }
   },
 
   mounted() {
-    console.log(this.divHeight);
+    // console.log(this.divHeight);
   },
 
   computed: {
     divWidth() {
       return $('.col-md-3')[0].offsetWidth;
     },
-    divHeight() {
-      return $('.col-md-3')[5].offsetHeight;
-    }
   },
 
   methods: {
-
+    testF() {
+      this.test = false;
+    },
+    testT() {
+      this.test = true;
+    },
   }
 }
 </script>
@@ -120,6 +135,14 @@ export default {
   left: 10%;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3E4551;
+  color: white;
 }
 
 </style>

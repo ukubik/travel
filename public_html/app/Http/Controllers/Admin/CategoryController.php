@@ -16,7 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('id', 'desc')->paginate(3);
         return view('admin.categories', compact('categories'));
     }
 
@@ -81,7 +81,7 @@ class CategoryController extends Controller
       $category->update([
         'added_menu' => $request->added_menu
       ]);
-      return Category::all();
+      return $category;
     }
 
     /**
