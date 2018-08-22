@@ -49156,7 +49156,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n#art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\n}\n.img-preview {\r\n  height: 100%;\n}\n.preview-title {\r\n  position: absolute;\r\n  top: 40%;\r\n  left: 10%;\r\n  text-transform: uppercase;\r\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: #3E4551;\r\n  color: white;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active {\r\n  -webkit-transition: all .8s ease;\r\n  transition: all .8s ease;\n}\n.slide-fade-leave-active {\r\n  -webkit-transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);\r\n  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\r\n\r\n/* .slide-fade-leave {\r\n  transform: translateX(-300px);\r\n  opacity: 0;\r\n} */\n.slide-fade-enter, .slide-fade-leave-to\r\n/* .slide-fade-leave-active до версии 2.1.8 */ {\r\n  -webkit-transform: translateX(300px);\r\n          transform: translateX(300px);\r\n  opacity: 0;\n}\n#art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\n}\n.img-preview {\r\n  height: 100%;\n}\n.preview-title {\r\n  position: absolute;\r\n  top: 40%;\r\n  left: 10%;\r\n  text-transform: uppercase;\r\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: #3E4551;\r\n  color: white;\r\n  z-index: 9999;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -49311,7 +49311,7 @@ var render = function() {
           }
         },
         [
-          _c("transition", { attrs: { name: "fade" } }, [
+          _c("transition", { attrs: { name: "slide-fade" } }, [
             _c(
               "div",
               {
@@ -49346,29 +49346,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("transition", { attrs: { name: "fade" } }, [
-            _c(
-              "div",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: !_vm.test,
-                    expression: "!test"
-                  }
-                ],
-                staticClass: "back p-2"
-              },
-              [
-                _c("p", [
-                  _vm._v(
-                    "\n            Применяется оными товарищами в случае, когда в их\n            наполовину готовое поделие необходимо воткнуть\n            человеческий текст, пригодный для демонстрации заказчику\n          "
-                  )
-                ])
-              ]
-            )
-          ])
+          _vm._m(0)
         ],
         1
       ),
@@ -49389,7 +49367,7 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _vm._m(0)
+          _vm._m(1)
         ]
       ),
       _vm._v(" "),
@@ -49403,7 +49381,7 @@ var render = function() {
           }
         }),
         _vm._v(" "),
-        _vm._m(1)
+        _vm._m(2)
       ]),
       _vm._v(" "),
       _c(
@@ -49422,7 +49400,7 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(3)
         ]
       )
     ]),
@@ -49438,7 +49416,7 @@ var render = function() {
           }
         }),
         _vm._v(" "),
-        _vm._m(3)
+        _vm._m(4)
       ]),
       _vm._v(" "),
       _c(
@@ -49457,7 +49435,7 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _vm._m(4)
+          _vm._m(5)
         ]
       ),
       _vm._v(" "),
@@ -49471,7 +49449,7 @@ var render = function() {
           }
         }),
         _vm._v(" "),
-        _vm._m(5)
+        _vm._m(6)
       ]),
       _vm._v(" "),
       _c(
@@ -49490,13 +49468,25 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _vm._m(6)
+          _vm._m(7)
         ]
       )
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "back p-2" }, [
+      _c("p", [
+        _vm._v(
+          "\n            Применяется оными товарищами в случае, когда в их\n            наполовину готовое поделие необходимо воткнуть\n            человеческий текст, пригодный для демонстрации заказчику\n          "
+        )
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
