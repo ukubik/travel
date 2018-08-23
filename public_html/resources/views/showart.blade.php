@@ -30,7 +30,42 @@
         </div>
       </div>
       
-      <show-comments :comments="{{ json_encode('$article->comments') }}"></show-comments>
+      @if($article->comments->isNotEmpty())
+      
+      <div class="container border-bottom my-5">
+
+        <div class="row">
+          <div class="col">
+            <h5 class="text-uppercase">комментарии наших читателей</h5>
+          </div>
+        </div>
+      
+        @foreach($article->comments as $comment)
+        
+    {{--@if($comment->published === 'Опубликован')--}}
+        
+        <div class="row d-flex justify-content-between">
+            <div class="col">
+                Пользователь: {{ $comment->user->login }}
+            </div>
+            <div class="col d-flex justify-content-end">
+                {{ $comment->created_at }}
+            </div>
+        </div>
+        
+        <div class="row border rounded mb-4">
+            <div class="col">
+                {{ $comment->content }}
+            </div>
+        </div>
+        
+        {{--@endif--}}
+        
+        @endForeach
+      
+      </div>
+      
+      @endif
 
       <comment-create :article_id="{{ $article->id }}"></comment-create>
     </div>

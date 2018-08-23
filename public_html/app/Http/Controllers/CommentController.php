@@ -16,7 +16,7 @@ class CommentController extends Controller
     {
       $user = Auth::user();
       if(!$user) {
-        abort(403, ['messages' => 'Только зарегистрированные пользователи могут оставлять комментарии.']);
+        abort(403, 'Только зарегистрированные пользователи могут оставлять комментарии.');
       } else {
         $article = Article::whereId($id)->first();
         $this->validate($request, [
