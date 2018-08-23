@@ -17,10 +17,8 @@
     <link href="{{ asset('css/my-styles.css') }}" rel="stylesheet">
     @stack('styles')
 </head>
-  <body style="height:3000px">
-    <!-- <div class="bg-img">
-      <img src="{{ asset('storage/images/site_0/fone.jpg') }}" alt="site fone" class="img-fluid">
-    </div> -->
+  <body>
+
     @include('layouts.navbar')
     <div class="container">
       <div class="row">
@@ -31,7 +29,6 @@
     </div>
 
     <div id="app">
-      <!-- <navbar-component></navbar-component> -->
       @yield('content')
     </div>
 

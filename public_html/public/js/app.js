@@ -49844,7 +49844,10 @@ var render = function() {
                   "a",
                   {
                     staticClass: "btn btn-outline-white btn-lg waves-effect",
-                    attrs: { href: "#", role: "button" }
+                    attrs: {
+                      href: "/article/" + _vm.article.id,
+                      role: "button"
+                    }
                   },
                   [
                     _vm._v(" читать\n            "),

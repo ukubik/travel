@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'IndexController@index')->name('index');
+// Show article
+Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
 
 Auth::routes();
 

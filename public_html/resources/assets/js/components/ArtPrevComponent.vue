@@ -18,7 +18,7 @@
         </h5>
         <div class="row">
           <div class="col text-center">
-            <a href="#" class="btn btn-outline-white btn-lg waves-effect" role="button"> читать
+            <a :href="'/article/' + article.id" class="btn btn-outline-white btn-lg waves-effect" role="button"> читать
               <i class="fa fa-angle-double-right fa-15x ml-2" aria-hidden="true"></i>
             </a>
           </div>
