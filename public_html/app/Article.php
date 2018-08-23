@@ -25,4 +25,9 @@ class Article extends Model
     {
       return $this->hasOne('App\MetaTag');
     }
+
+    public function comments()
+    {
+      return $this->hasMany('App\Comment');
+    }
 }

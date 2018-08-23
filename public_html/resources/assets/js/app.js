@@ -23,6 +23,7 @@ window.Vue = require('vue');
   Vue.component('preview-component', require('./components/PreviewComponent.vue'));
   Vue.component('article-preview', require('./components/ArtPrevComponent.vue'));
   Vue.component('lower-block', require('./components/LowerBlockComponent.vue'));
+  Vue.component('comment-create', require('./components/CommentCreateComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));

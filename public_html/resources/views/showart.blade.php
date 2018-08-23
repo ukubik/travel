@@ -24,11 +24,12 @@
   <div class="row white-text ">
 
     <div class="col-md-9">
-      <div class="row">
+      <div class="row mb-5">
         <div class="col p-5">
           {!! $article->content !!}
         </div>
       </div>
+      <comment-create :article_id="{{ $article->id }}"></comment-create>
     </div>
 
     <div class="col-md-3 pt-4 bg-dark z-depth-3">

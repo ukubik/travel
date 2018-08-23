@@ -14,6 +14,15 @@
 Route::get('/', 'IndexController@index')->name('index');
 // Show article
 Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
+// Вывод комментариев к статье
+Route::group(['prefix' => 'comment', 'middleware' => ['auth']], function() {
+  // Создание комментария
+  Route::post('/create/{article}', 'CommentController@store');
+  // Изменение комментария
+  Route::put('/update/{comment}', 'CommentController@update');
+  // Удаление комментария
+  Route::delete('/destroy/{comment}', 'CommentController@destroy');
+});
 
 Auth::routes();
 
