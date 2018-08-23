@@ -92,10 +92,11 @@ export default {
     },
 
     storeComment() {
-      axios.post('/create/' + this.article_id, {
-        content: this.content
+      axios.post('/comment/create/' + this.article_id, {
+        content: this.comment
       }).then(response => {
-        this.messages = response.data
+        this.messages = response.data.message;
+        this.hiddenTimeOutMess();
       }).catch(error => {
         this.showError = true;
         this.errors = _.flatten(_.toArray(error.response.data.errors));

@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="col-md-3 border art-prev" v-on:mouseover="testF()"  v-on:mouseout="testT()">
+  <div class="col-md-3 border art-prev" v-on:click="testT">
     <transition name="slide-fade">
       <div class="front" v-show="test">
         <img :src="'/public/storage/' + article.img_prew_path" class="img-fluid" alt="preview" style="min-height: 270px;">
@@ -59,7 +59,7 @@ export default {
       this.test = false;
     },
     testT() {
-      this.test = true;
+      this.test = !this.test;
     },
   }
 }

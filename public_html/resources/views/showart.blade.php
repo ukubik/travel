@@ -25,10 +25,13 @@
 
     <div class="col-md-9">
       <div class="row mb-5">
-        <div class="col p-5">
+        <div class="col p-4">
           {!! $article->content !!}
         </div>
       </div>
+      
+      <show-comments :comments="{{ json_encode('$article->comments') }}"></show-comments>
+
       <comment-create :article_id="{{ $article->id }}"></comment-create>
     </div>
 
