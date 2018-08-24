@@ -50500,7 +50500,7 @@ var render = function() {
                 expression: "comment"
               }
             ],
-            staticClass: "form-control form-control-sm",
+            staticClass: "form-control form-control-sm z-depth-1",
             attrs: { rows: "3" },
             domProps: { value: _vm.comment },
             on: {

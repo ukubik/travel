@@ -39,7 +39,7 @@
 
     <div class="row">
       <div class="col-md-7">
-        <textarea class="form-control form-control-sm" rows="3" v-model="comment"></textarea>
+        <textarea class="form-control form-control-sm z-depth-1" rows="3" v-model="comment"></textarea>
       </div>
     </div>
 
