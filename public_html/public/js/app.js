@@ -52605,7 +52605,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       var formData = new FormData();
       formData.append('file', this.file);
-      axios.post('/admin/article/' + this.article.id, formData, {
+      axios.post('/admin/img-article/' + this.article.id, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       }).then(function (response) {
         _this2.localArticle = response.data;

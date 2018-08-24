@@ -57,19 +57,19 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   // Обновление added_menu
   Route::put('/category/added_menu/{id}', 'Admin\CategoryController@updAddMenu');
   // Контроллер ресурса статей
-  Route::post('/article/{article}', 'Admin\ArticleController@update'); // Добавление превью фото к статье
+  Route::post('/img-article/{article}', 'Admin\ArticleController@updateImg'); // Добавление превью фото к статье
   Route::put('/article/del-img', 'Admin\ArticleController@delImg'); // Удаление превью фото
   Route::get('/get-article/{category}', 'Admin\ArticleController@index')->name('admin.article.index'); // Получение статей по категориям
   Route::patch('/article/published/', 'Admin\ArticleController@published');  // Публикация статьи
   Route::resource('/article', 'Admin\ArticleController', [
-    'except' => ['index', 'update'],
+    'except' => ['index'],
     'names' => [
       // 'index' => 'admin.article.index',
       'create' => 'admin.article.create',
       'store' => 'admin.article.store',
       'show' => 'admin.article.show',
       'edit' => 'admin.article.edit',
-      // 'update' => 'admin.article.update',
+      'update' => 'admin.article.update',
       'destroy' => 'admin.article.destroy'
     ]
   ]);

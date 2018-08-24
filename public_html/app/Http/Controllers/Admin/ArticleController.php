@@ -89,7 +89,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('admin.articles.edit', compact('article'));
     }
 
     /**
@@ -99,7 +99,25 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Article $article)
+    {
+        $this->validate($request, [
+          'content' => 'required|string',
+        ]);
+
+        $article->update($request->all());
+
+        return redirect()->route('admin.article.show', $article);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Article  $article
+     * @return \Illuminate\Http\Response
+     */
+    public function updateImg(Request $request, $id)
     {
         $article = Article::whereId($id)->first();
 

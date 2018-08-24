@@ -104,7 +104,7 @@ export default {
     addImg() {
       let formData = new FormData();
       formData.append('file', this.file);
-      axios.post('/admin/article/' + this.article.id,
+      axios.post('/admin/img-article/' + this.article.id,
         formData, {
           headers: {'Content-Type': 'multipart/form-data'}
       }).then(response => {
