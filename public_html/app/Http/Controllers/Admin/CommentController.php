@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use App\Comment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -15,7 +16,10 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        if(view()->exists('admin.comments.index')) {
+            return view('admin.comments.index');
+        }
+        abort(404);
     }
 
     /**
@@ -23,9 +27,9 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getComment()
     {
-        //
+        return Comment::orderBy('id', 'desc')->paginate(2);
     }
 
     /**
@@ -34,9 +38,10 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function getUser(User $user)
     {
-        //
+        // dd($user);
+        return $user;
     }
 
     /**

@@ -42,7 +42,7 @@
       
         @foreach($article->comments as $comment)
         
-    {{--@if($comment->published === 'Опубликован')--}}
+        @if($comment->published === 'Опубликован')
         
         <div class="row d-flex justify-content-between">
             <div class="col">
@@ -59,7 +59,7 @@
             </div>
         </div>
         
-        {{--@endif--}}
+        @endif
         
         @endForeach
       

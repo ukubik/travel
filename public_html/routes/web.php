@@ -85,4 +85,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
       'destroy' => 'admin.metatag.destroy'
     ]
   ]);
+  // Получение сомментов в компонент
+  Route::get('/get-comment', 'Admin\CommentController@getComment');
+  // Получение юзера коммента
+  Route::get('/get-user/{user}', 'Admin\CommentController@getUser');
+  // Ресурс обработки комментариев к статьям
+  Route::resource('/comment', 'Admin\CommentController', ['only' => ['index', 'update', 'destroy']]);
 });
