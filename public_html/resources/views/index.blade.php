@@ -66,3 +66,15 @@
 @endif
 
 @endsection
+
+@push('styles')
+<style media="screen">
+  #app {
+    background-image: url(/public/storage/images/site_0/fone2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #000; */
+  }
+</style>
+@endpush

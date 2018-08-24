@@ -50544,14 +50544,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col" }, [
+      _c("div", { staticClass: "col text-shadow" }, [
         _c("h5", [_vm._v("Вы можете оставить свой комметарий")]),
         _vm._v(" "),
         _c("small", [_vm._v("только для зарегистрированных пользователей.")]),
         _vm._v(" "),
         _c("p", [
           _vm._v("Ваш комментарий "),
-          _c("small", { staticClass: "text-muted" }, [
+          _c("small", { staticClass: "red-text" }, [
             _vm._v(" (E-mail опубликован не будет!)")
           ])
         ])

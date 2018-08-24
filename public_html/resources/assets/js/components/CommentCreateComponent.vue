@@ -30,10 +30,10 @@
     </transition>
 
     <div class="row">
-      <div class="col">
+      <div class="col text-shadow">
         <h5>Вы можете оставить свой комметарий</h5>
         <small>только для зарегистрированных пользователей.</small>
-        <p>Ваш комментарий <small class="text-muted"> (E-mail опубликован не будет!)</small> </p>
+        <p>Ваш комментарий <small class="red-text"> (E-mail опубликован не будет!)</small> </p>
       </div>
     </div>
 
