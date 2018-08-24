@@ -70,7 +70,7 @@
       <comment-create :article_id="{{ $article->id }}"></comment-create>
     </div>
 
-    <div class="col-md-3 pt-4 bg-dark z-depth-3">
+    <div class="col-md-3 pt-4 bg-dark z-depth-3 white-text">
       <div class="row my-5">
         <div class="col text-center">
           <h3>Раздел Интересное</h3>
