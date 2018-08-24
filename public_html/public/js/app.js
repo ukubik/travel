@@ -49858,7 +49858,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     testF: function testF() {
-      this.test = !this.test;
+      this.test = false;
     },
     testT: function testT() {
       this.test = true;
@@ -49876,7 +49876,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "col-md-3 border art-prev", on: { click: _vm.testF } },
+    {
+      staticClass: "col-md-3 border art-prev",
+      on: { mouseenter: _vm.testF, mouseleave: _vm.testT }
+    },
     [
       _c("transition", { attrs: { name: "slide-fade" } }, [
         _c(
