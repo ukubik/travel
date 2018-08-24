@@ -49861,7 +49861,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.test = false;
     },
     testT: function testT() {
-      this.test = !this.test;
+      this.test = true;
     }
   }
 });
@@ -49876,7 +49876,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "col-md-3 border art-prev", on: { click: _vm.testT } },
+    {
+      staticClass: "col-md-3 border art-prev",
+      on: { mouseenter: _vm.testF, mouseleave: _vm.testT }
+    },
     [
       _c("transition", { attrs: { name: "slide-fade" } }, [
         _c(
@@ -50370,6 +50373,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       axios.post('/comment/create/' + this.article_id, {
         content: this.comment
       }).then(function (response) {
+        _this3.showMessage = true;
         _this3.comment = '';
         _this3.messages = response.data.message;
         _this3.hiddenTimeOutMess();

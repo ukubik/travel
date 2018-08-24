@@ -17,7 +17,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-      $comments = Comment::paginate(5);
+      $comments = Comment::orderBy('id', 'desc')->paginate(5);
         if(view()->exists('admin.comments.index')) {
             return view('admin.comments.index', compact('comments'));
         }

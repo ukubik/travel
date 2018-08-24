@@ -95,6 +95,7 @@ export default {
       axios.post('/comment/create/' + this.article_id, {
         content: this.comment
       }).then(response => {
+        this.showMessage = true;
         this.comment = '';
         this.messages = response.data.message;
         this.hiddenTimeOutMess();
