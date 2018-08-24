@@ -17,59 +17,11 @@ class CommentController extends Controller
      */
     public function index()
     {
+      $comments = Comment::paginate(5);
         if(view()->exists('admin.comments.index')) {
-            return view('admin.comments.index');
+            return view('admin.comments.index', compact('comments'));
         }
         abort(404);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function getComments()
-    {
-        return Comment::orderBy('id', 'desc')->paginate(5);
-    }
-
-    /**
-     *
-     */
-    public function getUser(User $user)
-    {
-        // dd($user);
-        return $user;
-    }
-
-    /**
-     *
-     */
-    public function getArticle(Article $article)
-    {
-        return $article;
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Comment  $comment
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Comment $comment)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Comment  $comment
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Comment $comment)
-    {
-        //
     }
 
     /**
@@ -81,7 +33,14 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        $this->validate($request, [
+          'content' => 'required|string|max:1000',
+          'published' => 'required|string'
+        ]);
+
+        $comment->update($request->all());
+        // dd($comment);
+        return redirect()->back();
     }
 
     /**
@@ -92,6 +51,7 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        $comment->delete();
+        return redirect()->back();
     }
 }
