@@ -14,7 +14,7 @@
 
 <div class="jumbotron jumbotron-fluid" style="margin-bottom:0">
   <div class="container">
-    <h1 class="display-4">{{ $article->title }}</h1>
+    <h1 class="h1-responsive">{{ $article->title }}</h1>
     <p class="lead">{{ $article->description }}</p>
   </div>
 </div>
@@ -29,9 +29,9 @@
           {!! $article->content !!}
         </div>
       </div>
-      
+
       @if($article->comments->isNotEmpty())
-      
+
       <div class="container border-bottom my-5">
 
         <div class="row">
@@ -39,11 +39,11 @@
             <h5 class="text-uppercase">комментарии наших читателей</h5>
           </div>
         </div>
-      
+
         @foreach($article->comments as $comment)
-        
+
         @if($comment->published === 'Опубликован')
-        
+
         <div class="row d-flex justify-content-between">
             <div class="col">
                 Пользователь: {{ $comment->user->login }}
@@ -52,19 +52,19 @@
                 {{ $comment->created_at }}
             </div>
         </div>
-        
+
         <div class="row border rounded mb-4">
             <div class="col">
                 {{ $comment->content }}
             </div>
         </div>
-        
+
         @endif
-        
+
         @endForeach
-      
+
       </div>
-      
+
       @endif
 
       <comment-create :article_id="{{ $article->id }}"></comment-create>
