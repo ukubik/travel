@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\User;
 use App\Comment;
+use App\Article;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -27,21 +28,26 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getComment()
+    public function getComments()
     {
-        return Comment::orderBy('id', 'desc')->paginate(2);
+        return Comment::orderBy('id', 'desc')->paginate(5);
     }
 
     /**
-     * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function getUser(User $user)
     {
         // dd($user);
         return $user;
+    }
+
+    /**
+     *
+     */
+    public function getArticle(Article $article)
+    {
+        return $article;
     }
 
     /**

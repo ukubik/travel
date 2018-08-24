@@ -86,9 +86,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
     ]
   ]);
   // Получение сомментов в компонент
-  Route::get('/get-comment', 'Admin\CommentController@getComment');
+  Route::get('/get-comments', 'Admin\CommentController@getComments');
   // Получение юзера коммента
   Route::get('/get-user/{user}', 'Admin\CommentController@getUser');
+  // Получение статьи для вывода заголовка в таблице комментариев
+  Route::get('/get-comm-article/{article}', 'Admin\CommentController@getArticle');
   // Ресурс обработки комментариев к статьям
   Route::resource('/comment', 'Admin\CommentController', ['only' => ['index', 'update', 'destroy']]);
 });
