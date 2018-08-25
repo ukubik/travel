@@ -26,14 +26,14 @@
         <div class="col z-depth-3">
           <div class="container-fluid p-5">
             @if($previews1 && $previews1->isNotEmpty())
-            <div class="row white-text">
+            <div class="row white-text" style="min-height: 273px">
               @foreach($previews1 as $preview)
                 <article-preview :article="{{ json_encode($preview) }}"></article-preview>
               @endforeach
             </div>
             @endif
             @if($previews2 && $previews2->isNotEmpty())
-            <div class="row white-text">
+            <div class="row white-text" style="min-height: 273px">
               @foreach($previews2 as $preview)
                 <article-preview :article="{{ json_encode($preview) }}"></article-preview>
               @endforeach

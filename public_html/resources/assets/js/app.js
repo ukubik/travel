@@ -27,6 +27,7 @@ window.Vue = require('vue');
   Vue.component('lower-block', require('./components/LowerBlockComponent.vue'));
   Vue.component('comment-create', require('./components/CommentCreateComponent.vue'));
   Vue.component('show-comments', require('./components/ShowCommentsComponent.vue'));
+  Vue.component('auth-modal', require('./components/AuthModalComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));
@@ -35,7 +36,6 @@ window.Vue = require('vue');
   Vue.component('article-component', require('./components/admin/ArticleComponent.vue'));
   Vue.component('new-category', require('./components/admin/NewCategoryComponent.vue'));
   Vue.component('comments-component', require('./components/admin/CommentsComponent.vue'));
-  // Vue.component('get-article', require('./components/admin/GetArticleComponent.vue'));
 
 const app = new Vue({
     el: '#app'

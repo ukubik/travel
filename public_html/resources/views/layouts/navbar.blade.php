@@ -23,14 +23,14 @@
 
             <ul class="navbar-nav nav-flex-icons mr-5">
               @guest
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-users" aria-hidden="true"></i></a>
+                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Войти или зарегистрироваться">
+                    <a class="nav-link"><i class="fa fa-users" aria-hidden="true" data-toggle="modal" data-target="#auth"></i></a>
                 </li>
               @else
-              <li class="nav-item">
+              <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Мой профиль">
                   <a class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Выйти">
                   <a class="nav-link"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
               </li>
               @endguest
@@ -59,6 +59,14 @@
 
 </header>
 <!--Main Navigation-->
+@guest
+<!-- Side Modal Top Right -->
+<auth-modal></auth-modal>
+
+<!-- Side Modal Top Right -->
+@else
+
+@endguest
 
 @push('scripts')
 <script type="text/javascript">
@@ -77,5 +85,9 @@
       }
     }
   }
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
 </script>
 @endpush
