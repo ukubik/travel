@@ -15,6 +15,17 @@
     {{ method_field('PUT') }}
 
     <div class="row mb-3">
+      <div class="col-5">
+        <label for="title">Заголовок</label>
+        <input id="title" type="text" class="form-control form-control-sm" name="title" value="{{ $article->title }}">
+      </div>
+      <div class="col-7">
+        <label for="description">Краткое содержание</label>
+        <textarea id="description" name="description" rows="2" class="form-control form-control-sm">{{ $article->description }}</textarea>
+      </div>
+    </div>
+
+    <div class="row mb-3">
       <div class="col-md-12">
        <textarea id="editor" name="content">{{ $article->content }}</textarea>
      </div>
