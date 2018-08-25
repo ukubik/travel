@@ -83,6 +83,7 @@ export default {
   overflow: hidden;
   padding-right: 0px;
   padding-left: 0px;
+  min-height: 273px;
   z-index: 1;
 }
 
