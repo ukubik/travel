@@ -41,7 +41,7 @@ export default {
   },
 
   mounted() {
-    console.log(this.divHeight);
+    // console.log(this.divHeight);
   },
 
   computed: {

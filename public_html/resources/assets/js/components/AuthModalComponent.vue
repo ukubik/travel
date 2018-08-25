@@ -2,6 +2,19 @@
   <!-- Add class .modal-side and then add class .modal-top-right (or other classes from list above) to set a position to the modal -->
   <!-- To change the direction of the modal animation change .right class -->
   <div class="modal fade right" id="auth" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <!-- Errors -->
+    <transition name="fade">
+      <div class="alert alert-danger z-depth-3" v-if="this.errors.length > 0" v-show="showError" id="alert">
+        <button type="button" class="close" @click="hiddenErr" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <ul>
+            <li v-for="error in this.errors">
+                {{ error }}
+            </li>
+        </ul>
+      </div>
+    </transition>
     <div class="modal-dialog modal-side modal-top-right" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -41,7 +54,7 @@
             </div>
             <div class="col d-flex justify-content-end">
               <!-- <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button> -->
-              <button type="button" class="btn btn-sm btn-outline-elegant">Войти</button>false
+              <button type="button" class="btn btn-sm btn-outline-elegant" v-on:click="signIn">Войти</button>
             </div>
           </div>
 
@@ -59,9 +72,37 @@ export default {
     return {
       login: '',
       password: '',
-      remember: false
+      remember: false,
+      showError: false,
+      errors: [],
     }
   },
+
+  methods: {
+    //скрытие окна ошибки
+    hiddenErr() {
+      this.showError = false;
+    },
+    hiddenTimeOutErr() {
+      setTimeout(() => {
+        this.showError = false;
+      }, 5000);
+    },
+    signIn() {
+      axios.post('/login', {
+        login: this.login,
+        password: this.password,
+        remember: this.remember
+      }).then(response => {
+        $('#auth').modal('hide');
+        location.reload();
+      }).catch(error => {
+        this.showError = true;
+        this.errors = _.flatten(_.toArray(error.response.data.errors));
+        this.hiddenTimeOutErr();
+      });
+    }
+  }
 }
 </script>
 

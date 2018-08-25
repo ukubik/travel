@@ -31,7 +31,11 @@
                   <a class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a>
               </li>
               <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Выйти">
-                  <a class="nav-link"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
+                  <a class="nav-link" href="{{ route('logout') }}"
+                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                     @csrf
+                 </form>
               </li>
               @endguest
             </ul>

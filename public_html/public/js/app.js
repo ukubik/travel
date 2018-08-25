@@ -49843,7 +49843,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     };
   },
   mounted: function mounted() {
-    console.log(this.divHeight);
+    // console.log(this.divHeight);
   },
 
 
@@ -50778,7 +50778,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -50844,14 +50844,60 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       login: '',
       password: '',
-      remember: false
+      remember: false,
+      showError: false,
+      errors: []
     };
+  },
+
+
+  methods: {
+    //скрытие окна ошибки
+    hiddenErr: function hiddenErr() {
+      this.showError = false;
+    },
+    hiddenTimeOutErr: function hiddenTimeOutErr() {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.showError = false;
+      }, 5000);
+    },
+    signIn: function signIn() {
+      var _this2 = this;
+
+      axios.post('/login', {
+        login: this.login,
+        password: this.password,
+        remember: this.remember
+      }).then(function (response) {
+        $('#auth').modal('hide');
+        location.reload();
+      }).catch(function (error) {
+        _this2.showError = true;
+        _this2.errors = _.flatten(_.toArray(error.response.data.errors));
+        _this2.hiddenTimeOutErr();
+      });
+    }
   }
 });
 
@@ -50876,6 +50922,52 @@ var render = function() {
       }
     },
     [
+      _c("transition", { attrs: { name: "fade" } }, [
+        this.errors.length > 0
+          ? _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.showError,
+                    expression: "showError"
+                  }
+                ],
+                staticClass: "alert alert-danger z-depth-3",
+                attrs: { id: "alert" }
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "close",
+                    attrs: { type: "button", "aria-label": "Close" },
+                    on: { click: _vm.hiddenErr }
+                  },
+                  [
+                    _c("span", { attrs: { "aria-hidden": "true" } }, [
+                      _vm._v("×")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  _vm._l(this.errors, function(error) {
+                    return _c("li", [
+                      _vm._v(
+                        "\n              " + _vm._s(error) + "\n          "
+                      )
+                    ])
+                  })
+                )
+              ]
+            )
+          : _vm._e()
+      ]),
+      _vm._v(" "),
       _c(
         "div",
         {
@@ -50987,11 +51079,28 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(1)
+            _c("div", { staticClass: "modal-footer" }, [
+              _c("div", { staticClass: "row" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("div", { staticClass: "col d-flex justify-content-end" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-sm btn-outline-elegant",
+                      attrs: { type: "button" },
+                      on: { click: _vm.signIn }
+                    },
+                    [_vm._v("Войти")]
+                  )
+                ])
+              ])
+            ])
           ])
         ]
       )
-    ]
+    ],
+    1
   )
 }
 var staticRenderFns = [
@@ -51027,29 +51136,13 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-footer" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col" }, [
-          _c("a", { staticClass: "red-text", attrs: { href: "#" } }, [
-            _vm._v("Забыли пароль?")
-          ]),
-          _vm._v(" "),
-          _c("a", { staticClass: "red-text", attrs: { href: "#" } }, [
-            _vm._v("Зарегистрироваться")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col d-flex justify-content-end" }, [
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-sm btn-outline-elegant",
-              attrs: { type: "button" }
-            },
-            [_vm._v("Войти")]
-          ),
-          _vm._v("false\n          ")
-        ])
+    return _c("div", { staticClass: "col" }, [
+      _c("a", { staticClass: "red-text", attrs: { href: "#" } }, [
+        _vm._v("Забыли пароль?")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "red-text", attrs: { href: "#" } }, [
+        _vm._v("Зарегистрироваться")
       ])
     ])
   }
