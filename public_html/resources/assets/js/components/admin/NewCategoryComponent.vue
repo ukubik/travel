@@ -33,25 +33,25 @@
         <form>
           <div class="form-row">
             <div class="col border rounded">
-              <p>Добавить фото <span class="red-text">(1920 х 1080!)</span></p>
+              <p>Добавить фото <span class="red-text">(1920 х 840!)</span></p>
               <div class="custom-file">
                 <input type="file" id="file" ref="file" accept="image/*" v-on:change="handleFilesUpload()"/>
               </div>
             </div>
             <div class="col">
-              <label for="#validationLinkName"> <small>Ссылка на категорию</small>  <span class="red-text">*</span> </label>
+              <label for="#validationLinkName"> <small>Ссылка на категорию</small>  <span class="red-text"><i class="fa fa-asterisk" aria-hidden="true"></i></span> </label>
               <input type="text" class="form-control" id="validationName" v-model="link_name">
             </div>
             <div class="col">
-              <label for="#validationMenuName"> <small>Имя в меню</small>  <span class="red-text">*</span> </label>
+              <label for="#validationMenuName"> <small>Имя в меню</small>  <span class="red-text"><i class="fa fa-asterisk" aria-hidden="true"></i></span> </label>
               <input type="text" class="form-control" id="validationMenuName" v-model="menu_name">
             </div>
             <div class="col">
-              <label for="#validationHeader"> <small>Заголовок</small>  <span class="red-text">*</span> </label>
+              <label for="#validationHeader"> <small>Заголовок</small>  <span class="red-text"><i class="fa fa-asterisk" aria-hidden="true"></i></span> </label>
               <input type="text" class="form-control" id="validationHeader" v-model="header">
             </div>
             <div class="col">
-              <label for="#description"> <small>Описание категрии</small>  <span class="red-text">*</span> </label>
+              <label for="#description"> <small>Описание категрии</small>  <span class="red-text"><i class="fa fa-asterisk" aria-hidden="true"></i></span> </label>
               <textarea class="form-control" id="description" rows="2" v-model="description"></textarea>
             </div>
           </div>

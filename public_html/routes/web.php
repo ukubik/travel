@@ -14,7 +14,8 @@
 Route::get('/', 'IndexController@index')->name('index');
 // Show article
 Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
-// Вывод комментариев к статье
+
+// Вывод комментариев к статье (секция зарегистрированных пользователей)
 Route::group(['prefix' => 'comment', 'middleware' => ['auth']], function() {
   // Создание комментария
   Route::post('/create/{article}', 'CommentController@store');
@@ -22,6 +23,13 @@ Route::group(['prefix' => 'comment', 'middleware' => ['auth']], function() {
   Route::put('/update/{comment}', 'CommentController@update');
   // Удаление комментария
   Route::delete('/destroy/{comment}', 'CommentController@destroy');
+});
+
+Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
+  // Получение пользователя в компонент модального окна для идентификации и вывода логина
+  Route::get('/get-user', 'UserController@getUser');
+  // Получение роли пользователя в компонент модального окна для идентификации и вывода логина
+  Route::get('/get-role', 'UserController@getRole');
 });
 
 Auth::routes();

@@ -50523,6 +50523,7 @@ var render = function() {
             "button",
             {
               staticClass: "btn btn-outline-white btn-sm waves-effect",
+              staticStyle: { color: "#e91e63 !important" },
               attrs: { role: "button" },
               on: { click: _vm.storeComment }
             },
@@ -51559,7 +51560,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -51596,8 +51597,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      user: {},
+      role: ''
+    };
+  },
+  created: function created() {
+    this.getUser();
+    this.getRole();
+  },
+
+
+  methods: {
+    getUser: function getUser() {
+      var _this = this;
+
+      axios.get('/user/get-user').then(function (response) {
+        _this.user = response.data;
+      });
+    },
+    getRole: function getRole() {
+      var _this2 = this;
+
+      axios.get('/user/get-role').then(function (response) {
+        _this2.role = response.data;
+        console.log(_this2.role);
+      });
+    }
+  }
+});
 
 /***/ }),
 /* 103 */
@@ -51607,73 +51656,129 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    {
+      staticClass: "modal fade top",
+      attrs: {
+        id: "userModal",
+        tabindex: "-1",
+        role: "dialog",
+        "aria-labelledby": "myModalLabel",
+        "aria-hidden": "true"
+      }
+    },
+    [
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-frame modal-top",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-body" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "row d-flex justify-content-center align-items-center"
+                },
+                [
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-7 text-center" }, [
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col" }, [
+                        _c("h5", [_vm._v(_vm._s(_vm.user.login))])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col" }, [
+                        _vm.role === "Администратор"
+                          ? _c(
+                              "a",
+                              {
+                                attrs: {
+                                  href: "/admin",
+                                  "data-toggle": "tooltip",
+                                  "data-placement": "bottom",
+                                  title: "Перейти в админку"
+                                }
+                              },
+                              [
+                                _c("span", { staticClass: "red-text" }, [
+                                  _vm._v(_vm._s(_vm.role))
+                                ])
+                              ]
+                            )
+                          : _c("span", { staticClass: "text-muted" }, [
+                              _vm._v(_vm._s(_vm.role))
+                            ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _vm._m(2)
+                ]
+              )
+            ])
+          ])
+        ]
+      )
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "modal fade top",
+    return _c("div", { staticClass: "col-3 text-center" }, [
+      _c("i", {
+        staticClass: "fa fa-pencil-square-o fa-3x",
         attrs: {
-          id: "userModal",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "myModalLabel",
-          "aria-hidden": "true"
+          "aria-hidden": "true",
+          "data-toggle": "tooltip",
+          "data-placement": "bottom",
+          title: "Добавить статью"
         }
-      },
-      [
-        _c(
-          "div",
-          {
-            staticClass: "modal-dialog modal-frame modal-top",
-            attrs: { role: "document" }
-          },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _c("div", { staticClass: "modal-body" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "row d-flex justify-content-center align-items-center"
-                  },
-                  [
-                    _c("p", { staticClass: "pt-3 pr-2" }, [
-                      _vm._v(
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nisi quo provident fugiat reprehenderit nostrum\n              quos..\n            "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-secondary",
-                        attrs: { type: "button", "data-dismiss": "modal" }
-                      },
-                      [_vm._v("Close")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-primary",
-                        attrs: { type: "button" }
-                      },
-                      [_vm._v("Save changes")]
-                    )
-                  ]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-1 text-center" }, [
+      _c("i", {
+        staticClass: "fa fa-cogs fa-3x",
+        attrs: {
+          "aria-hidden": "true",
+          "data-toggle": "tooltip",
+          "data-placement": "bottom",
+          title: "Редактировать профиль"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-1 d-flex fustify-content-end" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-outline-elegant",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [_vm._v("закрыть")]
+      )
+    ])
   }
 ]
 render._withStripped = true
@@ -52846,7 +52951,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { attrs: { for: "#validationName" } }, [
-      _c("small", [_vm._v("Наименование категрии")]),
+      _c("small", [_vm._v("Наименование категoрии")]),
       _vm._v(" "),
       _c("span", { staticClass: "red-text" }, [_vm._v("*")])
     ])
@@ -52856,7 +52961,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("label", { attrs: { for: "#description" } }, [
-      _c("small", [_vm._v("Описание категрии")])
+      _c("small", [_vm._v("Описание категoрии")])
     ])
   }
 ]
@@ -55196,7 +55301,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("p", [
       _vm._v("Добавить фото "),
-      _c("span", { staticClass: "red-text" }, [_vm._v("(1920 х 1080!)")])
+      _c("span", { staticClass: "red-text" }, [_vm._v("(1920 х 840!)")])
     ])
   },
   function() {
@@ -55206,7 +55311,12 @@ var staticRenderFns = [
     return _c("label", { attrs: { for: "#validationLinkName" } }, [
       _c("small", [_vm._v("Ссылка на категорию")]),
       _vm._v(" "),
-      _c("span", { staticClass: "red-text" }, [_vm._v("*")])
+      _c("span", { staticClass: "red-text" }, [
+        _c("i", {
+          staticClass: "fa fa-asterisk",
+          attrs: { "aria-hidden": "true" }
+        })
+      ])
     ])
   },
   function() {
@@ -55216,7 +55326,12 @@ var staticRenderFns = [
     return _c("label", { attrs: { for: "#validationMenuName" } }, [
       _c("small", [_vm._v("Имя в меню")]),
       _vm._v(" "),
-      _c("span", { staticClass: "red-text" }, [_vm._v("*")])
+      _c("span", { staticClass: "red-text" }, [
+        _c("i", {
+          staticClass: "fa fa-asterisk",
+          attrs: { "aria-hidden": "true" }
+        })
+      ])
     ])
   },
   function() {
@@ -55226,7 +55341,12 @@ var staticRenderFns = [
     return _c("label", { attrs: { for: "#validationHeader" } }, [
       _c("small", [_vm._v("Заголовок")]),
       _vm._v(" "),
-      _c("span", { staticClass: "red-text" }, [_vm._v("*")])
+      _c("span", { staticClass: "red-text" }, [
+        _c("i", {
+          staticClass: "fa fa-asterisk",
+          attrs: { "aria-hidden": "true" }
+        })
+      ])
     ])
   },
   function() {
@@ -55236,7 +55356,12 @@ var staticRenderFns = [
     return _c("label", { attrs: { for: "#description" } }, [
       _c("small", [_vm._v("Описание категрии")]),
       _vm._v(" "),
-      _c("span", { staticClass: "red-text" }, [_vm._v("*")])
+      _c("span", { staticClass: "red-text" }, [
+        _c("i", {
+          staticClass: "fa fa-asterisk",
+          attrs: { "aria-hidden": "true" }
+        })
+      ])
     ])
   }
 ]

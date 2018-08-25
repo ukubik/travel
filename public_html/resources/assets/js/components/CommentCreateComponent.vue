@@ -45,7 +45,7 @@
 
     <div class="row my-3">
       <div class="col-md-7 d-flex justify-content-end">
-        <button class="btn btn-outline-white btn-sm waves-effect" role="button" @click="storeComment"> отправить
+        <button class="btn btn-outline-white btn-sm waves-effect" role="button" @click="storeComment" style="color: #e91e63 !important;"> отправить
           <i class="fa fa-angle-double-right fa-15x ml-2" aria-hidden="true"></i>
         </button>
       </div>

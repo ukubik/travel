@@ -2,7 +2,7 @@
 <header>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
-        <a class="navbar-brand" href="{{ route('index') }}">
+        <a class="navbar-brand" href="{{ route('index') }}" data-toggle="tooltip" data-placement="bottom" title="На главную...">
           <img src="{{ asset('storage/images/site_0/globus.gif') }}" alt="Globus" class="img-fluid" style="max-height:40px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,13 +23,17 @@
 
             <ul class="navbar-nav nav-flex-icons mr-5">
               @guest
-                <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Войти или зарегистрироваться">
-                    <a class="nav-link"><i class="fa fa-users" aria-hidden="true" data-toggle="modal" data-target="#auth"></i></a>
+              <span data-toggle="tooltip" data-placement="bottom" title="Войти или зарегистрироваться">
+                <li class="nav-item" aria-hidden="true" data-toggle="modal" data-target="#auth">
+                    <a class="nav-link"><i class="fa fa-users"></i></a>
                 </li>
+              </span>
               @else
-              <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Мой профиль">
-                  <a class="nav-link"><i class="fa fa-user" aria-hidden="true" data-toggle="modal" data-target="#userModal"></i></a>
-              </li>
+              <span data-toggle="tooltip" data-placement="bottom" title="Мой профиль">
+                <li class="nav-item" aria-hidden="true" data-toggle="modal" data-target="#userModal">
+                    <a class="nav-link"><i class="fa fa-user"></i></a>
+                </li>
+              </span>
               <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Выйти">
                   <a class="nav-link" href="{{ route('logout') }}"
                      onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></a>

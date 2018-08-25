@@ -53,11 +53,11 @@
           <form>
             <div class="form-row">
               <div class="col-5">
-                <label for="#validationName"> <small>Наименование категрии</small>  <span class="red-text">*</span> </label>
+                <label for="#validationName"> <small>Наименование категoрии</small>  <span class="red-text">*</span> </label>
                 <input type="text" class="form-control" id="validationName" v-model="name">
               </div>
               <div class="col-7">
-                <label for="#description"> <small>Описание категрии</small></label>
+                <label for="#description"> <small>Описание категoрии</small></label>
                 <textarea class="form-control" id="description" rows="2" v-model="description"></textarea>
               </div>
             </div>
