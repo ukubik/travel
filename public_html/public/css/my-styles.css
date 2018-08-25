@@ -1,3 +1,7 @@
+body {
+  padding-right: 0 !important;
+}
+
 #app {
   background-image: url(/public/storage/images/site_0/fone61.png);
   background-position: center;
@@ -14,4 +18,12 @@
 .modal .modal-dialog.modal-top-right {
   top: 80px;
   right: 10px;
+}
+
+.modal .modal-dialog.modal-top {
+  top: 80px;
+}
+
+.bg-grey {
+  background-color: #37474F;
 }
