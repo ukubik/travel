@@ -76,6 +76,8 @@
 
 <user-modal></user-modal>
 
+<edit-profile></edit-profile>
+
 @endguest
 
 @push('scripts')

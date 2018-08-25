@@ -27,3 +27,9 @@ body {
 .bg-grey {
   background-color: #37474F;
 }
+
+.star {
+  position: relative;
+  top: 10px;
+  font-size: 200%;
+}

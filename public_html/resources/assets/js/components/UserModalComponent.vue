@@ -27,7 +27,9 @@
                 </div>
               </div>
               <div class="col-1 text-center">
-                <i class="fa fa-cogs fa-3x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Редактировать профиль"></i>
+                <a href="#" class="black-text" data-toggle="modal" data-target="#editProfile" @click="closeUserModal">
+                  <i class="fa fa-cogs fa-3x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Редактировать профиль"></i>
+                </a>
               </div>
 
             <div class="col-1 d-flex fustify-content-end">
@@ -68,6 +70,10 @@ export default {
         console.log(this.role);
       });
     },
+
+    closeUserModal() {
+      $('#userModal').modal('hide');
+    }
   }
 }
 </script>

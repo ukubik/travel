@@ -1,7 +1,6 @@
 <template lang="html">
-
   <!-- Modal -->
-  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="editProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
     <!-- Errors -->
     <transition name="fade">
@@ -21,10 +20,9 @@
       <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
       <div class="modal-dialog modal-dialog-centered" role="document">
 
-
           <div class="modal-content">
               <div class="modal-header bg-grey">
-                  <h5 class="modal-title text-uppercase white-text" id="registerModal">регистрация</h5>
+                  <h5 class="modal-title text-uppercase white-text" id="editProfile">Редактирование профиля</h5>
                   <button type="button" class="close red-text" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                   </button>
@@ -33,68 +31,65 @@
               <div class="modal-body mx-3">
                 <div class="mb-4">
                   <i class="fa fa-user prefix grey-text"></i>
-                  <label data-error="wrong" data-success="right" for="form5">Логин
+                  <label data-error="wrong" data-success="right" for="form9">Логин
                     <span class="red-text star">*</span>
                     <small class="text-muted">(латиница, цифры, нижнеее подчеркивание)</small>
                   </label>
-                  <input type="text" id="form5" class="form-control form-control-sm validate" v-model="login">
+                  <input type="text" id="form9" class="form-control form-control-sm validate" v-model="user.login">
                 </div>
 
                 <div class="mb-4">
                   <i class="fa fa-envelope prefix grey-text"></i>
-                  <label data-error="wrong" data-success="right" for="form6">E-mail <span class="red-text star">*</span></label>
-                  <input type="email" id="form6" class="form-control form-control-sm validate" v-model="email">
+                  <label data-error="wrong" data-success="right" for="form10">E-mail <span class="red-text star">*</span></label>
+                  <input type="email" id="form10" class="form-control form-control-sm validate" v-model="user.email">
                 </div>
 
                 <div class="mb-4">
                   <i class="fa fa-user-secret prefix grey-text"></i>
-                  <label data-error="wrong" data-success="right" for="form7">Пароль <span class="red-text star">*</span></label>
-                  <input type="password" id="form7" class="form-control form-control-sm validate" v-model="password">
+                  <label data-error="wrong" data-success="right" for="form11">Пароль <span class="red-text star">*</span></label>
+                  <input type="password" id="form11" class="form-control form-control-sm validate" v-model="password">
                 </div>
 
                 <div class="mb-4">
                   <i class="fa fa-user-secret prefix grey-text"></i>
-                  <label data-error="wrong" data-success="right" for="form8">Повторите пароль <span class="red-text star">*</span></label>
-                  <input type="password" id="form8" class="form-control form-control-sm validate" v-model="password_confirmation">
+                  <label data-error="wrong" data-success="right" for="form12">Повторите пароль <span class="red-text star">*</span></label>
+                  <input type="password" id="form12" class="form-control form-control-sm validate" v-model="password_confirmation">
                 </div>
 
               </div>
 
               <div class="modal-footer">
                   <div class="row">
-                    <div class="col">
-                      <div class="checkbox">
-                        <label>
-                            <input type="checkbox" name="agree" v-model="agree"> <small class="text-muted">
-                              Согласен с условиями <a href="#" class="red-text">пользовательского соглашения</a>
-                             </small>
-                        </label>
-                      </div>
-                    </div>
                     <div class="col d-flex justify-content-end">
-                      <button type="button" class="btn btn-sm btn-outline-elegant" :disabled="!agree" @click.prevent="register">зарегистрироваться</button>
+                      <button type="button" class="btn btn-sm btn-outline-elegant" :disabled="agree" @click.prevent="updateProfile">сохранить</button>
                     </div>
                   </div>
               </div>
           </div>
       </div>
   </div>
-
 </template>
 
 <script>
 export default {
   data() {
     return {
-      login: '',
-      email: '',
       password: '',
       password_confirmation: '',
       agree: false,
       showError: false,
       errors: [],
+      user: {
+        login: '',
+        email: '',
+      },
     }
   },
+
+  mounted() {
+    this.getUser();
+  },
+
   methods: {
     //скрытие окна ошибки
     hiddenErr() {
@@ -105,20 +100,21 @@ export default {
         this.showError = false;
       }, 5000);
     },
-    register() {
-      axios.post('/register', {
-        login: this.login,
-        email: this.email,
+
+    getUser() {
+      axios.get('/user/get-user').then(response => {
+        this.user = response.data;
+      });
+    },
+
+    updateProfile() {
+      axios.put('/user/update-profile/' + this.user.id, {
+        login: this.user.login,
+        email: this.user.email,
         password: this.password,
         password_confirmation: this.password_confirmation
       }).then(response => {
-        this.login = '';
-        this.email = '';
-        this.password = '';
-        this.password_confirmation = '';
-        this.agree = false;
-        $('#registerModal').modal('hide');
-        location.reload();
+        this.user = response.data
       }).catch(error => {
         this.showError = true;
         this.errors = _.flatten(_.toArray(error.response.data.errors));
@@ -130,5 +126,4 @@ export default {
 </script>
 
 <style lang="css">
-
 </style>

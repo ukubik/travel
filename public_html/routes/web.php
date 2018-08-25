@@ -30,6 +30,8 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
   Route::get('/get-user', 'UserController@getUser');
   // Получение роли пользователя в компонент модального окна для идентификации и вывода логина
   Route::get('/get-role', 'UserController@getRole');
+  // Редактирование профиля юзверя
+  Route::put('/update-profile/{user}', 'UserController@updateProfile');
 });
 
 Auth::routes();

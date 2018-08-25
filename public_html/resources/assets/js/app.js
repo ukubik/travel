@@ -30,6 +30,7 @@ window.Vue = require('vue');
   Vue.component('auth-modal', require('./components/AuthModalComponent.vue'));
   Vue.component('user-modal', require('./components/UserModalComponent.vue'));
   Vue.component('register-modal', require('./components/RegisterComponent.vue'));
+  Vue.component('edit-profile', require('./components/EditProfileComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));
