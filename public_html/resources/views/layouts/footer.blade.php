@@ -56,7 +56,7 @@
           <ul class="list-unstyled">
             @foreach($categories as $category)
             <li>
-              <a href="{{ $category->link_name }}">{{ $category->menu_name }}</a>
+              <a href="{{ route('category', $category) }}">{{ $category->menu_name }}</a>
             </li>
             @endforeach
           </ul>
