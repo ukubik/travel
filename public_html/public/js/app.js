@@ -48886,6 +48886,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -48924,13 +48926,15 @@ var render = function() {
       return _c("div", { staticClass: "row my-4" }, [
         _c("div", { staticClass: "col" }, [
           _c("div", { staticClass: "card hoverable" }, [
-            _c("img", {
-              staticClass: "card-img-top hoverable",
-              attrs: {
-                src: "/public/storage/" + article.img_prew_path,
-                alt: "Card image cap"
-              }
-            }),
+            _c("a", { attrs: { href: "/article/" + article.id } }, [
+              _c("img", {
+                staticClass: "card-img-top hoverable",
+                attrs: {
+                  src: "/public/storage/" + article.img_prew_path,
+                  alt: "Card image cap"
+                }
+              })
+            ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _c("h4", { staticClass: "card-title" }, [
@@ -50116,7 +50120,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['article_id'],
@@ -50333,17 +50336,13 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
+    return _c("div", { staticClass: "row mb-2" }, [
       _c("div", { staticClass: "col text-shadow" }, [
         _c("h5", [_vm._v("Вы можете оставить свой комметарий")]),
         _vm._v(" "),
         _c("small", [_vm._v("только для зарегистрированных пользователей.")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v("Ваш комментарий "),
-          _c("small", { staticClass: "red-text" }, [
-            _vm._v(" (E-mail опубликован не будет!)")
-          ])
+        _c("small", { staticClass: "red-text" }, [
+          _vm._v(" (E-mail опубликован не будет!)")
         ])
       ])
     ])

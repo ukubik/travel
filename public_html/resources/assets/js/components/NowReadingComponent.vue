@@ -7,7 +7,9 @@
         <div class="card hoverable">
 
           <!-- Card image -->
-          <img class="card-img-top hoverable" :src="'/public/storage/' + article.img_prew_path" alt="Card image cap">
+          <a :href="'/article/' + article.id">
+            <img class="card-img-top hoverable" :src="'/public/storage/' + article.img_prew_path" alt="Card image cap">
+          </a>
 
           <!-- Card content -->
           <div class="card-body">
