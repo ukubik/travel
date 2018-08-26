@@ -8,12 +8,13 @@
       <div class="row">
 
         <!-- Grid column -->
-        <div class="col-md-4 mx-auto">
+        <div class="col-md-6 mx-auto">
 
           <!-- Content -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit.</p>
+          <h5 class="text-uppercase mt-3 mb-4">Путешествия по России</h5>
+          <p>Все права защищены. Копирование материалов разрешено c письменного согласия администрации сайта и при наличии активной ссылки на источник.</p>
+          <a href="{{ route('privacypolicy') }}" class="mx-2"><ins>Политика конфидециальности</ins></a>
+          <a href="{{ route('rules') }}" class="mx-2" title="Пользовательское соглашение"><ins>Пользовательское соглашение</ins></a>
 
         </div>
         <!-- Grid column -->
@@ -24,7 +25,7 @@
         <div class="col-md-2 mx-auto">
 
           <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+          <!-- <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
 
           <ul class="list-unstyled">
             <li>
@@ -39,7 +40,7 @@
             <li>
               <a href="#!">Link 4</a>
             </li>
-          </ul>
+          </ul> -->
 
         </div>
         <!-- Grid column -->
@@ -50,48 +51,16 @@
         <div class="col-md-2 mx-auto">
 
           <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
+          <h5 class="text-uppercase mt-3 mb-4">Перейти</h5>
+          @if(isset($categories) && $categories->isNotEmpty())
           <ul class="list-unstyled">
+            @foreach($categories as $category)
             <li>
-              <a href="#!">Link 1</a>
+              <a href="{{ $category->link_name }}">{{ $category->menu_name }}</a>
             </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
+            @endforeach
           </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-2 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
+          @endif
 
         </div>
         <!-- Grid column -->
@@ -107,10 +76,10 @@
     <!-- Call to action -->
     <ul class="list-unstyled list-inline text-center py-2">
       <li class="list-inline-item">
-        <h5 class="mb-1">Register for free</h5>
+        <h5 class="mb-1">Рагистрация бесплатна</h5>
       </li>
       <li class="list-inline-item">
-        <a href="#!" class="btn btn-pink btn-rounded">Sign up!</a>
+        <a href="#!" class="btn btn-pink btn-rounded" data-toggle="modal" data-target="#registerModal">Зарегистрироваться!</a>
       </li>
     </ul>
     <!-- Call to action -->
@@ -148,8 +117,8 @@
     <!-- Social buttons -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3">© {{ date('Y') }} Copyright:
+      <a href="{{ route('index') }}"> {{ config('app.name', 'Laravel') }}</a>
     </div>
     <!-- Copyright -->
 

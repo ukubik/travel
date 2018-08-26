@@ -30,7 +30,7 @@ class CategoryServiceProvider extends ServiceProvider
 
      public function getCategories()
      {
-       View::composer(['layouts.navbar', 'admin.layouts.nav'], function($view)
+       View::composer(['layouts.navbar', 'layouts.footer', 'admin.layouts.nav'], function($view)
        {
          $view->with('categories', Category::all());
        });

@@ -20,8 +20,12 @@ Route::get('/rules', 'IndexController@rules')->name('rules');
 Route::get('/privacypolicy', 'IndexController@privacypolicy')->name('privacypolicy');
 //Контакты
 Route::get('/contacts', 'IndexController@contacts')->name('contacts');
+
 //Send message admins
 // Route::post('/sendmessage', 'IndexController@sendmessage')->name('sendmessage');
+
+// Получение рандомных статей в раздел интересное (компонент NowReadingComponent)
+Route::get('/get-random-art', 'ArticleController@getRandomArt');
 
 // Вывод комментариев к статье (секция зарегистрированных пользователей)
 Route::group(['prefix' => 'comment', 'middleware' => ['auth']], function() {

@@ -33,3 +33,12 @@ body {
   top: 10px;
   font-size: 200%;
 }
+
+.page-footer a:hover {
+  color: red;
+}
+
+.art-preview {
+  min-height:600px;
+  background-color: rgba(207, 216, 220, 0.9);
+}

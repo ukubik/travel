@@ -48886,88 +48886,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      articles: {}
+    };
+  },
+  mounted: function mounted() {
+    this.getRandomArt();
   },
 
 
   methods: {
-    goto: function goto() {}
+    getRandomArt: function getRandomArt() {
+      var _this = this;
+
+      axios.get('/get-random-art').then(function (response) {
+        _this.articles = response.data;
+      });
+    }
   }
 });
 
@@ -48979,198 +48917,46 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container-fluid" }, [
-    _c("div", { staticClass: "row my-4" }, [
-      _c("div", { staticClass: "col" }, [
-        _c("div", { staticClass: "card hoverable" }, [
-          _c("img", {
-            staticClass: "card-img-top hoverable",
-            attrs: {
-              src: "/public/storage/images/site_12/2.png",
-              alt: "Card image cap"
-            }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._m(0),
+  return _c(
+    "div",
+    { staticClass: "container-fluid" },
+    _vm._l(_vm.articles, function(article) {
+      return _c("div", { staticClass: "row my-4" }, [
+        _c("div", { staticClass: "col" }, [
+          _c("div", { staticClass: "card hoverable" }, [
+            _c("img", {
+              staticClass: "card-img-top hoverable",
+              attrs: {
+                src: "/public/storage/" + article.img_prew_path,
+                alt: "Card image cap"
+              }
+            }),
             _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(
-                "Some quick example text to build on the card title and make up the bulk of the card's content."
+            _c("div", { staticClass: "card-body" }, [
+              _c("h4", { staticClass: "card-title" }, [
+                _c("a", [_vm._v(_vm._s(article.title))])
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(_vm._s(article.description))
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-pink btn-lg waves-effect",
+                  attrs: { href: "/article/" + article.id }
+                },
+                [_vm._v("читать")]
               )
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-pink btn-lg waves-effect",
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    return _vm.goto($event)
-                  }
-                }
-              },
-              [_vm._v("Button")]
-            )
+            ])
           ])
         ])
       ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row my-4" }, [
-      _c("div", { staticClass: "col" }, [
-        _c("div", { staticClass: "card hoverable" }, [
-          _c("img", {
-            staticClass: "card-img-top hoverable",
-            attrs: {
-              src: "/public/storage/images/site_12/3.png",
-              alt: "Card image cap"
-            }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(
-                "Some quick example text to build on the card title and make up the bulk of the card's content."
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-pink btn-lg waves-effect",
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    return _vm.goto($event)
-                  }
-                }
-              },
-              [_vm._v("Button")]
-            )
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row my-4" }, [
-      _c("div", { staticClass: "col" }, [
-        _c("div", { staticClass: "card hoverable" }, [
-          _c("img", {
-            staticClass: "card-img-top hoverable",
-            attrs: {
-              src: "/public/storage/images/site_12/4.png",
-              alt: "Card image cap"
-            }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._m(2),
-            _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(
-                "Some quick example text to build on the card title and make up the bulk of the card's content."
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-pink btn-lg waves-effect",
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    return _vm.goto($event)
-                  }
-                }
-              },
-              [_vm._v("Button")]
-            )
-          ])
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row my-4" }, [
-      _c("div", { staticClass: "col" }, [
-        _c("div", { staticClass: "card hoverable" }, [
-          _c("img", {
-            staticClass: "card-img-top hoverable",
-            attrs: {
-              src: "/public/storage/images/site_12/5.png",
-              alt: "Card image cap"
-            }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._m(3),
-            _vm._v(" "),
-            _c("p", { staticClass: "card-text" }, [
-              _vm._v(
-                "Some quick example text to build on the card title and make up the bulk of the card's content."
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-pink btn-lg waves-effect",
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    return _vm.goto($event)
-                  }
-                }
-              },
-              [_vm._v("Button")]
-            )
-          ])
-        ])
-      ])
-    ])
-  ])
+    })
+  )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h4", { staticClass: "card-title" }, [
-      _c("a", [_vm._v("Card title")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h4", { staticClass: "card-title" }, [
-      _c("a", [_vm._v("Card title")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h4", { staticClass: "card-title" }, [
-      _c("a", [_vm._v("Card title")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h4", { staticClass: "card-title" }, [
-      _c("a", [_vm._v("Card title")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

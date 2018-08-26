@@ -33,7 +33,7 @@
 
     <div class="row mb-3">
       <div class="col-md-12">
-       <textarea id="editor" name="content"></textarea>
+       <textarea id="editor" name="content">{{ old('content') }}</textarea>
      </div>
    </div>
 
