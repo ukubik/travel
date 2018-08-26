@@ -49,7 +49,7 @@
 
         <div class="row d-flex justify-content-between">
             <div class="col">
-                Пользователь: {{ $comment->user->login }}
+              <small>{{ $comment->user->role->name }}:</small> <b>{{ $comment->user->login }}</b> 
             </div>
             <div class="col d-flex justify-content-end">
                 {{ $comment->created_at }}
