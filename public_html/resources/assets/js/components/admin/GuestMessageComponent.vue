@@ -15,7 +15,7 @@
 
     <div class="row my-3" v-if="showTable > 0">
       <div class="col">
-        <table class="table table-sm table-bordered">
+        <table class="table table-sm table-bordered z-depth-2">
           <thead class="text-center bg-dark white-text">
             <th>Имя гостя</th>
             <th>Email</th>

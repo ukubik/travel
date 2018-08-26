@@ -56450,40 +56450,44 @@ var render = function() {
             "div",
             { staticClass: "col" },
             [
-              _c("table", { staticClass: "table table-sm table-bordered" }, [
-                _vm._m(1),
-                _vm._v(" "),
-                _c(
-                  "tbody",
-                  _vm._l(_vm.messages.data, function(message) {
-                    return _c("tr", [
-                      _c("td", [_vm._v(_vm._s(message.name))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(message.email))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(message.message))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(message.created_at))]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-sm btn-danger border",
-                            on: {
-                              click: function($event) {
-                                $event.preventDefault()
-                                _vm.destroyMessage(message.id)
+              _c(
+                "table",
+                { staticClass: "table table-sm table-bordered z-depth-2" },
+                [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c(
+                    "tbody",
+                    _vm._l(_vm.messages.data, function(message) {
+                      return _c("tr", [
+                        _c("td", [_vm._v(_vm._s(message.name))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(message.email))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(message.message))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(message.created_at))]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-sm btn-danger border",
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                  _vm.destroyMessage(message.id)
+                                }
                               }
-                            }
-                          },
-                          [_vm._v("удалить")]
-                        )
+                            },
+                            [_vm._v("удалить")]
+                          )
+                        ])
                       ])
-                    ])
-                  })
-                )
-              ]),
+                    })
+                  )
+                ]
+              ),
               _vm._v(" "),
               _c("pagination", {
                 attrs: { data: _vm.messages },
