@@ -42,8 +42,8 @@
             <h5 class="text-uppercase">комментарии наших читателей</h5>
           </div>
         </div>
-
-        @foreach($article->comments as $comment)
+        @php $comments = $article->comments->sortByDesc('id'); @endphp
+        @foreach($comments as $comment)
 
         @if($comment->published === 'Опубликован')
 
