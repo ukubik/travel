@@ -26,7 +26,7 @@
         <input type="text" class="form-control form-control-sm" name="art_title" value="{{ old('art_title') }}">
       </div>
       <div class="col-md-4">
-        <label for="description"> <small>Краткое содержание статьи</small> <i class="fa fa-exclamation ml-2 red-text" aria-hidden="true"></i></label>
+        <label for="description"> <small>Краткое содержание статьи <span class="text-muted">( макс. 120 символов )</span> </small> <i class="fa fa-exclamation ml-2 red-text" aria-hidden="true"></i></label>
         <textarea name="description" rows="3" class="form-control form-control-sm">{{ old('description') }}</textarea>
       </div>
     </div>

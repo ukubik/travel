@@ -49,7 +49,7 @@ class ArticleController extends Controller
         $this->validate($request, [
           'category_id' => 'required|integer',
           'art_title' => 'required|string',
-          'description' => 'required|string|max:150',
+          'description' => 'required|string|max:120',
           'content' => 'required|string'
         ]);
 
@@ -103,7 +103,7 @@ class ArticleController extends Controller
     {
         $this->validate($request, [
           'title' => 'required|string',
-          'description' => 'required|string|max:150',
+          'description' => 'required|string|max:120',
           'content' => 'required|string',
         ]);
 
@@ -174,8 +174,11 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         $article = Article::whereId($id)->first();
-        if($article && !$article->metatag) {
+        // dd($article);
+        if($article && !$article->metatag && $article->comments->isEmpty()) {
           $article->delete();
+        } else {
+          return abort(406, 'Удаление не возможно ( сперва удалите комментарии ).');
         }
     }
 }

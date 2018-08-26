@@ -20,7 +20,7 @@
         <input id="title" type="text" class="form-control form-control-sm" name="title" value="{{ $article->title }}">
       </div>
       <div class="col-7">
-        <label for="description">Краткое содержание</label>
+        <label for="description">Краткое содержание <small class="text-muted">( макс. 120 символов )</small> </label>
         <textarea id="description" name="description" rows="2" class="form-control form-control-sm">{{ $article->description }}</textarea>
       </div>
     </div>

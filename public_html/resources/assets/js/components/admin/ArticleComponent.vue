@@ -34,8 +34,8 @@
       <div class="custom-file" v-if="!localArticle.img_prew_path">
         <input type="file" id="file" ref="file" accept="image/*" v-on:change="handleFilesUpload()"/>
       </div>
-      <button type="button" class="btn btn-default btn-sm" v-if="!localArticle.img_prew_path" @click="addImg()">save image</button>
-      <button type="button" class="btn btn-danger btn-sm" v-if="localArticle.img_prew_path" @click="delImg()">delete image</button>
+      <button class="btn btn-default btn-sm" v-if="!localArticle.img_prew_path" @click.prevent="addImg()">save image</button>
+      <button class="btn btn-danger btn-sm" v-if="localArticle.img_prew_path" @click.prevent="delImg()">delete image</button>
     </div>
 
 
@@ -52,13 +52,13 @@
       <textarea class="form-control form-control-sm" rows="2" v-model="meta.description"></textarea>
     </div>
     <div class="col border m-1">
-      <button type="button" class="btn btn-sm btn-success" v-if="localArticle.published === 'Не опубликована'" @click="published('Опубликована')">опубликовать</button>
-      <button type="button" class="btn btn-sm btn-success" v-if="localArticle.published === 'Опубликована'" @click="published('Не опубликована')">снять с публикации</button>
+      <button class="btn btn-sm btn-success" v-if="localArticle.published === 'Не опубликована'" @click.prevent="published('Опубликована')">опубликовать</button>
+      <button class="btn btn-sm btn-success" v-if="localArticle.published === 'Опубликована'" @click.prevent="published('Не опубликована')">снять с публикации</button>
       <a :href="'/admin/article/' + localArticle.id" class="btn btn-sm btn-secondary">просмотр</a>
-      <button type="button" class="btn btn-sm btn-primary" @click="storeMeta" v-if="meta.id === 0">save metatags</button>
-      <button type="button" class="btn btn-sm btn-purple" @click="updMeta" v-if="meta.id !== 0">update metatags</button>
-      <button type="button" class="btn btn-sm btn-danger" v-if="meta.id === 0 && !localArticle.img_prew_path" @click="destroyArt">удалить статью</button>
-      <button type="button" class="btn btn-sm btn-danger" v-if="meta.id !== 0" @click="destroyMeta">удалить metatags</button>
+      <button class="btn btn-sm btn-primary" @click.prevent="storeMeta" v-if="meta.id === 0">save metatags</button>
+      <button class="btn btn-sm btn-purple" @click.prevent="updMeta" v-if="meta.id !== 0">update metatags</button>
+      <button class="btn btn-sm btn-danger" v-if="meta.id === 0 && !localArticle.img_prew_path" @click.prevent="destroyArt">удалить статью</button>
+      <button class="btn btn-sm btn-danger" v-if="meta.id !== 0" @click.prevent="destroyMeta">удалить metatags</button>
     </div>
   </div>
 </template>
@@ -180,6 +180,10 @@ export default {
     destroyArt() {
       axios.delete('/admin/article/' + this.localArticle.id).then(response => {
         location.reload();
+      }).catch(error => {
+        this.showError = true;
+        this.errors = [error.response.data.message];
+        this.hiddenTimeOutErr();
       });
     },
 

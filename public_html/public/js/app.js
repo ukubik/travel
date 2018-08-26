@@ -49585,7 +49585,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active {\r\n  -webkit-transition: all .2s ease;\r\n  transition: all .2s ease;\n}\n.slide-fade-leave-active {\r\n  -webkit-transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\r\n  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-fade-enter, .slide-fade-leave-to {\r\n  -webkit-transform: translateX(300px);\r\n          transform: translateX(300px);\r\n  opacity: 0;\n}\n.art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\r\n  min-height: 273px;\r\n  z-index: 1;\n}\n.art-prev:hover {\r\n  cursor: pointer;\n}\n.img-preview {\r\n  height: 100% !important;\r\n  vertical-align: middle;\n}\n.preview-title {\r\n  position: absolute;\r\n  top: 40%;\r\n  left: 10%;\r\n  text-transform: uppercase;\r\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  top:0;\r\n  background-color: #3E4551;\r\n  color: white;\r\n  z-index: 0;\n}\r\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active {\r\n  -webkit-transition: all .2s ease;\r\n  transition: all .2s ease;\n}\n.slide-fade-leave-active {\r\n  -webkit-transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\r\n  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-fade-enter, .slide-fade-leave-to {\r\n  -webkit-transform: translateX(300px);\r\n          transform: translateX(300px);\r\n  opacity: 0;\n}\n.art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\r\n  min-height: 272px;\r\n  z-index: 1;\n}\n.art-prev:hover {\r\n  cursor: pointer;\n}\n.img-preview {\r\n  height: 100% !important;\r\n  vertical-align: middle;\n}\n.preview-title {\r\n  position: absolute;\r\n  top: 40%;\r\n  left: 10%;\r\n  text-transform: uppercase;\r\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  top:0;\r\n  background-color: #3E4551;\r\n  color: white;\r\n  z-index: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -54543,7 +54543,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -54736,17 +54736,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }
     },
     destroyArt: function destroyArt() {
+      var _this7 = this;
+
       axios.delete('/admin/article/' + this.localArticle.id).then(function (response) {
         location.reload();
+      }).catch(function (error) {
+        _this7.showError = true;
+        _this7.errors = [error.response.data.message];
+        _this7.hiddenTimeOutErr();
       });
     },
     delImg: function delImg() {
-      var _this7 = this;
+      var _this8 = this;
 
       axios.put('/admin/article/del-img', {
         id: this.localArticle.id
       }).then(function (response) {
-        _this7.localArticle = response.data;
+        _this8.localArticle = response.data;
       });
     },
 
@@ -54756,10 +54762,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.showError = false;
     },
     hiddenTimeOutErr: function hiddenTimeOutErr() {
-      var _this8 = this;
+      var _this9 = this;
 
       setTimeout(function () {
-        _this8.showError = false;
+        _this9.showError = false;
       }, 5000);
     },
 
@@ -54768,10 +54774,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.showMessage = false;
     },
     hiddenTimeOutMess: function hiddenTimeOutMess() {
-      var _this9 = this;
+      var _this10 = this;
 
       setTimeout(function () {
-        _this9.showMessage = false;
+        _this10.showMessage = false;
       }, 5000);
     }
   }
@@ -54918,9 +54924,9 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-default btn-sm",
-                attrs: { type: "button" },
                 on: {
                   click: function($event) {
+                    $event.preventDefault()
                     _vm.addImg()
                   }
                 }
@@ -54934,9 +54940,9 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-danger btn-sm",
-                attrs: { type: "button" },
                 on: {
                   click: function($event) {
+                    $event.preventDefault()
                     _vm.delImg()
                   }
                 }
@@ -55030,9 +55036,9 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-sm btn-success",
-                attrs: { type: "button" },
                 on: {
                   click: function($event) {
+                    $event.preventDefault()
                     _vm.published("Опубликована")
                   }
                 }
@@ -55046,9 +55052,9 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-sm btn-success",
-                attrs: { type: "button" },
                 on: {
                   click: function($event) {
+                    $event.preventDefault()
                     _vm.published("Не опубликована")
                   }
                 }
@@ -55071,8 +55077,12 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-sm btn-primary",
-                attrs: { type: "button" },
-                on: { click: _vm.storeMeta }
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.storeMeta($event)
+                  }
+                }
               },
               [_vm._v("save metatags")]
             )
@@ -55083,8 +55093,12 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-sm btn-purple",
-                attrs: { type: "button" },
-                on: { click: _vm.updMeta }
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.updMeta($event)
+                  }
+                }
               },
               [_vm._v("update metatags")]
             )
@@ -55095,8 +55109,12 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-sm btn-danger",
-                attrs: { type: "button" },
-                on: { click: _vm.destroyArt }
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.destroyArt($event)
+                  }
+                }
               },
               [_vm._v("удалить статью")]
             )
@@ -55107,8 +55125,12 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-sm btn-danger",
-                attrs: { type: "button" },
-                on: { click: _vm.destroyMeta }
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.destroyMeta($event)
+                  }
+                }
               },
               [_vm._v("удалить metatags")]
             )
