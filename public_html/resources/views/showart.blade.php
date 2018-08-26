@@ -24,9 +24,12 @@
   <div class="row">
 
     <div class="col-md-9">
-      <div class="row mb-5">
-        <div class="col p-4">
-          {!! $article->content !!}
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col pt-4">
+            {!! $article->content !!}
+          </div>
         </div>
       </div>
 
