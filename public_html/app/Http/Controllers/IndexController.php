@@ -7,6 +7,7 @@ use App\Image;
 use App\Article;
 use App\Category;
 use App\GuestMessage;
+use App\Events\GuestMessage as Message;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -61,14 +62,12 @@ class IndexController extends Controller
         'message' => 'required|max:1000'
       ]);
 
-      $guestmessage = GuestMessage::create([
+      $message = GuestMessage::create([
         'name' => $request->name,
         'email' => $request->email,
         'message' => $request->message,
       ]);
-
-      // $users = User::whereRoleId(1)->get();
-      // Notification::send($users, new NewMessage($guestmessage));
+      event(new Message($message));
       return redirect()->back()->with('message', 'Ваше сообщение отправлено администратору ресурса.');
     }
 }

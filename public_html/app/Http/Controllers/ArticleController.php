@@ -10,7 +10,7 @@ class ArticleController extends Controller
     //
     public function show($id)
     {
-      $article = Article::whereId($id)->first();
+      $article = Article::whereId($id)->wherePublished('Опубликована')->first();
 
       if($article && view()->exists('showart')) {
         // dd($article);

@@ -16,6 +16,15 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Event' => [
             'App\Listeners\EventListener',
         ],
+        'App\Events\GuestMessage' => [
+          'App\Listeners\GuestMessageNotification',
+        ],
+        'App\Events\NewArticle' => [
+          'App\Listeners\NewArticleCreatedNotification',
+        ],
+        'App\Events\NewCommentArticle' => [
+          'App\Listeners\NewCommentAddedNotififcation',
+        ],
     ];
 
     /**

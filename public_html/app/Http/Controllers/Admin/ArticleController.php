@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Article;
 use App\Category;
-// use App\Http\Controllers\Admin\MetaTagController;
+use App\Events\NewArticle;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -61,8 +61,6 @@ class ArticleController extends Controller
           'content' => $request->content
         ]);
         //
-        // $meta = new MetaTagController;
-        // $meta->store($request, $article);
         return redirect()->route('admin.article.index', $request->category_id);
     }
 
@@ -162,6 +160,9 @@ class ArticleController extends Controller
       $article->update([
         'published' => $request->published
       ]);
+      
+      if($request->published === 'Опубликована') event(new NewArticle($article));
+
       return $article;
     }
 
