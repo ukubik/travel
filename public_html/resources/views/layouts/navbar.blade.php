@@ -75,7 +75,7 @@
 @else
 
 <user-modal></user-modal>
-
+<already-registered></already-registered>
 <edit-profile></edit-profile>
 
 @endguest
