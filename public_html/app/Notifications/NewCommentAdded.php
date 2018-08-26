@@ -2,25 +2,24 @@
 
 namespace App\Notifications;
 
-use App\GuestMessage;
+use App\Comment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class NewGuetMessage extends Notification
+class NewCommentAdded extends Notification
 {
     use Queueable;
-    protected $message;
-
+    public $comment;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(GuestMessage $message)
+    public function __construct(Comment $comment)
     {
-        $this->message = $message;
+        $this->comment = $comment;
     }
 
     /**
@@ -43,10 +42,10 @@ class NewGuetMessage extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-              ->subject('Новое сообщение')
-              ->line('Гость <ins>' . $this->message->name . '</ins> оставил новое сообщение: ')
-              ->line('<b>"' . $this->message->message . '"</b>')
-              ->action('Перейти в админку', url('/admin/guestmessage'))
+              ->subject('Новый комментарий к статье: "' . $this->comment->article->title . '".')
+              ->line('Пользователь <ins>' . $this->comment->user->login . '</ins> добавил комментарий: ')
+              ->line('<b>"' . $this->comment->content . '"</b>')
+              ->action('Перейти в админку', url('/admin/comment'))
               ->line('Спасибо, что Вы с нами!');
     }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Comment;
 use App\Article;
 use Illuminate\Http\Request;
+use App\Events\NewCommentArticle;
 use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
@@ -27,6 +28,7 @@ class CommentController extends Controller
           'article_id' => $article->id,
           'content' => $request->content
         ]);
+        event(new NewCommentArticle($comment));
         abort(200, 'Спасибо за комментарий. В ближайшее время он будет опубликован');
       }
     }

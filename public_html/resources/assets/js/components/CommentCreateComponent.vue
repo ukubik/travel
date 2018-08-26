@@ -44,7 +44,7 @@
 
     <div class="row my-3">
       <div class="col-md-7 d-flex justify-content-end">
-        <button class="btn btn-outline-white btn-sm waves-effect" role="button" @click="storeComment" style="color: #e91e63 !important;"> отправить
+        <button class="btn btn-outline-white btn-sm waves-effect" role="button" @click="storeComment" style="color: #e91e63 !important;" :disabled="send"> отправить
           <i class="fa fa-angle-double-right fa-15x ml-2" aria-hidden="true"></i>
         </button>
       </div>
@@ -66,7 +66,8 @@ export default {
       errors: [],
       showMessage: true,
       messages: [],
-      comment: ''
+      comment: '',
+      send: false
     }
   },
 
@@ -91,6 +92,7 @@ export default {
     },
 
     storeComment() {
+      this.send = true;
       axios.post('/comment/create/' + this.article_id, {
         content: this.comment
       }).then(response => {
@@ -98,6 +100,7 @@ export default {
         this.comment = '';
         this.messages = response.data.message;
         this.hiddenTimeOutMess();
+        this.send = false;
       }).catch(error => {
         this.showError = true;
         this.errors = _.flatten(_.toArray(error.response.data.errors));

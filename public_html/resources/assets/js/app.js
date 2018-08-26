@@ -40,6 +40,7 @@ window.Vue = require('vue');
   Vue.component('article-component', require('./components/admin/ArticleComponent.vue'));
   Vue.component('new-category', require('./components/admin/NewCategoryComponent.vue'));
   Vue.component('comments-component', require('./components/admin/CommentsComponent.vue'));
+  Vue.component('guest-message', require('./components/admin/GuestMessageComponent.vue'));
 
 const app = new Vue({
     el: '#app'
