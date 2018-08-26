@@ -48038,7 +48038,7 @@ var render = function() {
                                       staticClass:
                                         "btn btn-outline-white btn-lg waves-effect",
                                       attrs: {
-                                        href: "/" + category.link_name,
+                                        href: "/category/" + category.id,
                                         role: "button"
                                       }
                                     },
