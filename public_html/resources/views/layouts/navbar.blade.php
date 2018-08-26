@@ -1,7 +1,7 @@
 <!--Main Navigation-->
 <header>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-grey">
         <a class="navbar-brand" href="{{ route('index') }}" data-toggle="tooltip" data-placement="bottom" title="На главную...">
           <img src="{{ asset('storage/images/site_0/globus.gif') }}" alt="Globus" class="img-fluid" style="max-height:40px;">
         </a>

@@ -14,6 +14,14 @@
 Route::get('/', 'IndexController@index')->name('index');
 // Show article
 Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
+//Пользовательское соглашение
+Route::get('/rules', 'IndexController@rules')->name('rules');
+//Политика конфидециальности
+Route::get('/privacypolicy', 'IndexController@privacypolicy')->name('privacypolicy');
+//Контакты
+Route::get('/contacts', 'IndexController@contacts')->name('contacts');
+//Send message admins
+// Route::post('/sendmessage', 'IndexController@sendmessage')->name('sendmessage');
 
 // Вывод комментариев к статье (секция зарегистрированных пользователей)
 Route::group(['prefix' => 'comment', 'middleware' => ['auth']], function() {

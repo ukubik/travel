@@ -52399,7 +52399,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("small", { staticClass: "text-muted" }, [
       _vm._v("\n                            Согласен с условиями "),
-      _c("a", { staticClass: "red-text", attrs: { href: "#" } }, [
+      _c("a", { staticClass: "red-text", attrs: { href: "/rules" } }, [
         _vm._v("пользовательского соглашения")
       ])
     ])

@@ -66,7 +66,7 @@
                       <div class="checkbox">
                         <label>
                             <input type="checkbox" name="agree" v-model="agree"> <small class="text-muted">
-                              Согласен с условиями <a href="#" class="red-text">пользовательского соглашения</a>
+                              Согласен с условиями <a href="/rules" class="red-text">пользовательского соглашения</a>
                              </small>
                         </label>
                       </div>
