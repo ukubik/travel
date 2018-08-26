@@ -17,7 +17,7 @@
       </div>
 
       <div class="row" style="min-height:700px">
-        <div class="col d-flex justify-content-center">
+        <div class="col d-flex justify-content-center text-shadow">
           <second-component></second-component>
         </div>
       </div>
@@ -26,6 +26,12 @@
         <div class="col z-depth-3">
           <div class="container-fluid p-5">
             @if($previews1 && $previews1->isNotEmpty())
+            <div class="row my-3">
+              <div class="col text-uppercase border-bottom border-danger">
+                <h2 class="h2-responsive">Свежие статьи</h2>
+                <h5 class="h5-responsive">новости из разных уголков россии</h5>
+              </div>
+            </div>
             <div class="row white-text" style="min-height: 272px">
               @foreach($previews1 as $preview)
                 <article-preview :article="{{ json_encode($preview) }}"></article-preview>
@@ -56,7 +62,7 @@
   </div>
 
   <div class="row" style="min-height:700px">
-    <div class="col">
+    <div class="col text-shadow">
       <lower-block></lower-block>
     </div>
   </div>
