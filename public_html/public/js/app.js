@@ -48048,7 +48048,7 @@ var render = function() {
                                       ),
                                       _c("i", {
                                         staticClass:
-                                          "fa fa-angle-double-down fa-15x ml-2",
+                                          "fa fa-angle-double-right fa-15x ml-2",
                                         attrs: { "aria-hidden": "true" }
                                       })
                                     ]
