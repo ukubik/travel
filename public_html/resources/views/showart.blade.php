@@ -73,7 +73,7 @@
     <div class="col-md-3 pt-4 bg-dark z-depth-3 white-text">
       <div class="row my-5">
         <div class="col text-center">
-          <h3>Раздел Интересное</h3>
+          <h3>Вам будет интересно</h3>
         </div>
       </div>
       <now-reading></now-reading>
