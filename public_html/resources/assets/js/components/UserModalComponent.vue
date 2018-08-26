@@ -11,7 +11,7 @@
           <div class="row d-flex justify-content-center align-items-center">
 
               <div class="col-3 text-center">
-                <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Добавить статью"></i>
+                <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Добавить статью ( в разработке... )"></i>
               </div>
               <div class="col-7 text-center">
                 <div class="row">

@@ -51564,7 +51564,7 @@ var staticRenderFns = [
           "aria-hidden": "true",
           "data-toggle": "tooltip",
           "data-placement": "bottom",
-          title: "Добавить статью"
+          title: "Добавить статью ( в разработке... )"
         }
       })
     ])
