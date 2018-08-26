@@ -126,18 +126,4 @@ export default {
   width: 100px !important;
   height: 100px !important;
 }
-
-.btn-outline-white {
-  /* z-index: 9999; */
-  border: 2px solid #ffffff !important;
-  border-radius: 25px;
-  background-color: rgba(255,255,255,.2) !important;
-  color: #ffffff !important;
-}
-
-.btn-outline-white:hover {
-  background-color: rgba(255,255,255,.7) !important;
-  color: rgb(233, 30, 99) !important;
-  border: 2px solid rgb(233, 30, 99) !important;
-}
 </style>
