@@ -20,6 +20,8 @@ Route::get('/rules', 'IndexController@rules')->name('rules');
 Route::get('/privacypolicy', 'IndexController@privacypolicy')->name('privacypolicy');
 //Контакты
 Route::get('/contacts', 'IndexController@contacts')->name('contacts');
+// Страница категории с оглавлением и статьями
+Route::get('/category/{category}', 'CategoryController@index')->name('category');
 
 //Send message admins
 // Route::post('/sendmessage', 'IndexController@sendmessage')->name('sendmessage');

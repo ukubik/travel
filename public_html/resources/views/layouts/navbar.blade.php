@@ -14,7 +14,8 @@
               @foreach($categories as $category)
               @if($category->added_menu === 'В меню')
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ '/' . $category->link_name }}"> {{ $category->menu_name }} <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('category', $category) }}"
+                    data-toggle="tooltip" data-placement="bottom" title="{{ $category->description }}"> {{ $category->menu_name }} <span class="sr-only">(current)</span></a>
                 </li>
               @endif
               @endforeach
