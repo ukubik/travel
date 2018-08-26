@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Image;
 use App\Article;
 use App\Category;
+use App\GuestMessage;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -41,32 +43,32 @@ class IndexController extends Controller
       abort(404);
     }
 
-    // public function contacts()
-    // {
-    //   if(view()->exists('contacts')) {
-    //
-    //     return view('contacts');
-    //   }
-    //
-    //   abort(404);
-    // }
+    public function contacts()
+    {
+      if(view()->exists('contacts')) {
 
-    // public function sendmessage(Request $request)
-    // {
-    //   $this->validate($request, [
-    //     'name' => 'required|max:100',
-    //     'email' =>'required|email',
-    //     'message' => 'required|max:1000'
-    //   ]);
-    //
-    //   $guestmessage = GuestMessage::create([
-    //     'name' => $request->name,
-    //     'email' => $request->email,
-    //     'message' => $request->message,
-    //   ]);
-    //
-    //   $users = User::whereRoleId(1)->get();
-    //   Notification::send($users, new NewMessage($guestmessage));
-    //   return redirect()->back()->with('message', 'Ваше сообщение отправлено администратору ресурса.');
-    // }
+        return view('contacts');
+      }
+
+      abort(404);
+    }
+
+    public function sendmessage(Request $request)
+    {
+      $this->validate($request, [
+        'name' => 'required|max:100',
+        'email' =>'required|email',
+        'message' => 'required|max:1000'
+      ]);
+
+      $guestmessage = GuestMessage::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'message' => $request->message,
+      ]);
+
+      // $users = User::whereRoleId(1)->get();
+      // Notification::send($users, new NewMessage($guestmessage));
+      return redirect()->back()->with('message', 'Ваше сообщение отправлено администратору ресурса.');
+    }
 }

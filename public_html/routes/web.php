@@ -24,7 +24,7 @@ Route::get('/contacts', 'IndexController@contacts')->name('contacts');
 Route::get('/category/{category}', 'CategoryController@index')->name('category');
 
 //Send message admins
-// Route::post('/sendmessage', 'IndexController@sendmessage')->name('sendmessage');
+Route::post('/sendmessage', 'IndexController@sendmessage')->name('sendmessage');
 
 // Получение рандомных статей в раздел интересное (компонент NowReadingComponent)
 Route::get('/get-random-art', 'ArticleController@getRandomArt');
