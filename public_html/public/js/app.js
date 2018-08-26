@@ -49700,7 +49700,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "row preview-title" }, [
               _c("div", { staticClass: "col" }, [
-                _c("h2", { staticClass: "h2-responsive" }, [
+                _c("h4", { staticClass: "h4-responsive" }, [
                   _vm._v(_vm._s(_vm.article.title))
                 ])
               ])
