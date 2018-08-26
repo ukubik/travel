@@ -56,6 +56,11 @@
                   <input type="password" id="form12" class="form-control form-control-sm validate" v-model="password_confirmation">
                 </div>
 
+                <div class="mb-4 cursor-hand">
+                  <span class="red-text text-uppercase" v-if="user.subscription === 'Не подписан'" @click="subscrybe('Подписан')"> <ins>оформить подписку на новые статьи</ins> </span>
+                  <span class="blue-text text-uppercase" v-if="user.subscription === 'Подписан'" @click="subscrybe('Не подписан')"> <ins>вы подписаны</ins> </span>
+                </div>
+
               </div>
 
               <div class="modal-footer">
@@ -121,9 +126,24 @@ export default {
         this.hiddenTimeOutErr();
       });
     },
+
+    subscrybe(text) {
+      axios.put('/user/subscrybe/' + this.user.id, {
+        subscription: text
+      }).then(response => {
+        this.getUser();
+      }).catch(error => {
+        this.showError = true;
+        this.errors = _.flatten(_.toArray(error.response.data.errors));
+        this.hiddenTimeOutErr();
+      });
+    },
   }
 }
 </script>
 
 <style lang="css">
+.cursor-hand:hover {
+  cursor: pointer;
+}
 </style>

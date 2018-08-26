@@ -56,4 +56,13 @@ class UserController extends Controller
       ]);
       return $user;
     }
+
+    // Подписка
+    public function subscrybe(Request $request, User $user)
+    {
+      $this->validate($request, [
+        'subscription' => 'required|string'
+      ]);
+      $user->update($request->all());
+    }
 }

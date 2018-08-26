@@ -52290,7 +52290,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.cursor-hand:hover {\r\n  cursor: pointer;\n}\r\n", ""]);
 
 // exports
 
@@ -52301,6 +52301,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -52426,6 +52431,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         _this3.showError = true;
         _this3.errors = _.flatten(_.toArray(error.response.data.errors));
         _this3.hiddenTimeOutErr();
+      });
+    },
+    subscrybe: function subscrybe(text) {
+      var _this4 = this;
+
+      axios.put('/user/subscrybe/' + this.user.id, {
+        subscription: text
+      }).then(function (response) {
+        _this4.getUser();
+      }).catch(function (error) {
+        _this4.showError = true;
+        _this4.errors = _.flatten(_.toArray(error.response.data.errors));
+        _this4.hiddenTimeOutErr();
       });
     }
   }
@@ -52619,6 +52637,38 @@ var render = function() {
                     }
                   }
                 })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "mb-4 cursor-hand" }, [
+                _vm.user.subscription === "Не подписан"
+                  ? _c(
+                      "span",
+                      {
+                        staticClass: "red-text text-uppercase",
+                        on: {
+                          click: function($event) {
+                            _vm.subscrybe("Подписан")
+                          }
+                        }
+                      },
+                      [_c("ins", [_vm._v("оформить подписку на новые статьи")])]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.user.subscription === "Подписан"
+                  ? _c(
+                      "span",
+                      {
+                        staticClass: "blue-text text-uppercase",
+                        on: {
+                          click: function($event) {
+                            _vm.subscrybe("Не подписан")
+                          }
+                        }
+                      },
+                      [_c("ins", [_vm._v("вы подписаны")])]
+                    )
+                  : _vm._e()
               ])
             ]),
             _vm._v(" "),

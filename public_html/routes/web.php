@@ -46,6 +46,8 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
   Route::get('/get-role', 'UserController@getRole');
   // Редактирование профиля юзверя
   Route::put('/update-profile/{user}', 'UserController@updateProfile');
+  // Подписка
+  Route::put('/subscrybe/{user}', 'UserController@subscrybe');
 });
 
 Auth::routes();
