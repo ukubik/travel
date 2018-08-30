@@ -31,28 +31,28 @@
               </div>
 
               <div class="modal-body mx-3">
-                <div class="mb-4">
+                <div class="mb-1">
                   <i class="fa fa-user prefix grey-text"></i>
                   <label data-error="wrong" data-success="right" for="form5">Логин
                     <span class="red-text star">*</span>
-                    <small class="text-muted">(латиница, цифры, нижнеее подчеркивание)</small>
+                    <!-- <small class="text-muted">(латиница, цифры, нижнеее подчеркивание)</small> -->
                   </label>
                   <input type="text" id="form5" class="form-control form-control-sm validate" v-model="login">
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-1">
                   <i class="fa fa-envelope prefix grey-text"></i>
                   <label data-error="wrong" data-success="right" for="form6">E-mail <span class="red-text star">*</span></label>
                   <input type="email" id="form6" class="form-control form-control-sm validate" v-model="email">
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-1">
                   <i class="fa fa-user-secret prefix grey-text"></i>
                   <label data-error="wrong" data-success="right" for="form7">Пароль <span class="red-text star">*</span></label>
                   <input type="password" id="form7" class="form-control form-control-sm validate" v-model="password">
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-1">
                   <i class="fa fa-user-secret prefix grey-text"></i>
                   <label data-error="wrong" data-success="right" for="form8">Повторите пароль <span class="red-text star">*</span></label>
                   <input type="password" id="form8" class="form-control form-control-sm validate" v-model="password_confirmation">

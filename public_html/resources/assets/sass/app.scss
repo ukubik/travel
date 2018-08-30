@@ -16,10 +16,12 @@
 // Окно ошибок и уведомлений сервера
 #alert {
   position: fixed;
-  width: 30%;
-  top: 10px;
-  right: 40%;
+  width: auto;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: 9999;
+  padding-left: 0;
 }
 
 .fade-enter-active, .fade-leave-active {

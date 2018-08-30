@@ -48109,7 +48109,7 @@ var staticRenderFns = [
     return _c(
       "a",
       {
-        staticClass: "carousel-control-next",
+        staticClass: "carousel-control-next d-flex justify-content-end",
         attrs: {
           href: "#carousel-example-1z",
           role: "button",
@@ -50178,6 +50178,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         _this3.showError = true;
         _this3.errors = _.flatten(_.toArray(error.response.data.errors));
         _this3.hiddenTimeOutErr();
+        _this3.send = false;
       });
     }
   }
@@ -51483,64 +51484,72 @@ var render = function() {
                 [
                   _vm._m(0),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-7 text-center" }, [
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col" }, [
-                        _c("h5", [_vm._v(_vm._s(_vm.user.login))])
+                  _c(
+                    "div",
+                    { staticClass: "col-md-7 my-2 border-bottom text-center" },
+                    [
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _c("h5", [_vm._v(_vm._s(_vm.user.login))])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col" }, [
+                          _vm.role === "Администратор"
+                            ? _c(
+                                "a",
+                                {
+                                  attrs: {
+                                    href: "/admin",
+                                    "data-toggle": "tooltip",
+                                    "data-placement": "bottom",
+                                    title: "Перейти в админку"
+                                  }
+                                },
+                                [
+                                  _c("span", { staticClass: "red-text" }, [
+                                    _vm._v(_vm._s(_vm.role))
+                                  ])
+                                ]
+                              )
+                            : _c("span", { staticClass: "text-muted" }, [
+                                _vm._v(_vm._s(_vm.role))
+                              ])
+                        ])
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "row" }, [
-                      _c("div", { staticClass: "col" }, [
-                        _vm.role === "Администратор"
-                          ? _c(
-                              "a",
-                              {
-                                attrs: {
-                                  href: "/admin",
-                                  "data-toggle": "tooltip",
-                                  "data-placement": "bottom",
-                                  title: "Перейти в админку"
-                                }
-                              },
-                              [
-                                _c("span", { staticClass: "red-text" }, [
-                                  _vm._v(_vm._s(_vm.role))
-                                ])
-                              ]
-                            )
-                          : _c("span", { staticClass: "text-muted" }, [
-                              _vm._v(_vm._s(_vm.role))
-                            ])
-                      ])
-                    ])
-                  ]),
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-1 text-center" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "black-text",
-                        attrs: {
-                          href: "#",
-                          "data-toggle": "modal",
-                          "data-target": "#editProfile"
-                        },
-                        on: { click: _vm.closeUserModal }
-                      },
-                      [
-                        _c("i", {
-                          staticClass: "fa fa-cogs fa-3x",
+                  _c(
+                    "div",
+                    { staticClass: "col-md-1 my-2 border-bottom text-center" },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "black-text",
                           attrs: {
-                            "aria-hidden": "true",
-                            "data-toggle": "tooltip",
-                            "data-placement": "bottom",
-                            title: "Редактировать профиль"
-                          }
-                        })
-                      ]
-                    )
-                  ]),
+                            href: "#",
+                            "data-toggle": "modal",
+                            "data-target": "#editProfile"
+                          },
+                          on: { click: _vm.closeUserModal }
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fa fa-cogs fa-3x",
+                            attrs: {
+                              "aria-hidden": "true",
+                              "data-toggle": "tooltip",
+                              "data-placement": "bottom",
+                              title: "Редактировать профиль"
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  ),
                   _vm._v(" "),
                   _vm._m(1)
                 ]
@@ -51557,32 +51566,40 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-3 text-center" }, [
-      _c("i", {
-        staticClass: "fa fa-pencil-square-o fa-3x",
-        attrs: {
-          "aria-hidden": "true",
-          "data-toggle": "tooltip",
-          "data-placement": "bottom",
-          title: "Добавить статью ( в разработке... )"
-        }
-      })
-    ])
+    return _c(
+      "div",
+      { staticClass: "col-md-3 my-2 border-bottom text-center" },
+      [
+        _c("i", {
+          staticClass: "fa fa-pencil-square-o fa-3x",
+          attrs: {
+            "aria-hidden": "true",
+            "data-toggle": "tooltip",
+            "data-placement": "bottom",
+            title: "Добавить статью ( в разработке... )"
+          }
+        })
+      ]
+    )
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-1 d-flex fustify-content-end" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-outline-elegant",
-          attrs: { type: "button", "data-dismiss": "modal" }
-        },
-        [_vm._v("закрыть")]
-      )
-    ])
+    return _c(
+      "div",
+      { staticClass: "col-md-1 my-2 border-bottom d-flex fustify-content-end" },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-outline-elegant",
+            attrs: { type: "button", "data-dismiss": "modal" }
+          },
+          [_vm._v("закрыть")]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -51904,7 +51921,7 @@ var render = function() {
             _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "modal-body mx-3" }, [
-              _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-user prefix grey-text" }),
                 _vm._v(" "),
                 _vm._m(1),
@@ -51932,7 +51949,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-envelope prefix grey-text" }),
                 _vm._v(" "),
                 _vm._m(2),
@@ -51960,7 +51977,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-user-secret prefix grey-text" }),
                 _vm._v(" "),
                 _vm._m(3),
@@ -51988,7 +52005,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-user-secret prefix grey-text" }),
                 _vm._v(" "),
                 _vm._m(4),
@@ -52130,11 +52147,7 @@ var staticRenderFns = [
       },
       [
         _vm._v("Логин\n                  "),
-        _c("span", { staticClass: "red-text star" }, [_vm._v("*")]),
-        _vm._v(" "),
-        _c("small", { staticClass: "text-muted" }, [
-          _vm._v("(латиница, цифры, нижнеее подчеркивание)")
-        ])
+        _c("span", { staticClass: "red-text star" }, [_vm._v("*")])
       ]
     )
   },
@@ -52527,7 +52540,7 @@ var render = function() {
             _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "modal-body mx-3" }, [
-              _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-user prefix grey-text" }),
                 _vm._v(" "),
                 _vm._m(1),
@@ -52555,7 +52568,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-envelope prefix grey-text" }),
                 _vm._v(" "),
                 _vm._m(2),
@@ -52583,7 +52596,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-user-secret prefix grey-text" }),
                 _vm._v(" "),
                 _vm._m(3),
@@ -52611,7 +52624,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-user-secret prefix grey-text" }),
                 _vm._v(" "),
                 _vm._m(4),
@@ -52639,7 +52652,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mb-4 cursor-hand" }, [
+              _c("div", { staticClass: "mb-1 cursor-hand" }, [
                 _vm.user.subscription === "Не подписан"
                   ? _c(
                       "span",
@@ -52739,11 +52752,7 @@ var staticRenderFns = [
       },
       [
         _vm._v("Логин\n                  "),
-        _c("span", { staticClass: "red-text star" }, [_vm._v("*")]),
-        _vm._v(" "),
-        _c("small", { staticClass: "text-muted" }, [
-          _vm._v("(латиница, цифры, нижнеее подчеркивание)")
-        ])
+        _c("span", { staticClass: "red-text star" }, [_vm._v("*")])
       ]
     )
   },

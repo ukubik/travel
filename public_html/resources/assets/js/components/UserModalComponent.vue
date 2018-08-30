@@ -10,10 +10,10 @@
         <div class="modal-body">
           <div class="row d-flex justify-content-center align-items-center">
 
-              <div class="col-3 text-center">
+              <div class="col-md-3 my-2 border-bottom text-center">
                 <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Добавить статью ( в разработке... )"></i>
               </div>
-              <div class="col-7 text-center">
+              <div class="col-md-7 my-2 border-bottom text-center">
                 <div class="row">
                   <div class="col">
                     <h5>{{ user.login }}</h5>
@@ -26,13 +26,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-1 text-center">
+              <div class="col-md-1 my-2 border-bottom text-center">
                 <a href="#" class="black-text" data-toggle="modal" data-target="#editProfile" @click="closeUserModal">
                   <i class="fa fa-cogs fa-3x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Редактировать профиль"></i>
                 </a>
               </div>
 
-            <div class="col-1 d-flex fustify-content-end">
+            <div class="col-md-1 my-2 border-bottom d-flex fustify-content-end">
               <button type="button" class="btn btn-outline-elegant" data-dismiss="modal">закрыть</button>
             </div>
 
