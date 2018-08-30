@@ -153,7 +153,7 @@ class ArticleController extends Controller
     public function published(Request $request)
     {
       $article = Article::whereId($request->id)->first();
-      // dd($article);
+      
       $this->validate($request, [
         'published' => 'required|string'
       ]);
@@ -175,7 +175,7 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         $article = Article::whereId($id)->first();
-        // dd($article);
+
         if($article && !$article->metatag && $article->comments->isEmpty()) {
           $article->delete();
         } else {

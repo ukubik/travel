@@ -1,16 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', 'IndexController@index')->name('index');
 // Show article
 Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
@@ -113,7 +102,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   ]);
   // Ресурс обработки комментариев к статьям
   Route::resource('/comment', 'Admin\CommentController', ['only' => ['index', 'update', 'destroy']]);
-  // Guext message Controller
+  // Guest message Controller
   Route::get('/get-messages', 'Admin\GuestMessageController@getMessages'); // Возвращает гостевые сообщения в компонент
   Route::delete('/destroy-all', 'Admin\GuestMessageController@destroyAll'); // удаление всех сообщений
   Route::resource('/guestmessage', 'Admin\GuestMessageController', ['only' => ['index', 'destroy']]);

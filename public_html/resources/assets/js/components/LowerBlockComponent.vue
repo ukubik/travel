@@ -3,7 +3,7 @@
   <div class="container white-text">
     <div class="row my-5 pt-5">
       <div class="col">
-        <h1 class="display-3"> Еще какой-то блок</h1>
+        <h1 class="display-3">Наши лучшие авторы</h1>
       </div>
     </div>
 
