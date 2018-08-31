@@ -48653,7 +48653,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -48694,7 +48694,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      article: {}
+    };
+  },
+  mounted: function mounted() {
+    this.getRndArt();
+  },
+
+
+  methods: {
+    getRndArt: function getRndArt() {
+      var _this = this;
+
+      axios.get('/rnd-article').then(function (response) {
+        _this.article = response.data;
+      });
+    }
+  }
+});
 
 /***/ }),
 /* 63 */
@@ -48704,53 +48724,44 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container white-text" }, [
-      _c("div", { staticClass: "row my-5 py-5" }, [
-        _c("div", { staticClass: "col text-center" }, [
-          _c("h1", { staticClass: "display-3" }, [
-            _vm._v("Тут надо придумать что-то")
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row my-5" }, [
-        _c("div", { staticClass: "col" }, [
-          _c("h3", { staticClass: "h3-responsive" }, [
-            _vm._v(
-              "\n        Lorem ipsum — dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.\n      "
-            )
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row my-5" }, [
-        _c("div", { staticClass: "col text-center" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-outline-white btn-lg waves-effect",
-              attrs: { href: "#", role: "button" }
-            },
-            [
-              _vm._v(" перейти\n        "),
-              _c("i", {
-                staticClass: "fa fa-angle-double-right fa-15x ml-2",
-                attrs: { "aria-hidden": "true" }
-              })
-            ]
-          )
+  return _c("div", { staticClass: "container white-text" }, [
+    _c("div", { staticClass: "row my-5 py-5" }, [
+      _c("div", { staticClass: "col text-center" }, [
+        _c("h1", { staticClass: "display-3" }, [
+          _vm._v(_vm._s(_vm.article.title))
         ])
       ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row my-5" }, [
+      _c("div", { staticClass: "col" }, [
+        _c("h3", { staticClass: "h3-responsive" }, [
+          _vm._v("\n        " + _vm._s(_vm.article.description) + "\n      ")
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row my-5" }, [
+      _c("div", { staticClass: "col text-center" }, [
+        _c(
+          "a",
+          {
+            staticClass: "btn btn-outline-white btn-lg waves-effect",
+            attrs: { href: "/article/" + _vm.article.id, role: "button" }
+          },
+          [
+            _vm._v(" перейти\n        "),
+            _c("i", {
+              staticClass: "fa fa-angle-double-right fa-15x ml-2",
+              attrs: { "aria-hidden": "true" }
+            })
+          ]
+        )
+      ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

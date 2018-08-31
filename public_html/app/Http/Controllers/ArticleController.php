@@ -29,4 +29,10 @@ class ArticleController extends Controller
           return $articles = null;
         }
     }
+
+    // Вывод в SecondComponent
+    public function rndArticle()
+    {
+       return Article::inRandomOrder()->first();
+    }
 }
