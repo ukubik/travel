@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -28,6 +29,22 @@ class UserController extends Controller
     // Update profile
     public function updateProfile(Request $request, User $user)
     {
+      // dump($request->avatar_path);
+      // dd(Auth::user()->avatar_path);
+      if($request->avatar_path !== null) {
+        $this->validate($request, [
+          'avatar_path' => 'required|image|max:200'
+        ]);
+        if(Auth::user()->avatar_path !== 'images/avatars/default.png') {
+          Storage::delete('public/' . Auth::user()->avatar_path);
+        }
+        
+        $path = $request->avatar_path->store('images/avatars', 'public');
+        $user->update([
+          'avatar_path' => $path
+        ]);
+      }
+
       if($request->login === Auth::user()->login && $request->email === Auth::user()->email) {
         $this->validate($request, [
           'password' => 'required|string|min:6|confirmed',
@@ -49,6 +66,8 @@ class UserController extends Controller
           'password' => 'required|string|min:6|confirmed',
         ]);
       }
+
+
       $user->update([
         'login' => $request->login,
         'email' => $request->email,

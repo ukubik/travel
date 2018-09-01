@@ -29,6 +29,13 @@
               </div>
 
               <div class="modal-body mx-3">
+                <div class="mb-1 text-center">
+                  <label for="file-upload" data-toggle="tooltip" data-placement="bottom" title="Изменить аватар (не более 200 Кб)">
+                    <img :src="'/public/storage/' + user.avatar_path" class="rounded-circle img-fluid cursor-hand" alt="Avatar" style="max-height:100px">
+                  </label>
+                  <input id="file-upload" type="file" ref="file" accept="image/*" v-on:change="handleFilesUpload()">
+                </div>
+
                 <div class="mb-1">
                   <i class="fa fa-user prefix grey-text"></i>
                   <label data-error="wrong" data-success="right" for="form9">Логин
@@ -88,6 +95,7 @@ export default {
         login: '',
         email: '',
       },
+      file: '',
     }
   },
 
@@ -112,14 +120,25 @@ export default {
       });
     },
 
+    handleFilesUpload(){
+      this.file = this.$refs.file.files[0];
+      console.log(this.file);
+    },
+
     updateProfile() {
-      axios.put('/user/update-profile/' + this.user.id, {
-        login: this.user.login,
-        email: this.user.email,
-        password: this.password,
-        password_confirmation: this.password_confirmation
+      let formData = new FormData();
+      formData.append('avatar_path', this.file);
+      formData.append('login', this.user.login);
+      formData.append('email', this.user.email);
+      formData.append('password', this.password);
+      formData.append('password_confirmation', this.password_confirmation);
+      axios.post('/user/profile/' + this.user.id,
+        formData, {
+          headers: {'Content-Type': 'multipart/form-data'}
       }).then(response => {
-        this.user = response.data
+        this.user = response.data;
+        this.password = '';
+        this.password_confirmation = '';
       }).catch(error => {
         this.showError = true;
         this.errors = _.flatten(_.toArray(error.response.data.errors));
@@ -143,7 +162,17 @@ export default {
 </script>
 
 <style lang="css">
+
 .cursor-hand:hover {
   cursor: pointer;
 }
+
+input[type="file"] {
+  display: none;
+}
+
+label {
+  margin-bottom: 0;
+}
+
 </style>

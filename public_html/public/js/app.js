@@ -51363,7 +51363,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -51447,7 +51447,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       axios.get('/user/get-role').then(function (response) {
         _this2.role = response.data;
-        console.log(_this2.role);
       });
     },
     closeUserModal: function closeUserModal() {
@@ -52314,7 +52313,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.cursor-hand:hover {\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.cursor-hand:hover {\n  cursor: pointer;\n}\ninput[type=\"file\"] {\n  display: none;\n}\nlabel {\n  margin-bottom: 0;\n}\n\n", ""]);
 
 // exports
 
@@ -52325,6 +52324,13 @@ exports.push([module.i, "\n.cursor-hand:hover {\n  cursor: pointer;\n}\n", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -52414,7 +52420,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       user: {
         login: '',
         email: ''
-      }
+      },
+      file: ''
     };
   },
   mounted: function mounted() {
@@ -52441,16 +52448,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         _this2.user = response.data;
       });
     },
+    handleFilesUpload: function handleFilesUpload() {
+      this.file = this.$refs.file.files[0];
+      console.log(this.file);
+    },
     updateProfile: function updateProfile() {
       var _this3 = this;
 
-      axios.put('/user/update-profile/' + this.user.id, {
-        login: this.user.login,
-        email: this.user.email,
-        password: this.password,
-        password_confirmation: this.password_confirmation
+      var formData = new FormData();
+      formData.append('avatar_path', this.file);
+      formData.append('login', this.user.login);
+      formData.append('email', this.user.email);
+      formData.append('password', this.password);
+      formData.append('password_confirmation', this.password_confirmation);
+      axios.post('/user/profile/' + this.user.id, formData, {
+        headers: { 'Content-Type': 'multipart/form-data' }
       }).then(function (response) {
         _this3.user = response.data;
+        _this3.password = '';
+        _this3.password_confirmation = '';
       }).catch(function (error) {
         _this3.showError = true;
         _this3.errors = _.flatten(_.toArray(error.response.data.errors));
@@ -52551,6 +52567,40 @@ var render = function() {
             _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "modal-body mx-3" }, [
+              _c("div", { staticClass: "mb-1 text-center" }, [
+                _c(
+                  "label",
+                  {
+                    attrs: {
+                      for: "file-upload",
+                      "data-toggle": "tooltip",
+                      "data-placement": "bottom",
+                      title: "Изменить аватар (не более 200 Кб)"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "rounded-circle img-fluid cursor-hand",
+                      staticStyle: { "max-height": "100px" },
+                      attrs: {
+                        src: "/public/storage/" + _vm.user.avatar_path,
+                        alt: "Avatar"
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("input", {
+                  ref: "file",
+                  attrs: { id: "file-upload", type: "file", accept: "image/*" },
+                  on: {
+                    change: function($event) {
+                      _vm.handleFilesUpload()
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
               _c("div", { staticClass: "mb-1" }, [
                 _c("i", { staticClass: "fa fa-user prefix grey-text" }),
                 _vm._v(" "),

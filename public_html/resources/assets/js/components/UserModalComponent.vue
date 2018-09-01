@@ -67,7 +67,6 @@ export default {
     getRole() {
       axios.get('/user/get-role').then(response => {
         this.role = response.data;
-        console.log(this.role);
       });
     },
 

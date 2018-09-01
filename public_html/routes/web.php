@@ -37,7 +37,7 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
   // Получение роли пользователя в компонент модального окна для идентификации и вывода логина
   Route::get('/get-role', 'UserController@getRole');
   // Редактирование профиля юзверя
-  Route::put('/update-profile/{user}', 'UserController@updateProfile');
+  Route::post('/profile/{user}', 'UserController@updateProfile');
   // Подписка
   Route::put('/subscrybe/{user}', 'UserController@subscrybe');
 });
