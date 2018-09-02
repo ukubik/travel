@@ -47808,7 +47808,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.btn .fa-15x {\n  font-size: 1.5em !important;\n}\n.slogan {\n  z-index: 0;\n  position: absolute;\n  width: 100%;\n  top: 20%;\n  left: 4%;\n}\n.globus {\n  z-index: 0;\n  position: absolute;\n  width: 20%;\n  top: 20%;\n  right: 20%;\n  opacity: 0.7;\n}\n.d-block {\n  min-height: 300px;\n  overflow: hidden;\n}\n.rgba-black-strong, .rgba-black-strong::after {\n  background-color: rgba(0,0,0,.29);\n}\n.carousel-control-prev, .carousel-control-next {\n  z-index: 999;\n}\n.carousel-control-prev-icon, .carousel-control-next-icon {\n  width: 100px !important;\n  height: 100px !important;\n}\n", ""]);
+exports.push([module.i, "\n.btn .fa-15x {\r\n  font-size: 1.5em !important;\n}\n.slogan {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 100%;\r\n  top: 20%;\r\n  left: 4%;\n}\n.globus {\r\n  z-index: 0;\r\n  position: absolute;\r\n  width: 20%;\r\n  top: 20%;\r\n  right: 20%;\r\n  opacity: 0.7;\n}\n.d-block {\r\n  min-height: 300px;\r\n  overflow: hidden;\n}\n.rgba-black-strong, .rgba-black-strong::after {\r\n  background-color: rgba(0,0,0,.29);\n}\n.carousel-control-prev, .carousel-control-next {\r\n  z-index: 999;\n}\n.carousel-control-prev-icon, .carousel-control-next-icon {\r\n  width: 100px !important;\r\n  height: 100px !important;\n}\r\n", ""]);
 
 // exports
 
@@ -48237,7 +48237,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n#manned-flight {\n  position: relative;\n  top: 0px;\n  min-height: 400px;\n}\narticle {\n  display: block;\n}\n.parallax-bg {\n  z-index: -1;\n  position: relative;\n  top: 0;\n  width: 100%;\n}\n.bg-1 {\n  position: relative;\n  opacity: 0.2;\n}\n.ct-content {\n  background-color: #fff;\n  max-width: 100%;\n  height: auto;\n  position: relative;\n  bottom: 580px;\n}\n", ""]);
+exports.push([module.i, "\n#manned-flight {\r\n  position: relative;\r\n  top: 0px;\r\n  min-height: 400px;\n}\narticle {\r\n  display: block;\n}\n.parallax-bg {\r\n  z-index: -1;\r\n  position: relative;\r\n  top: 0;\r\n  width: 100%;\n}\n.bg-1 {\r\n  position: relative;\r\n  opacity: 0.2;\n}\n.ct-content {\r\n  background-color: #fff;\r\n  max-width: 100%;\r\n  height: auto;\r\n  position: relative;\r\n  bottom: 580px;\n}\r\n", ""]);
 
 // exports
 
@@ -48424,7 +48424,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.blockquote {\n  border-left: .25rem solid #e91e63 !important;\n}\n", ""]);
+exports.push([module.i, "\n.blockquote {\r\n  border-left: .25rem solid #e91e63 !important;\n}\r\n", ""]);
 
 // exports
 
@@ -48857,7 +48857,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.hoverable:hover {\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.hoverable:hover {\r\n  cursor: pointer;\n}\r\n", ""]);
 
 // exports
 
@@ -49069,7 +49069,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active {\n  -webkit-transition: all .3s ease;\n  transition: all .3s ease;\n}\n.slide-fade-leave-active {\n  -webkit-transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-fade-enter, .slide-fade-leave-to {\n  -webkit-transform: translateY(300px);\n          transform: translateY(300px);\n  opacity: 0;\n}\n\n/* .slide-back-enter-active {\n  transition: all .3s ease;\n}\n\n.slide-back-leave-active {\n  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n\n.slide-back-enter, .slide-back-leave-to {\n  transform: translateX(300px);\n  opacity: 1;\n} */\n#art-prev {\n  overflow: hidden;\n  padding-right: 0px;\n  padding-left: 0px;\n  z-index: 1;\n}\n#art-prev:hover {\n  cursor: pointer;\n}\n.img-preview {\n  height: 100%;\n}\n.preview-title {\n  position: absolute;\n  top: 40%;\n  left: 10%;\n  text-transform: uppercase;\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  /* left: -100%; */\n  top:0;\n  background-color: #3E4551;\n  color: white;\n  z-index: 0;\n}\n\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active {\r\n  -webkit-transition: all .3s ease;\r\n  transition: all .3s ease;\n}\n.slide-fade-leave-active {\r\n  -webkit-transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);\r\n  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-fade-enter, .slide-fade-leave-to {\r\n  -webkit-transform: translateY(300px);\r\n          transform: translateY(300px);\r\n  opacity: 0;\n}\r\n\r\n/* .slide-back-enter-active {\r\n  transition: all .3s ease;\r\n}\r\n\r\n.slide-back-leave-active {\r\n  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);\r\n}\r\n\r\n.slide-back-enter, .slide-back-leave-to {\r\n  transform: translateX(300px);\r\n  opacity: 1;\r\n} */\n#art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\r\n  z-index: 1;\n}\n#art-prev:hover {\r\n  cursor: pointer;\n}\n.img-preview {\r\n  height: 100%;\n}\n.preview-title {\r\n  position: absolute;\r\n  top: 40%;\r\n  left: 10%;\r\n  text-transform: uppercase;\r\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  /* left: -100%; */\r\n  top:0;\r\n  background-color: #3E4551;\r\n  color: white;\r\n  z-index: 0;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -49598,7 +49598,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active {\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease;\n}\n.slide-fade-leave-active {\n  -webkit-transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-fade-enter, .slide-fade-leave-to {\n  -webkit-transform: translateX(300px);\n          transform: translateX(300px);\n  opacity: 0;\n}\n.art-prev {\n  overflow: hidden;\n  padding-right: 0px;\n  padding-left: 0px;\n  min-height: 272px;\n  z-index: 1;\n}\n.art-prev:hover {\n  cursor: pointer;\n}\n.img-preview {\n  height: 100% !important;\n  vertical-align: middle;\n}\n.preview-title {\n  position: absolute;\n  top: 40%;\n  left: 10%;\n  text-transform: uppercase;\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top:0;\n  background-color: #3E4551;\n  color: white;\n  z-index: 0;\n}\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active {\r\n  -webkit-transition: all .2s ease;\r\n  transition: all .2s ease;\n}\n.slide-fade-leave-active {\r\n  -webkit-transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\r\n  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-fade-enter, .slide-fade-leave-to {\r\n  -webkit-transform: translateX(300px);\r\n          transform: translateX(300px);\r\n  opacity: 0;\n}\n.art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\r\n  min-height: 272px;\r\n  z-index: 1;\n}\n.art-prev:hover {\r\n  cursor: pointer;\n}\n.img-preview {\r\n  height: 100% !important;\r\n  vertical-align: middle;\n}\n.preview-title {\r\n  position: absolute;\r\n  top: 40%;\r\n  left: 10%;\r\n  text-transform: uppercase;\r\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  top:0;\r\n  background-color: #3E4551;\r\n  color: white;\r\n  z-index: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -50066,7 +50066,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.btn-outline-white {\n  /* z-index: 9999; */\n  border: 2px solid #ffffff !important;\n  border-radius: 25px;\n  background-color: rgba(255,255,255,.2) !important;\n  color: #ffffff !important;\n}\n.btn-outline-white:hover {\n  background-color: rgba(255,255,255,.7) !important;\n  color: rgb(233, 30, 99) !important;\n  border: 2px solid rgb(233, 30, 99) !important;\n}\n", ""]);
+exports.push([module.i, "\n.btn-outline-white {\r\n  /* z-index: 9999; */\r\n  border: 2px solid #ffffff !important;\r\n  border-radius: 25px;\r\n  background-color: rgba(255,255,255,.2) !important;\r\n  color: #ffffff !important;\n}\n.btn-outline-white:hover {\r\n  background-color: rgba(255,255,255,.7) !important;\r\n  color: rgb(233, 30, 99) !important;\r\n  border: 2px solid rgb(233, 30, 99) !important;\n}\r\n", ""]);
 
 // exports
 
@@ -51363,7 +51363,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -51374,6 +51374,8 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -51489,10 +51491,34 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "row d-flex justify-content-center align-items-center"
+                    "row d-flex justify-content-center align-items-center align-items-stretch"
                 },
                 [
-                  _vm._m(0),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-3 my-2 border-bottom text-center" },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "black-text",
+                          attrs: { href: "/user/new-autor/" + _vm.user.id }
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "fa fa-pencil-square-o fa-3x cursor-hand",
+                            attrs: {
+                              "aria-hidden": "true",
+                              "data-toggle": "tooltip",
+                              "data-placement": "bottom",
+                              title: "Добавить статью ( в разработке... )"
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  ),
                   _vm._v(" "),
                   _c(
                     "div",
@@ -51561,7 +51587,7 @@ var render = function() {
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(1)
+                  _vm._m(0)
                 ]
               )
             ])
@@ -51572,26 +51598,6 @@ var render = function() {
   )
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "col-md-3 my-2 border-bottom text-center" },
-      [
-        _c("i", {
-          staticClass: "fa fa-pencil-square-o fa-3x",
-          attrs: {
-            "aria-hidden": "true",
-            "data-toggle": "tooltip",
-            "data-placement": "bottom",
-            title: "Добавить статью ( в разработке... )"
-          }
-        })
-      ]
-    )
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -52313,7 +52319,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.cursor-hand:hover {\n  cursor: pointer;\n}\ninput[type=\"file\"] {\n  display: none;\n}\nlabel {\n  margin-bottom: 0;\n}\n\n", ""]);
+exports.push([module.i, "\ninput[type=\"file\"] {\r\n  display: none;\n}\nlabel {\r\n  margin-bottom: 0;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -53716,7 +53722,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.hand:hover {\n  cursor: pointer;\n  background-color: #000;\n}\n.text-content {\n  text-transform: uppercase;\n  font-size: 14px;\n  font-weight: 4400;\n  color: #61CBE2;\n}\n.custom-file-label::after {\n  content: '\\41E\\431\\437\\43E\\440' !important;\n}\n/* .fade-enter-active, .fade-leave-active {\n  transition: opacity .5s;\n}\n.fade-enter, .fade-leave-to {\n  opacity: 0;\n} */\n", ""]);
+exports.push([module.i, "\n.hand:hover {\r\n  cursor: pointer;\r\n  background-color: #000;\n}\n.text-content {\r\n  text-transform: uppercase;\r\n  font-size: 14px;\r\n  font-weight: 4400;\r\n  color: #61CBE2;\n}\n.custom-file-label::after {\r\n  content: '\\41E\\431\\437\\43E\\440' !important;\n}\r\n/* .fade-enter-active, .fade-leave-active {\r\n  transition: opacity .5s;\r\n}\r\n.fade-enter, .fade-leave-to {\r\n  opacity: 0;\r\n} */\r\n", ""]);
 
 // exports
 
@@ -56138,7 +56144,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.pagination .page-item.active .page-link {\n\tcolor: red;\n}\n", ""]);
+exports.push([module.i, "\n.pagination .page-item.active .page-link {\r\n\tcolor: red;\n}\r\n", ""]);
 
 // exports
 
@@ -56426,7 +56432,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.pagination .page-item.active .page-link {\n\tbackground-color: red;\n}\n", ""]);
+exports.push([module.i, "\n.pagination .page-item.active .page-link {\r\n\tbackground-color: red;\n}\r\n", ""]);
 
 // exports
 
@@ -56493,44 +56499,44 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-		data: function data() {
-				return {
-						messages: {},
-						showTable: 0
-				};
+	data: function data() {
+		return {
+			messages: {},
+			showTable: 0
+		};
+	},
+	created: function created() {
+		this.getResults();
+	},
+
+
+	methods: {
+		getResults: function getResults(page) {
+			var _this = this;
+
+			if (typeof page === 'undefined') {
+				page = 1;
+			}
+			axios.get('get-messages?page=' + page).then(function (response) {
+				_this.showTable = response.data.data.length;
+				return _this.messages = response.data;
+			});
 		},
-		created: function created() {
-				this.getResults();
+		destroyMessage: function destroyMessage(id) {
+			var _this2 = this;
+
+			axios.delete('/admin/guestmessage/' + id).then(function (response) {
+				_this2.getResults();
+			});
 		},
+		destroyAll: function destroyAll() {
+			var _this3 = this;
 
-
-		methods: {
-				getResults: function getResults(page) {
-						var _this = this;
-
-						if (typeof page === 'undefined') {
-								page = 1;
-						}
-						axios.get('get-messages?page=' + page).then(function (response) {
-								_this.showTable = response.data.data.length;
-								return _this.messages = response.data;
-						});
-				},
-				destroyMessage: function destroyMessage(id) {
-						var _this2 = this;
-
-						axios.delete('/admin/guestmessage/' + id).then(function (response) {
-								_this2.getResults();
-						});
-				},
-				destroyAll: function destroyAll() {
-						var _this3 = this;
-
-						axios.delete('/admin/destroy-all').then(function (response) {
-								_this3.getResults();
-						});
-				}
+			axios.delete('/admin/destroy-all').then(function (response) {
+				_this3.getResults();
+			});
 		}
+	}
 });
 
 /***/ }),

@@ -8,10 +8,12 @@
 
       <div class="modal-content">
         <div class="modal-body">
-          <div class="row d-flex justify-content-center align-items-center">
+          <div class="row d-flex justify-content-center align-items-center align-items-stretch">
 
               <div class="col-md-3 my-2 border-bottom text-center">
-                <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Добавить статью ( в разработке... )"></i>
+                <a :href="'/user/new-autor/' + user.id" class="black-text">                
+                  <i class="fa fa-pencil-square-o fa-3x cursor-hand" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Добавить статью ( в разработке... )"></i>
+                </a>
               </div>
               <div class="col-md-7 my-2 border-bottom text-center">
                 <div class="row">

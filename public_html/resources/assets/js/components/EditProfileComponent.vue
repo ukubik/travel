@@ -163,10 +163,6 @@ export default {
 
 <style lang="css">
 
-.cursor-hand:hover {
-  cursor: pointer;
-}
-
 input[type="file"] {
   display: none;
 }

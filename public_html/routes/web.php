@@ -31,6 +31,8 @@ Route::group(['prefix' => 'comment', 'middleware' => ['auth']], function() {
   Route::delete('/destroy/{comment}', 'CommentController@destroy');
 });
 
+
+
 Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
   // Получение пользователя в компонент модального окна для идентификации и вывода логина
   Route::get('/get-user', 'UserController@getUser');
@@ -40,6 +42,8 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
   Route::post('/profile/{user}', 'UserController@updateProfile');
   // Подписка
   Route::put('/subscrybe/{user}', 'UserController@subscrybe');
+  // Подача заявки на размещение статьи
+  Route::get('/new-autor/{user}', 'Autor\ArticleController@newAutor');
 });
 
 Auth::routes();

@@ -64,3 +64,12 @@ ul {margin-left: -1rem;}
     padding-right: 0.25rem !important;
     padding-left: 0.25rem !important;
 } */
+
+.cursor-hand:hover {
+  cursor: pointer;
+}
+
+.stars {
+  font-size: 200%;
+  padding-top: 50%;
+}
