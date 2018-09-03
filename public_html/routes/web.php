@@ -43,7 +43,9 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
   // Подписка
   Route::put('/subscrybe/{user}', 'UserController@subscrybe');
   // Подача заявки на размещение статьи
-  Route::get('/new-autor/{user}', 'Autor\ArticleController@newAutor');
+  Route::get('/new-autor/{user}', 'Autor\ArticleController@newAuthor');
+  //Заявка на асторство, прием сервером
+  Route::post('/new-autor', 'Autor\ArticleController@newClaim')->name('user.new.autor');
 });
 
 Auth::routes();

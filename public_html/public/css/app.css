@@ -10485,7 +10485,6 @@ a.text-dark:focus {
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   z-index: 9999;
-  padding-left: 0;
 }
 
 .fade-enter-active,
