@@ -6,6 +6,7 @@ use App\User;
 use App\Article;
 use App\ClaimAuthor;
 use Illuminate\Http\Request;
+use App\Events\ClaimNewAuthor;
 use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
@@ -26,12 +27,12 @@ class ArticleController extends Controller
       if($user->claim) return redirect()->route('index')->with(['errors' => ['Вы уже подавали заявку']]);
       $this->validate($request, [
         'user_id' => 'required|integer',
-        'theme' => 'required|integer|max:150',
+        'theme' => 'required|string|max:150',
         'description' => 'required|string|max:1000'
       ]);
 
       $claim = ClaimAuthor::create($request->all());
-
+      event(new ClaimNewAuthor($claim));
       return redirect()->route('index')->with(['message' => 'Ваша заявка принята. Вы будете уведомлены о результате рассмотрения. Спасибо.']);
     }
 }

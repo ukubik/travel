@@ -25,6 +25,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\NewCommentArticle' => [
           'App\Listeners\NewCommentAddedNotififcation',
         ],
+        'App\Events\ClaimNewAuthor' => [
+          'App\Listeners\ClaimNewAuthorNotification'
+        ],
     ];
 
     /**

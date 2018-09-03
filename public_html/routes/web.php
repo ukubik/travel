@@ -115,4 +115,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   Route::get('/get-messages', 'Admin\GuestMessageController@getMessages'); // Возвращает гостевые сообщения в компонент
   Route::delete('/destroy-all', 'Admin\GuestMessageController@destroyAll'); // удаление всех сообщений
   Route::resource('/guestmessage', 'Admin\GuestMessageController', ['only' => ['index', 'destroy']]);
+
+  // Ресурс обработки заявок
+  Route::resource('/claims', 'Admin\ClaimAuthorController', ['only' => ['index', 'update', 'destroy']]);
 });
