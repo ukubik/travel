@@ -28,6 +28,9 @@
                         <a class="nav-link" href="{{ route('admin.index') }}">{{ __('HomeAdmin') }}</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('users.index') }}">{{ __('Users') }}</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('categories.index') }}">{{ __('Categories') }}</a>
                     </li>
                     <li class="nav-item dropdown">

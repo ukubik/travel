@@ -61,7 +61,7 @@ class ArticlesController extends Controller
         'content' => $request->content
       ]);
       //
-      return redirect()->route('userarticle.index')->with(['message' => 'После проверки статьи администрацией, она будет опубликована. Спасибо']);
+      return redirect()->route('userarticle.index')->with(['message' => 'Ваша статья успешно создана. После модерации она будет опубликована.']);
     }
 
     /**

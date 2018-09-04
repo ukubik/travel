@@ -15,7 +15,13 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.users');
+    }
+
+
+    public function getUsers()
+    {
+      return User::all();
     }
 
 
@@ -50,7 +56,11 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $this->validate($request, [
+          'status' => 'required|string'
+        ]);
+        $user->update($request->all());
+        return User::all();
     }
 
     /**

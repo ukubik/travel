@@ -123,5 +123,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   Route::get('/get-claims', 'Admin\ClaimAuthorController@getClaims'); // получение заявок в компоненте
   Route::resource('/claims', 'Admin\ClaimAuthorController', ['only' => ['index', 'update', 'destroy']]);
   // Ресурс обработки юзеров
+  // Получение юзеров в компонент
+  Route::get('/get-users', 'Admin\UserController@getUsers');
   Route::resource('/users', 'Admin\UserController', ['except' => ['create', 'store']]);
 });
