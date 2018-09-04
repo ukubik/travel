@@ -51364,7 +51364,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -51375,6 +51375,9 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
 //
 //
 //
@@ -51499,25 +51502,49 @@ var render = function() {
                     "div",
                     { staticClass: "col-md-3 my-2 border-bottom text-center" },
                     [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "black-text",
-                          attrs: { href: "/user/new-autor/" + _vm.user.id }
-                        },
-                        [
-                          _c("i", {
-                            staticClass:
-                              "fa fa-pencil-square-o fa-3x cursor-hand",
-                            attrs: {
-                              "aria-hidden": "true",
-                              "data-toggle": "tooltip",
-                              "data-placement": "bottom",
-                              title: "Добавить статью ( в разработке... )"
-                            }
-                          })
-                        ]
-                      )
+                      _vm.user.role_id === 2
+                        ? _c(
+                            "a",
+                            {
+                              staticClass: "black-text",
+                              attrs: { href: "/user/new-autor/" + _vm.user.id }
+                            },
+                            [
+                              _c("i", {
+                                staticClass:
+                                  "fa fa-pencil-square-o fa-3x cursor-hand",
+                                attrs: {
+                                  "aria-hidden": "true",
+                                  "data-toggle": "tooltip",
+                                  "data-placement": "bottom",
+                                  title: "Добавить статью ( в разработке... )"
+                                }
+                              })
+                            ]
+                          )
+                        : _vm._e(),
+                      _vm._v(" "),
+                      _vm.user.role_id === 3
+                        ? _c(
+                            "a",
+                            {
+                              staticClass: "black-text",
+                              attrs: { href: "/userarticle" }
+                            },
+                            [
+                              _c("i", {
+                                staticClass:
+                                  "fa fa-pencil-square-o fa-3x cursor-hand",
+                                attrs: {
+                                  "aria-hidden": "true",
+                                  "data-toggle": "tooltip",
+                                  "data-placement": "bottom",
+                                  title: "Добавить статью ( в разработке... )"
+                                }
+                              })
+                            ]
+                          )
+                        : _vm._e()
                     ]
                   ),
                   _vm._v(" "),

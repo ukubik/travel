@@ -48,6 +48,9 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
   Route::post('/new-autor', 'Autor\ArticleController@newClaim')->name('user.new.autor');
 });
 
+// Ресурс для работы со статьями авторов
+Route::resource('/userarticle', 'Autor\ArticlesController')->middleware(['auth', 'author']);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

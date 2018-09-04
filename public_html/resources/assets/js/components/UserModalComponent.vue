@@ -11,7 +11,10 @@
           <div class="row d-flex justify-content-center align-items-center align-items-stretch">
 
               <div class="col-md-3 my-2 border-bottom text-center">
-                <a :href="'/user/new-autor/' + user.id" class="black-text">                
+                <a :href="'/user/new-autor/' + user.id" class="black-text" v-if="user.role_id === 2">
+                  <i class="fa fa-pencil-square-o fa-3x cursor-hand" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Добавить статью ( в разработке... )"></i>
+                </a>
+                <a href="/userarticle" class="black-text" v-if="user.role_id === 3">                
                   <i class="fa fa-pencil-square-o fa-3x cursor-hand" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Добавить статью ( в разработке... )"></i>
                 </a>
               </div>

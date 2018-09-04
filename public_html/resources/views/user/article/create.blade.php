@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-  <div class="row my-2">
+  <div class="row my-5 pt-5">
     <div class="col">
       <div class="alert alert-dark">
         <b> <ins>Правила написания статьи:</ins> </b>
@@ -10,66 +10,53 @@
     </div>
   </div>
 <hr>
-<form class="" action="{{ route('userarticle.store') }}" method="post">
+<form action="{{ route('userarticle.store') }}" method="post">
   {{ csrf_field() }}
-  <div class="row">
-    <div class="col">
-      @if(isset($groups) && $groups->isNotEmpty())
-      <label for="article_group">Выберите раздел <span class="red-text">*</span> </label>
-      <select class="form-control form-control-sm" id="article_group" name="article_group_id">
-        @foreach($groups as $group)
-        <option value="{{ $group->id }}">{{ $group->name }}</option>
+  <div class="row mb-2">
+    <div class="col-md-4">
+      <label for="cat-id"> <small>Выберите категорию статьи</small> <i class="fa fa-exclamation ml-2 red-text" aria-hidden="true"></i> </label>
+      <select class="form-control form-control-sm" name="category_id" value="{{ old('category_id') }}">
+        @foreach($categories as $category)
+        <option value="{{ $category->id }}">{{ $category->header }}</option>
         @endforeach
       </select>
-      @endif
     </div>
-    <div class="col">
-      <label for="header">Заголовок статьи <span class="red-text">*</span> </label>
-      <input type="text" class="form-control form-control-sm" name="header" id="header" value="{{ old('header') }}" required>
+    <div class="col-md-4">
+      <label for="article-title"> <small>Введите заголовок статьи</small> <i class="fa fa-exclamation ml-2 red-text" aria-hidden="true"></i> </label>
+      <input type="text" class="form-control form-control-sm" name="art_title" value="{{ old('art_title') }}">
     </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col">
-      <label for="Textarea2">Краткое содержание <span class="red-text">*</span> </label>
-      <textarea class="form-control" name="description" id="Textarea2" rows="2" required>{{ old('description') }}</textarea>
+    <div class="col-md-4">
+      <label for="description"> <small>Краткое содержание статьи <span class="text-muted">( макс. 120 символов )</span> </small> <i class="fa fa-exclamation ml-2 red-text" aria-hidden="true"></i></label>
+      <textarea name="description" rows="3" class="form-control form-control-sm">{{ old('description') }}</textarea>
     </div>
   </div>
-  <hr>
-  <div class="row my-3">
-    <div class="col">
-      <textarea name="content" id="editor1" rows="100">{{ old('content') }}</textarea>
-    </div>
-  </div>
-  <div class="row mb-4">
-    <div class="col">
-      <a href="{{ URL::previous() }}" class="btn btn-sm btn-outline-warning rounded">
-        <i class="fa fa-caret-square-o-left mr-2 warning-text" aria-hidden="true"></i>отмена</a>
-    </div>
-    <div class="col d-flex justify-content-end">
-      <button type="submit" class="btn btn-sm btn-outline-indigo rounded">Сохранить</button>
-    </div>
-  </div>
-</form>
 
+  <div class="row mb-3">
+    <div class="col-md-12">
+     <textarea id="editor" name="content">{{ old('content') }}</textarea>
+   </div>
+ </div>
+
+ <div class="row pb-4">
+   <div class="col d-flex justify-content-end">
+     <button type="submit" class="btn btn-success waves-effect border rounded">сохранить</button>
+   </div>
+ </div>
+</form>
 </div>
 
 @endsection
 
-@push('script')
-<script type="text/javascript" src="{{ asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
-<!-- <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script> -->
+@push('scripts')
+<script src="{{ asset('/ckeditor/ckeditor.js') }}" type="text/javascript" charset="utf-8" ></script>
 <script>
-  var options = {
-    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
-    // extraPlugins: 'bootstrapVisibility',
-    // extraPlugins: 'justify',
-  };
+var options = {
+  filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+  filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+  filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+  filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token=',
+};
 
-  var editor = CKEDITOR.replace('editor1', options);
-
+var editor = CKEDITOR.replace( 'editor', options);
 </script>
 @endpush

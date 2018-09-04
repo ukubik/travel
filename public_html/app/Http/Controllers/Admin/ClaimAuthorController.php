@@ -36,12 +36,21 @@ class ClaimAuthorController extends Controller
     public function update(Request $request, $id)
     {
         $claimAuthor = ClaimAuthor::whereId($id)->first();
-        // dd($claimAuthor);
+        // dd($claimAuthor->user->role->name);
         $this->validate($request, [
           'result' => 'required|string|max:100'
         ]);
-
         $claimAuthor->update($request->all());
+        if($request->result === 'Удовлетворена' && $claimAuthor->user->role->name !== 'Администратор') {
+            $claimAuthor->user->update([
+              'role_id' => 3
+            ]);
+        } elseif($request->result === 'Отклонена' && $claimAuthor->user->role->name !== 'Администратор') {
+          $claimAuthor->user->update([
+            'role_id' => 2
+          ]);
+        }
+
     }
 
     /**

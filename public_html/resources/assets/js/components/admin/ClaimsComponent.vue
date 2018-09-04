@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
 
   <div class="row mb-3">
 
