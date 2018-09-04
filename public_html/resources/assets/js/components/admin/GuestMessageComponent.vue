@@ -43,7 +43,7 @@
     <div class="row mt-5 pt-5" v-else>
       <div class="col">
         <div class="alert alert-dark">
-          Сообщений не обнаружено...
+          Сообщения не найдены...
         </div>
       </div>
     </div>

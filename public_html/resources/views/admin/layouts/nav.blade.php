@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-light bg-grey z-depth-3">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand white-text" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
@@ -28,16 +28,7 @@
                         <a class="nav-link" href="{{ route('admin.index') }}">{{ __('HomeAdmin') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.images.index') }}">{{ __('Images') }}</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('categories.index') }}">{{ __('Categories') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('comment.index') }}">{{ __('Comments') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('guestmessage.index') }}">{{ __('Messages') }}</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -51,7 +42,18 @@
                             @endif
                         </div>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('comment.index') }}">{{ __('Comments') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('guestmessage.index') }}">{{ __('Messages') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('claims.index') }}">{{ __('Claims') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.images.index') }}">{{ __('Images') }}</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->login }} <span class="caret"></span>

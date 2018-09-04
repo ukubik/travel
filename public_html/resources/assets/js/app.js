@@ -41,6 +41,7 @@ window.Vue = require('vue');
   Vue.component('new-category', require('./components/admin/NewCategoryComponent.vue'));
   Vue.component('comments-component', require('./components/admin/CommentsComponent.vue'));
   Vue.component('guest-message', require('./components/admin/GuestMessageComponent.vue'));
+  Vue.component('claims-component', require('./components/admin/ClaimsComponent.vue'));
 
 const app = new Vue({
     el: '#app'

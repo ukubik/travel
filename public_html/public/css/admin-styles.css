@@ -6,6 +6,14 @@
   background-color: rgba(55, 71, 79, 0.7);
 }
 
+.bg-red {
+  background-color: rgb(241, 18, 18);
+}
+
+.bg-green {
+  background-color: rgb(42, 249, 119);
+}
+
 .navbar.navbar-light .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link {
     color: #fff;
   }

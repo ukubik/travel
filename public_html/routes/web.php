@@ -117,5 +117,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   Route::resource('/guestmessage', 'Admin\GuestMessageController', ['only' => ['index', 'destroy']]);
 
   // Ресурс обработки заявок
+  Route::get('/get-claims', 'Admin\ClaimAuthorController@getClaims'); // получение заявок в компоненте
   Route::resource('/claims', 'Admin\ClaimAuthorController', ['only' => ['index', 'update', 'destroy']]);
+  // Ресурс обработки юзеров
+  Route::resource('/users', 'Admin\UserController', ['except' => ['create', 'store']]);
 });

@@ -14298,7 +14298,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(154);
+module.exports = __webpack_require__(159);
 
 
 /***/ }),
@@ -14348,6 +14348,7 @@ Vue.component('article-component', __webpack_require__(134));
 Vue.component('new-category', __webpack_require__(139));
 Vue.component('comments-component', __webpack_require__(144));
 Vue.component('guest-message', __webpack_require__(149));
+Vue.component('claims-component', __webpack_require__(154));
 
 var app = new Vue({
   el: '#app'
@@ -56659,7 +56660,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col" }, [
       _c("div", { staticClass: "alert alert-dark" }, [
-        _vm._v("\n        Сообщений не обнаружено...\n      ")
+        _vm._v("\n        Сообщения не найдены...\n      ")
       ])
     ])
   }
@@ -56675,6 +56676,646 @@ if (false) {
 
 /***/ }),
 /* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(155)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(157)
+/* template */
+var __vue_template__ = __webpack_require__(158)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/admin/ClaimsComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6d86d0c2", Component.options)
+  } else {
+    hotAPI.reload("data-v-6d86d0c2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 155 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(156);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("313041ae", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6d86d0c2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ClaimsComponent.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6d86d0c2\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ClaimsComponent.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 156 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 157 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      claims: [],
+      user: {},
+      showTable: 0,
+      showError: false,
+      errors: [],
+      showMessage: true,
+      messages: []
+    };
+  },
+  created: function created() {
+    this.getResults();
+  },
+
+
+  methods: {
+    getResults: function getResults(page) {
+      var _this = this;
+
+      if (typeof page === 'undefined') {
+        page = 1;
+      }
+      axios.get('/admin/get-claims?page=' + page).then(function (response) {
+        _this.showTable = response.data.data.length;
+        // console.log(response.data);
+        return _this.claims = response.data;
+      });
+    },
+    getUser: function getUser(id) {
+      var _this2 = this;
+
+      axios.get('/admin/users/' + id).then(function (response) {
+        _this2.user = response.data;
+      });
+    },
+    updateClaim: function updateClaim(id, result) {
+      var _this3 = this;
+
+      axios.put('/admin/claims/' + id, {
+        result: result
+      }).then(function (response) {
+        _this3.getResults();
+      }).catch(function (error) {
+        _this3.showError = true;
+        _this3.errors = _.flatten(_.toArray(error.response.data.errors));
+        _this3.hiddenTimeOutErr();
+      });
+    },
+
+
+    //скрытие окна ошибки
+    hiddenErr: function hiddenErr() {
+      this.showError = false;
+    },
+    hiddenTimeOutErr: function hiddenTimeOutErr() {
+      var _this4 = this;
+
+      setTimeout(function () {
+        _this4.showError = false;
+      }, 5000);
+    },
+
+    //скрытие окна уведомления
+    hiddenMessage: function hiddenMessage() {
+      this.showMessage = false;
+    },
+    hiddenTimeOutMess: function hiddenTimeOutMess() {
+      var _this5 = this;
+
+      setTimeout(function () {
+        _this5.showMessage = false;
+      }, 5000);
+    }
+  }
+});
+
+/***/ }),
+/* 158 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "row mb-3" },
+    [
+      _c("transition", { attrs: { name: "fade" } }, [
+        this.errors.length > 0
+          ? _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.showError,
+                    expression: "showError"
+                  }
+                ],
+                staticClass: "alert alert-danger z-depth-3",
+                attrs: { id: "alert" }
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "close",
+                    attrs: { type: "button", "aria-label": "Close" },
+                    on: { click: _vm.hiddenErr }
+                  },
+                  [
+                    _c("span", { attrs: { "aria-hidden": "true" } }, [
+                      _vm._v("×")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  _vm._l(this.errors, function(error) {
+                    return _c("li", [
+                      _vm._v(
+                        "\n              " + _vm._s(error) + "\n          "
+                      )
+                    ])
+                  })
+                )
+              ]
+            )
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c("transition", { attrs: { name: "fade" } }, [
+        this.messages.length > 0
+          ? _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.showMessage,
+                    expression: "showMessage"
+                  }
+                ],
+                staticClass: "alert alert-success z-depth-3",
+                attrs: { id: "alert" }
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "close",
+                    attrs: { type: "button", "aria-label": "Close" },
+                    on: { click: _vm.hiddenMessage }
+                  },
+                  [
+                    _c("span", { attrs: { "aria-hidden": "true" } }, [
+                      _vm._v("×")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  _vm._l(this.messages, function(message) {
+                    return _c("li", [
+                      _vm._v(
+                        "\n              " + _vm._s(message) + "\n          "
+                      )
+                    ])
+                  })
+                )
+              ]
+            )
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col" }, [
+        _vm.showTable > 0
+          ? _c(
+              "div",
+              { staticClass: "table-responsive z-depth-2" },
+              [
+                _c(
+                  "table",
+                  { staticClass: "table table-sm table-bordered mb-0" },
+                  [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.claims.data, function(claim) {
+                        return _c("tr", [
+                          _c(
+                            "td",
+                            {
+                              attrs: {
+                                "data-toggle": "modal",
+                                "data-target": "#basicExampleModal"
+                              }
+                            },
+                            [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "font-weight-bold blue-text",
+                                  attrs: {
+                                    href: "#",
+                                    "data-toggle": "tooltip",
+                                    "data-placement": "bottom",
+                                    title: "Посмотреть данные пользователя"
+                                  },
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      _vm.getUser(claim.user_id)
+                                    }
+                                  }
+                                },
+                                [_c("ins", [_vm._v(_vm._s(claim.theme))])]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(claim.description))]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            {
+                              staticClass: "font-weight-bold text-center",
+                              class: {
+                                "bg-red": claim.result === "Отклонена",
+                                "bg-green": claim.result === "Удовлетворена"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(claim.result) +
+                                  "\n            "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("td", { staticClass: "text-center" }, [
+                            claim.result === "Рассматривается" ||
+                            claim.result === "Отклонена"
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-success px-3",
+                                    attrs: {
+                                      "data-toggle": "tooltip",
+                                      "data-placement": "bottom",
+                                      title: "Удовлетворить"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.updateClaim(
+                                          claim.id,
+                                          "Удовлетворена"
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "fa fa-thumbs-o-up",
+                                      attrs: { "aria-hidden": "true" }
+                                    })
+                                  ]
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            claim.result === "Рассматривается" ||
+                            claim.result === "Удовлетворена"
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-danger px-3",
+                                    attrs: {
+                                      "data-toggle": "tooltip",
+                                      "data-placement": "bottom",
+                                      title: "Отклонить"
+                                    },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        _vm.updateClaim(claim.id, "Отклонена")
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "fa fa-thumbs-o-down",
+                                      attrs: { "aria-hidden": "true" }
+                                    })
+                                  ]
+                                )
+                              : _vm._e()
+                          ])
+                        ])
+                      })
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("pagination", {
+                  attrs: { data: _vm.claims },
+                  on: { "pagination-change-page": _vm.getResults }
+                })
+              ],
+              1
+            )
+          : _c("div", { staticClass: "alert alert-dark" }, [
+              _c("p", [_vm._v("Заявки не обнаружены...")])
+            ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "modal fade",
+            attrs: {
+              id: "basicExampleModal",
+              tabindex: "-1",
+              role: "dialog",
+              "aria-labelledby": "exampleModalLabel",
+              "aria-hidden": "true"
+            }
+          },
+          [
+            _c(
+              "div",
+              { staticClass: "modal-dialog", attrs: { role: "document" } },
+              [
+                _c("div", { staticClass: "modal-content" }, [
+                  _c("div", { staticClass: "modal-header" }, [
+                    _c(
+                      "h5",
+                      {
+                        staticClass: "modal-title",
+                        attrs: { id: "exampleModalLabel" }
+                      },
+                      [_vm._v("Пользователь " + _vm._s(_vm.user.login))]
+                    ),
+                    _vm._v(" "),
+                    _vm._m(1)
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "modal-body" }, [
+                    _c("p", [_vm._v("Email: " + _vm._s(_vm.user.email))]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("Зарегистрирован: " + _vm._s(_vm.user.created_at))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(2)
+                ])
+              ]
+            )
+          ]
+        )
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "black white-text text-center" }, [
+      _c("th", [_vm._v("Theme")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Description")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Статус")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Action")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-pink",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [_vm._v("Close")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6d86d0c2", module.exports)
+  }
+}
+
+/***/ }),
+/* 159 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

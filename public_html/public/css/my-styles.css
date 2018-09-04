@@ -73,3 +73,11 @@ ul {margin-left: -1rem;}
   font-size: 200%;
   padding-top: 50%;
 }
+
+.bg-red {
+  background-color: rgb(241, 18, 18);
+}
+
+.bg-green {
+  background-color: rgb(42, 249, 119);
+}

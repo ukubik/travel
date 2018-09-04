@@ -15,50 +15,15 @@ class ClaimAuthorController extends Controller
      */
     public function index()
     {
-        //
+        if(view()->exists('admin.claims.index')) {
+          return view('admin.claims.index');
+        }
+        abort(404);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function getClaims()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\ClaimAuthor  $claimAuthor
-     * @return \Illuminate\Http\Response
-     */
-    public function show(ClaimAuthor $claimAuthor)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\ClaimAuthor  $claimAuthor
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ClaimAuthor $claimAuthor)
-    {
-        //
+      return ClaimAuthor::orderBy('id', 'desc')->paginate(10);
     }
 
     /**
@@ -68,9 +33,15 @@ class ClaimAuthorController extends Controller
      * @param  \App\ClaimAuthor  $claimAuthor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ClaimAuthor $claimAuthor)
+    public function update(Request $request, $id)
     {
-        //
+        $claimAuthor = ClaimAuthor::whereId($id)->first();
+        // dd($claimAuthor);
+        $this->validate($request, [
+          'result' => 'required|string|max:100'
+        ]);
+
+        $claimAuthor->update($request->all());
     }
 
     /**
