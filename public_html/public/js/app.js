@@ -57069,7 +57069,7 @@ var render = function() {
         _vm.showTable > 0
           ? _c(
               "div",
-              { staticClass: "table-responsive z-depth-2" },
+              { staticClass: "table-responsive" },
               [
                 _c(
                   "table",
@@ -57197,6 +57197,7 @@ var render = function() {
                 ),
                 _vm._v(" "),
                 _c("pagination", {
+                  staticClass: "my-3",
                   attrs: { data: _vm.claims },
                   on: { "pagination-change-page": _vm.getResults }
                 })

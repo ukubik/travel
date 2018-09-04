@@ -23,7 +23,7 @@ class ClaimAuthorController extends Controller
 
     public function getClaims()
     {
-      return ClaimAuthor::orderBy('id', 'desc')->paginate(10);
+      return ClaimAuthor::orderBy('id', 'desc')->paginate(6);
     }
 
     /**

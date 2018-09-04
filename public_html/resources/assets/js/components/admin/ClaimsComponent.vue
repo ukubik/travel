@@ -31,7 +31,7 @@
 
     <div class="col">
 
-      <div class="table-responsive z-depth-2" v-if="showTable > 0">
+      <div class="table-responsive" v-if="showTable > 0">
         <table class="table table-sm table-bordered mb-0">
           <thead class="black white-text text-center">
             <!-- <th>Login</th>
@@ -76,7 +76,7 @@
             </tr>
           </tbody>
         </table>
-        <pagination :data="claims" v-on:pagination-change-page="getResults"></pagination>
+        <pagination :data="claims" v-on:pagination-change-page="getResults" class="my-3"></pagination>
       </div>
 
       <div class="alert alert-dark" v-else>
