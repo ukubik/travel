@@ -88,7 +88,10 @@ class ArticlesController extends Controller
      */
     public function edit(Article $userarticle)
     {
-        //
+        if($userarticle->published === 'Не опубликована') {
+          return view('user.article.edit', compact('userarticle'));
+        }
+        return redirect()->back()->with(['errors' => ['Ваша статья уже опубликована']]);
     }
 
     /**
@@ -100,7 +103,13 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, Article $userarticle)
     {
-        //
+        $this->validate($request, [
+          'content' => 'required|string'
+        ]);
+        $userarticle->update([
+          'content' => $request->content
+        ]);
+        return redirect()->route('userarticle.show', $userarticle);
     }
 
     /**
