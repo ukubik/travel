@@ -179,7 +179,7 @@ class ArticleController extends Controller
       $article->update([
         'category_id' => $request->category_id
       ]);
-      return redirect()->back()->with(['message' => 'Статья перенесена вновую категорию...']);
+      return redirect()->back()->with(['message' => 'Статья перенесена в новую категорию...']);
     }
 
     /**
