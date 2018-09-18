@@ -20,8 +20,9 @@ class ArticleController extends Controller
     public function index(Category $category)
     {
         //
+        $categories = Category::all();
         $articles = Article::whereCategoryId($category->id)->orderBy('id', 'desc')->paginate(4);
-        return view('admin.articles.index', compact('articles', 'category'));
+        return view('admin.articles.index', compact('articles', 'category', 'categories'));
     }
 
     /**
@@ -153,17 +154,32 @@ class ArticleController extends Controller
     public function published(Request $request)
     {
       $article = Article::whereId($request->id)->first();
-      
+
       $this->validate($request, [
         'published' => 'required|string'
       ]);
       $article->update([
         'published' => $request->published
       ]);
-      
+
       if($request->published === 'Опубликована') event(new NewArticle($article));
 
       return $article;
+    }
+
+    /**
+    * Изменение категории статьи
+    */
+    public function newCategory(Request $request, Article $article)
+    {
+      // dd($article);
+      $this->validate($request, [
+        'category_id' => 'required|integer'
+      ]);
+      $article->update([
+        'category_id' => $request->category_id
+      ]);
+      return redirect()->back()->with(['message' => 'Статья перенесена вновую категорию...']);
     }
 
     /**
