@@ -14298,7 +14298,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(164);
+module.exports = __webpack_require__(169);
 
 
 /***/ }),
@@ -14350,6 +14350,7 @@ Vue.component('comments-component', __webpack_require__(144));
 Vue.component('guest-message', __webpack_require__(149));
 Vue.component('claims-component', __webpack_require__(154));
 Vue.component('users-component', __webpack_require__(159));
+Vue.component('sub-categories', __webpack_require__(164));
 
 var app = new Vue({
   el: '#app'
@@ -49773,7 +49774,7 @@ var staticRenderFns = [
                 },
                 [_vm._v("нашего сайта Путешествия По России.")]
               ),
-              _vm._v(" И так... "),
+              _vm._v(" Итак... "),
               _c("a", { attrs: { href: "#art-preview" } }, [
                 _vm._v("В путь...")
               ])
@@ -50939,7 +50940,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "row preview-title" }, [
               _c("div", { staticClass: "col" }, [
-                _c("h4", { staticClass: "h4-responsive" }, [
+                _c("h4", { staticClass: "h5-responsive" }, [
                   _vm._v(_vm._s(_vm.article.title))
                 ])
               ])
@@ -55539,7 +55540,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -55550,6 +55551,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -55632,9 +55638,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       messages: []
     };
   },
-  mounted: function mounted() {
-    // console.log(this.categories)
-  },
+  created: function created() {},
 
 
   methods: {
@@ -55977,37 +55981,59 @@ var render = function() {
                 : _vm._e()
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col border-bottom" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-sm btn-success",
-                  attrs: { type: "button" },
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      _vm.updateCat(_vm.localCategory)
+            _c(
+              "div",
+              { staticClass: "col border-bottom" },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-sm btn-success",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.updateCat(_vm.localCategory)
+                      }
                     }
-                  }
-                },
-                [_vm._v("изменить")]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-sm btn-danger",
-                  attrs: { type: "button" },
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      _vm.delCat(_vm.localCategory)
+                  },
+                  [_vm._v("изменить")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-sm btn-danger",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.delCat(_vm.localCategory)
+                      }
                     }
-                  }
-                },
-                [_vm._v("удалить")]
-              )
-            ])
+                  },
+                  [_vm._v("удалить")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-sm btn-primary",
+                    attrs: {
+                      type: "button",
+                      "data-toggle": "modal",
+                      "data-target": "#centralModalSm_" + _vm.localCategory.id
+                    }
+                  },
+                  [_vm._v("\n            подкатегории\n          ")]
+                ),
+                _vm._v(" "),
+                _c("sub-categories", {
+                  attrs: { category_id: _vm.localCategory.id }
+                })
+              ],
+              1
+            )
           ])
         ])
       ])
@@ -58920,6 +58946,636 @@ if (false) {
 
 /***/ }),
 /* 164 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(165)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(167)
+/* template */
+var __vue_template__ = __webpack_require__(168)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/admin/SubCategories.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3f1bae55", Component.options)
+  } else {
+    hotAPI.reload("data-v-3f1bae55", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 165 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(166);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("4d8a424a", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f1bae55\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SubCategories.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f1bae55\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SubCategories.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 166 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 167 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['category_id'],
+
+  data: function data() {
+    return {
+      categories: this.subCategories,
+      link_name: '',
+      title: '',
+      description: '',
+      showError: false,
+      errors: [],
+      showMessage: true,
+      messages: [],
+      subCategories: []
+    };
+  },
+  mounted: function mounted() {
+    this.getSubCategories();
+  },
+
+
+  methods: {
+    // получаем подкатегории
+    getSubCategories: function getSubCategories() {
+      var _this = this;
+
+      axios.get('/admin/sub-category/' + this.category_id).then(function (response) {
+        _this.subCategories = response.data;
+      });
+    },
+
+
+    // Удаление
+    destroy: function destroy(category) {
+      var _this2 = this;
+
+      axios.delete('/admin/sub-category/' + category.id).then(function (response) {
+        _this2.getSubCategories();
+      }).catch(function (error) {
+        _this2.showError = true;
+        _this2.errors = _.flatten(_.toArray(error.response.data.errors));
+        _this2.hiddenTimeOutErr();
+      });
+    },
+
+
+    //скрытие окна ошибки
+    hiddenErr: function hiddenErr() {
+      this.showError = false;
+    },
+    hiddenTimeOutErr: function hiddenTimeOutErr() {
+      var _this3 = this;
+
+      setTimeout(function () {
+        _this3.showError = false;
+      }, 5000);
+    },
+
+    //скрытие окна уведомления
+    hiddenMessage: function hiddenMessage() {
+      this.showMessage = false;
+    },
+    hiddenTimeOutMess: function hiddenTimeOutMess() {
+      var _this4 = this;
+
+      setTimeout(function () {
+        _this4.showMessage = false;
+      }, 5000);
+    },
+    storeSubCategory: function storeSubCategory() {
+      var _this5 = this;
+
+      axios.post('/admin/sub-category', {
+        category_id: this.category_id,
+        link_name: this.link_name,
+        title: this.title,
+        description: this.description
+      }).then(function (response) {
+        _this5.subCategories = response.data;
+        link_name = '';
+        title = '';
+        description = '';
+      }).catch(function (error) {
+        _this5.showError = true;
+        _this5.errors = _.flatten(_.toArray(error.response.data.errors));
+        _this5.hiddenTimeOutErr();
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 168 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "modal fade",
+      attrs: {
+        id: "centralModalSm_" + _vm.category_id,
+        tabindex: "-1",
+        role: "dialog",
+        "aria-labelledby": _vm.category_id + "myModalLabel",
+        "aria-hidden": "true"
+      }
+    },
+    [
+      _c("transition", { attrs: { name: "fade" } }, [
+        this.errors.length > 0
+          ? _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.showError,
+                    expression: "showError"
+                  }
+                ],
+                staticClass: "alert alert-danger z-depth-3",
+                attrs: { id: "alert" }
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "close",
+                    attrs: { type: "button", "aria-label": "Close" },
+                    on: { click: _vm.hiddenErr }
+                  },
+                  [
+                    _c("span", { attrs: { "aria-hidden": "true" } }, [
+                      _vm._v("×")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  _vm._l(this.errors, function(error) {
+                    return _c("li", [
+                      _vm._v(
+                        "\n              " + _vm._s(error) + "\n          "
+                      )
+                    ])
+                  })
+                )
+              ]
+            )
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c("transition", { attrs: { name: "fade" } }, [
+        this.messages.length > 0
+          ? _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.showMessage,
+                    expression: "showMessage"
+                  }
+                ],
+                staticClass: "alert alert-success z-depth-3",
+                attrs: { id: "alert" }
+              },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "close",
+                    attrs: { type: "button", "aria-label": "Close" },
+                    on: { click: _vm.hiddenMessage }
+                  },
+                  [
+                    _c("span", { attrs: { "aria-hidden": "true" } }, [
+                      _vm._v("×")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [
+                    _vm._v(
+                      "\n              " + _vm._s(_vm.messages) + "\n          "
+                    )
+                  ])
+                ])
+              ]
+            )
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "modal-dialog modal-fluid",
+          attrs: { role: "document" }
+        },
+        [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "h4",
+                {
+                  staticClass: "modal-title w-100",
+                  attrs: { id: _vm.category_id + "myModalLabel" }
+                },
+                [_vm._v("Подкатегории")]
+              ),
+              _vm._v(" "),
+              _vm._m(0)
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c(
+                "table",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.subCategories.length !== 0,
+                      expression: "subCategories.length !== 0"
+                    }
+                  ],
+                  staticClass: "table table-sm table-bordered"
+                },
+                [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c(
+                    "tbody",
+                    _vm._l(_vm.subCategories, function(category) {
+                      return _c("tr", [
+                        _c("td", [_vm._v(_vm._s(category.link_name))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(category.title))]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(category.description))]),
+                        _vm._v(" "),
+                        _c("td", { staticClass: "text-center" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "btn btn-sm btn-outline-danger waves-effect",
+                              attrs: { type: "button" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                  _vm.destroy(category)
+                                }
+                              }
+                            },
+                            [_vm._v("удалить")]
+                          )
+                        ])
+                      ])
+                    })
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col p-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.link_name,
+                        expression: "link_name"
+                      }
+                    ],
+                    staticClass: "form-control form-control-sm",
+                    attrs: {
+                      type: "text",
+                      placeholder: "Имя ссылки (латиница!)"
+                    },
+                    domProps: { value: _vm.link_name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.link_name = $event.target.value
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col p-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.title,
+                        expression: "title"
+                      }
+                    ],
+                    staticClass: "form-control form-control-sm",
+                    attrs: { type: "text", placeholder: "Имя в меню" },
+                    domProps: { value: _vm.title },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.title = $event.target.value
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col p-2" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.description,
+                          expression: "description"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { rows: "2", placeholder: "Краткое описание" },
+                      domProps: { value: _vm.description },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.description = $event.target.value
+                        }
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-secondary btn-sm",
+                  attrs: { type: "button", "data-dismiss": "modal" }
+                },
+                [_vm._v("Close")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary btn-sm",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.storeSubCategory($event)
+                    }
+                  }
+                },
+                [_vm._v("Save changes")]
+              )
+            ])
+          ])
+        ]
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark text-center" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Ссылка на категорию")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Наименование в меню")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Описание")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Действие")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row mt-2" }, [
+      _c("div", { staticClass: "col p-2" }, [
+        _c("h5", [_vm._v("Новая подкатегория")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3f1bae55", module.exports)
+  }
+}
+
+/***/ }),
+/* 169 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

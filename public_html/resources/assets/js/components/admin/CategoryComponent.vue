@@ -59,10 +59,15 @@
           <div class="col border-bottom">
             <button type="button" class="btn btn-sm btn-success" @click.prevent="updateCat(localCategory)">изменить</button>
             <button type="button" class="btn btn-sm btn-danger" @click.prevent="delCat(localCategory)">удалить</button>
+            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" :data-target="'#centralModalSm_' + localCategory.id">
+              подкатегории
+            </button>
+            <sub-categories :category_id="localCategory.id"></sub-categories>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 
 </template>
@@ -83,8 +88,8 @@ export default {
     }
   },
 
-  mounted() {
-    // console.log(this.categories)
+  created() {
+
   },
 
   methods: {

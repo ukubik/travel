@@ -5,7 +5,7 @@
         <img :src="'/public/storage/' + article.img_prew_path" class="img-fluid" alt="preview" style="min-height: 270px;">
         <div class="row preview-title">
           <div class="col">
-            <h4 class="h4-responsive">{{ article.title }}</h4>
+            <h4 class="h5-responsive">{{ article.title }}</h4>
           </div>
         </div>
       </div>

@@ -30,4 +30,9 @@ class Article extends Model
     {
       return $this->hasMany('App\Comment');
     }
+
+    public function subcategory()
+    {
+      return $this->belongsTo('App\SubCategory');
+    }
 }

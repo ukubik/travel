@@ -127,4 +127,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   // Получение юзеров в компонент
   Route::get('/get-users', 'Admin\UserController@getUsers');
   Route::resource('/users', 'Admin\UserController', ['except' => ['create', 'store']]);
+  // Ресурс обработки подкатегорий
+  Route::get('/sub-category/{category_id}', 'Admin\SubCategoryController@index');
+  Route::resource('/sub-category', 'Admin\SubCategoryController', ['only' => ['store', 'destroy']]);
 });
