@@ -81,8 +81,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary btn-sm" @click.prevent="storeSubCategory">Save changes</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">закрыть</button>
+            <button type="button" class="btn btn-primary btn-sm" @click.prevent="storeSubCategory">сохранить</button>
           </div>
         </div>
       </div>
