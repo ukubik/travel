@@ -160,9 +160,9 @@ export default {
         description: this.description
       }).then(response => {
         this.subCategories = response.data;
-        link_name = '';
-        title = '';
-        description = ''
+        this.link_name = '';
+        this.title = '';
+        this.description = ''
       }).catch(error => {
         this.showError = true;
         this.errors = _.flatten(_.toArray(error.response.data.errors));

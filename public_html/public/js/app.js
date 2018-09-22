@@ -59213,9 +59213,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         description: this.description
       }).then(function (response) {
         _this5.subCategories = response.data;
-        link_name = '';
-        title = '';
-        description = '';
+        _this5.link_name = '';
+        _this5.title = '';
+        _this5.description = '';
       }).catch(function (error) {
         _this5.showError = true;
         _this5.errors = _.flatten(_.toArray(error.response.data.errors));
