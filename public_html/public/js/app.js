@@ -49655,6 +49655,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -49676,8 +49678,8 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container-fluid" }, [
       _c("div", { staticClass: "row my-5" }, [
         _c("div", { staticClass: "col text-center" }, [
-          _c("h1", { staticClass: "display-3" }, [
-            _vm._v("Lorem classification inutilis")
+          _c("h1", { staticClass: "display-5" }, [
+            _vm._v("Россия в путешествиях. Узнай свою Родину...")
           ])
         ])
       ]),
@@ -49687,7 +49689,37 @@ var staticRenderFns = [
           _c("blockquote", { staticClass: "blockquote" }, [
             _c("p", [
               _vm._v(
-                "\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum\n          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in\n          culpa qui officia deserunt mollit anim id est laborum.\n        "
+                "\n          Россия - огромная страна, площадь России составляет "
+              ),
+              _c("span", { staticClass: "font-weight-bold" }, [
+                _vm._v("17 125 407")
+              ]),
+              _vm._v(
+                " кв.км.\n          В состав Российской Федерации входят "
+              ),
+              _c("span", { staticClass: "font-weight-bold" }, [_vm._v("21")]),
+              _vm._v(" республика, "),
+              _c("span", { staticClass: "font-weight-bold" }, [_vm._v("6")]),
+              _vm._v(" краев, "),
+              _c("span", { staticClass: "font-weight-bold" }, [_vm._v("49")]),
+              _vm._v(
+                " областей,\n          города федерального значения Москва и Санкт-Петербург, автономная область и "
+              ),
+              _c("span", { staticClass: "font-weight-bold" }, [_vm._v("10")]),
+              _vm._v(" автономных округов.\n          Как пишет "),
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href:
+                      "https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F#%D0%A2%D1%83%D1%80%D0%B8%D1%81%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D0%B8%D1%8F",
+                    target: "_blank"
+                  }
+                },
+                [_vm._v("\n            многоуважаемая Wikipedia\n          ")]
+              ),
+              _vm._v(
+                ' "Основные туристические маршруты в России представляют собой путешествие по Золотому кольцу древних городов, круизы по Волге и длительные путешествия по Транссибирской магистрали." Но мы то с Вами знаем, что это слишком приуменьшено. На самом деле в России любой маршрут туристический и мы предлагаем Вам совершить путешествия вместе с нами.\n        '
               )
             ])
           ])
@@ -49697,10 +49729,20 @@ var staticRenderFns = [
           _c("img", {
             staticClass: "img-fluid z-depth-2",
             attrs: {
-              src: "/public/storage/images/site_12/north.png",
+              src: "/public/storage/images/site_12/tree-grass.jpg",
               alt: "north"
             }
           })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row my-5" }, [
+        _c("div", { staticClass: "col text-center" }, [
+          _c("h2", { staticClass: "display-5" }, [
+            _vm._v(
+              "Побывайте там, где ни когда не были. Посетите любимые места..."
+            )
+          ])
         ])
       ]),
       _vm._v(" "),
@@ -49709,7 +49751,7 @@ var staticRenderFns = [
           _c("img", {
             staticClass: "img-fluid z-depth-2",
             attrs: {
-              src: "/public/storage/images/site_12/port.png",
+              src: "/public/storage/images/site_12/building.jpg",
               alt: "north"
             }
           })
@@ -49719,8 +49761,22 @@ var staticRenderFns = [
           _c("blockquote", { staticClass: "blockquote" }, [
             _c("p", [
               _vm._v(
-                "\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum\n          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in\n          culpa qui officia deserunt mollit anim id est laborum.\n        "
-              )
+                "\n          Настоящая жемчужина России – Москва. Столица наполнена музеями, галереями, архитектурными и историческими достопримечательностями, и конечно это самое посещаемое туристическое направление страны. Санкт-Петербург, Казань, Ростов-на-Дону, Нижний Новгород... Можно долго перечислять города нашей страны, которые очень привлекательны для туризма.\n          Юг России притягивает к себе не только черноморскими или азовскими пляжами на берегах Крыма и курортов Краснодарского края, но будет интересен и любителям природы и горных пейзажей, а также для лечебного отдыха. Озеро Байкал - объект всемирного наследия ЮНЕСКО, Камчатка и Курилы, Сахалин, Алтай, Арктика в конце концов... Обо всем этом Вы сможете прочесть в статьях "
+              ),
+              _c(
+                "a",
+                {
+                  attrs: {
+                    href: "https://puzzle-it.ru/",
+                    title: "Путешествия по России"
+                  }
+                },
+                [_vm._v("нашего сайта Путешествия По России.")]
+              ),
+              _vm._v(" И так... "),
+              _c("a", { attrs: { href: "#art-preview" } }, [
+                _vm._v("В путь...")
+              ])
             ])
           ])
         ])

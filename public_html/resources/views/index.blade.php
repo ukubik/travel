@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="row art-preview">
+      <div class="row art-preview" id="art-preview">
         <div class="col z-depth-3">
           <div class="container-fluid p-5">
             @if($previews1 && $previews1->isNotEmpty())
