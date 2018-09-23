@@ -22,6 +22,10 @@ class CommentController extends Controller
         $article = Article::whereId($id)->first();
         $this->validate($request, [
           'content' => 'required|string|max:1000'
+        ],
+        [
+          'content.required' => 'Нужно все же что-то написать...',
+          'content.max:1000' => 'Вы слишком много написАли. Должно быть не более 1000 символов...',
         ]);
         $comment = Comment::create([
           'user_id' => $user->id,
