@@ -55417,7 +55417,7 @@ var render = function() {
             }
           ],
           staticClass: "form-control form-control-sm",
-          attrs: { rows: "2" },
+          attrs: { rows: "5" },
           domProps: { value: _vm.meta.description },
           on: {
             input: function($event) {

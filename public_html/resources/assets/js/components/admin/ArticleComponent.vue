@@ -49,7 +49,7 @@
     </div>
     <div class="col border m-1 pb-2">
       <label for="description"> <small>Введите или измените значение</small> </label>
-      <textarea class="form-control form-control-sm" rows="2" v-model="meta.description"></textarea>
+      <textarea class="form-control form-control-sm" rows="5" v-model="meta.description"></textarea>
     </div>
     <div class="col border m-1">
       <button class="btn btn-sm btn-success" v-if="localArticle.published === 'Не опубликована'" @click.prevent="published('Опубликована')">опубликовать</button>
