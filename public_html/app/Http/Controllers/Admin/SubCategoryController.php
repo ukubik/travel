@@ -59,7 +59,7 @@ class SubCategoryController extends Controller
     public function destroy(SubCategory $subCategory)
     {
         if($subCategory->articles->isNotEmpty()) {
-          return abort(406, 'Удаление не возможно');
+          return abort(406, 'Удаление не возможно: подраздел имеет статьи...');
         } else {
           $subCategory->delete();
         }

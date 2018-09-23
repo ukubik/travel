@@ -128,7 +128,7 @@ export default {
         this.getSubCategories();
       }).catch(error => {
         this.showError = true;
-        this.errors = _.flatten(_.toArray(error.response.data.errors));
+        this.errors = [error.response.data.message];
         this.hiddenTimeOutErr();
       });
     },

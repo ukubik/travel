@@ -59174,7 +59174,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         _this2.getSubCategories();
       }).catch(function (error) {
         _this2.showError = true;
-        _this2.errors = _.flatten(_.toArray(error.response.data.errors));
+        _this2.errors = [error.response.data.message];
         _this2.hiddenTimeOutErr();
       });
     },
