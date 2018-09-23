@@ -31,6 +31,12 @@
             {!! $article->content !!}
           </div>
         </div>
+
+        <div class="row mb-5">
+          <div class="col-auto border-bottom">
+            Автор: <em class="font-weight-bold">{{ $article->user->login }}</em>
+          </div>
+        </div>
       </div>
 
       @if($article->comments->isNotEmpty())
@@ -49,7 +55,7 @@
 
         <div class="row d-flex justify-content-between">
             <div class="col">
-              <small>{{ $comment->user->role->name }}:</small> <b>{{ $comment->user->login }}</b> 
+              <small>{{ $comment->user->role->name }}:</small> <b>{{ $comment->user->login }}</b>
             </div>
             <div class="col d-flex justify-content-end">
                 {{ $comment->created_at }}
