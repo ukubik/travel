@@ -19,10 +19,10 @@
                       {{ $category->menu_name }}</a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="{{ route('category', $category) }}"
-                      data-toggle="tooltip" data-placement="right" title="{{ $category->description }}"> Перейти к разделу {{ $category->menu_name }}<span class="sr-only">(current)</span></a>
+                      data-toggle="tooltip" data-placement="bottom" title="{{ $category->description }}"> Перейти к разделу {{ $category->menu_name }}<span class="sr-only">(current)</span></a>
                         @foreach($category->subcategories as $subcategory)
                         <a class="dropdown-item" href="{{ route('category', [$category, $subcategory]) }}"
-                        data-toggle="tooltip" data-placement="right" title="{{ $subcategory->description }}"><i class="fa fa-genderless mx-2" aria-hidden="true"></i> {{ $subcategory->title }} <span class="sr-only">(current)</span></a>
+                        data-toggle="tooltip" data-placement="bottom" title="{{ $subcategory->description }}"><i class="fa fa-genderless mx-2" aria-hidden="true"></i> {{ $subcategory->title }} <span class="sr-only">(current)</span></a>
                         @endforeach
                     </div>
                 </li>
