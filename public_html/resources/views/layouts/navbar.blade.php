@@ -13,10 +13,25 @@
             <ul class="navbar-nav mr-auto">
               @foreach($categories as $category)
               @if($category->added_menu === 'В меню')
+                @if(isset($category->subcategories) && $category->subcategories->isNotEmpty())
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{{ route('category', $category) }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                      {{ $category->menu_name }}</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="{{ route('category', $category) }}"
+                      data-toggle="tooltip" data-placement="right" title="{{ $category->description }}"> Перейти к категории {{ $category->menu_name }}<span class="sr-only">(current)</span></a>
+                        @foreach($category->subcategories as $subcategory)
+                        <a class="dropdown-item" href="{{ route('category', [$category, $subcategory]) }}"
+                        data-toggle="tooltip" data-placement="right" title="{{ $subcategory->description }}"><i class="fa fa-genderless mx-2" aria-hidden="true"></i> {{ $subcategory->title }} <span class="sr-only">(current)</span></a>
+                        @endforeach
+                    </div>
+                </li>
+                @else
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('category', $category) }}"
                     data-toggle="tooltip" data-placement="bottom" title="{{ $category->description }}"> {{ $category->menu_name }} <span class="sr-only">(current)</span></a>
                 </li>
+                @endif
               @endif
               @endforeach
             </ul>

@@ -81,3 +81,15 @@ ul {margin-left: -1rem;}
 .bg-green {
   background-color: rgb(42, 249, 119);
 }
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #425D6A;
+}
+
+.dropdown-menu a {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  /* font-size: .9375rem;
+  font-weight: 300;
+  color: #000 !important; */
+}

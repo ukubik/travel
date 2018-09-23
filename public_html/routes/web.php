@@ -10,7 +10,7 @@ Route::get('/privacypolicy', 'IndexController@privacypolicy')->name('privacypoli
 //Контакты
 Route::get('/contacts', 'IndexController@contacts')->name('contacts');
 // Страница категории с оглавлением и статьями
-Route::get('/category/{category}', 'CategoryController@index')->name('category');
+Route::get('/category/{category}/{subcategory?}', 'CategoryController')->name('category');
 
 //Send message admins
 Route::post('/sendmessage', 'IndexController@sendmessage')->name('sendmessage');
