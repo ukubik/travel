@@ -24,6 +24,22 @@
   <div class="row">
 
     <div class="col-md-9 mt-4 p-5">
+
+      @if(isset($subcategories) && $subcategories->isNotEmpty())
+      <div class="row mb-5 border-bottom">
+        <div class="col-auto mb-2 border-right">
+          <a class="btn btn-sm btn-outline-danger waves-effect" href="{{ route('category', $category) }}"
+          data-toggle="tooltip" data-placement="bottom" title="{{ $category->description }}"> {{ $category->menu_name }} <span class="sr-only">(current)</span></a>
+        </div>
+        @foreach($subcategories as $subcategory)
+        <div class="col-auto mb-2">
+          <a class="btn btn-sm btn-outline-primary waves-effect" href="{{ route('category', [$category, $subcategory]) }}"
+          data-toggle="tooltip" data-placement="bottom" title="{{ $subcategory->description }}"> {{ $subcategory->title }} <span class="sr-only">(current)</span></a>
+        </div>
+        @endforeach
+      </div>
+      @endif
+
       @if($articles && $articles->isNotEmpty())
       <div class="row white-text" style="min-height: 272px">
         @foreach($articles as $article)

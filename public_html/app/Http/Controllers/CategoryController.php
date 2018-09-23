@@ -11,6 +11,7 @@ class CategoryController extends Controller
 {
     public function __invoke(Category $category, SubCategory $subcategory = null)
     {
+      $subcategories = SubCategory::whereCategoryId($category->id)->get();
       if($subcategory) {
         $articles = Article::whereSubCategoryId($subcategory->id)->wherePublished('Опубликована')->orderBy('id', 'desc')->get();
       } else {
@@ -18,7 +19,7 @@ class CategoryController extends Controller
       }
       // dd($articles);
       if(view()->exists('category.index')) {
-        return view('category.index', compact('articles', 'category'));
+        return view('category.index', compact('articles', 'category', 'subcategories'));
       }
       abort(404);
     }
