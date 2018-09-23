@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <meta name="description" content="">
-    <meta name="Keywords" content="">
+    <title>{{ $article->metatag->title or config('app.name') }}</title>
+    <meta name="description" content="{{ $article->metatag->description or 'Все о путешествиях по России. Статьи о людях, городах, обычаях самой большой страны. Заметки путешественников, всевозможные идеи для тех, что любит свою страну и планирует поездки по России или только мечтает о них' }}">
+    <meta name="keywords" content="{{ $article->metatag->keywords or 'путешествия по России, туризм, интересные статьи, заметки путешественников, полезные советы для туристов' }}">
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
