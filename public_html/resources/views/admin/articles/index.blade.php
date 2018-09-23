@@ -35,6 +35,9 @@
       {{ $article->title }}
     </div>
     <div class="col-md-auto p-2">
+      Автор: <em>{{ $article->user->login }}</em>
+    </div>
+    <div class="col-md-auto p-2">
       <small class="text-muted"> Выберите категорию, нажмите "Изменить" </small>
       <form class="form-inline" action="{{ route('admin.new-category', $article) }}" method="post">
         {{ csrf_field() }}
