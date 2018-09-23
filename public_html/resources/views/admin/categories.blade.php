@@ -22,9 +22,9 @@
     <div class="col p-2 border-right">
       Изображение <small class="text-muted">(карусель в заголовке сайта)</small>
     </div>
-    <div class="col p-2 border-right">
+<!--     <div class="col p-2 border-right">
       Ссылка на категорию
-    </div>
+    </div> -->
     <div class="col p-2 border-right">
       Наименование в меню
     </div>

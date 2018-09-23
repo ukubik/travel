@@ -30,7 +30,7 @@
     </transition>
 
       <!-- Change class .modal-sm to change the size of the modal -->
-      <div class="modal-dialog modal-fluid" role="document">
+      <div class="modal-dialog modal-lg" role="document">
 
 
         <div class="modal-content">
@@ -44,7 +44,7 @@
             <table class="table table-sm table-bordered" v-show="subCategories.length !== 0">
               <thead class="thead-dark text-center">
                 <tr>
-                  <th scope="col">Ссылка на категорию</th>
+                  <!-- <th scope="col">Ссылка на категорию</th> -->
                   <th scope="col">Наименование в меню</th>
                   <th scope="col">Описание</th>
                   <th scope="col">Действие</th>
@@ -52,7 +52,7 @@
               </thead>
               <tbody>
                 <tr v-for="category in subCategories">
-                  <td>{{ category.link_name }}</td>
+                  <!-- <td>{{ category.link_name }}</td> -->
                   <td>{{ category.title }}</td>
                   <td>{{ category.description }}</td>
                   <td class="text-center">
@@ -67,9 +67,9 @@
               </div>
             </div>
             <div class="row">
-              <div class="col p-2">
+<!--               <div class="col p-2">
                 <input class="form-control form-control-sm" type="text" v-model="link_name" placeholder="Имя ссылки (латиница!)">
-              </div>
+              </div> -->
               <div class="col p-2">
                 <input class="form-control form-control-sm" type="text" v-model="title" placeholder="Имя в меню">
               </div>
@@ -99,7 +99,7 @@ export default {
   data() {
     return {
       categories: this.subCategories,
-      link_name: '',
+      // link_name: '',
       title: '',
       description: '',
       showError: false,
@@ -155,12 +155,12 @@ export default {
     storeSubCategory() {
       axios.post('/admin/sub-category', {
         category_id: this.category_id,
-        link_name: this.link_name,
+        // link_name: this.link_name,
         title: this.title,
         description: this.description
       }).then(response => {
         this.subCategories = response.data;
-        this.link_name = '';
+        // this.link_name = '';
         this.title = '';
         this.description = ''
       }).catch(error => {

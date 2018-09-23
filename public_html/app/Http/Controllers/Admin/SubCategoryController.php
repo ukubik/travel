@@ -29,7 +29,7 @@ class SubCategoryController extends Controller
     {
         $this->validate($request, [
           'category_id' => 'required|integer',
-          'link_name' => 'required|string',
+          // 'link_name' => 'required|string',
           'title' => 'required|string',
           'description' => 'required|string|max:500'
         ]);
