@@ -21,3 +21,15 @@
 .pagination .page-item.active .page-link {
 	background-color: red;
 }
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #425D6A;
+}
+
+.dropdown-menu a {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  /* font-size: .9375rem;
+  font-weight: 300;
+  color: #000 !important; */
+}

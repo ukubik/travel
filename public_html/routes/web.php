@@ -86,7 +86,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   // Контроллер ресурса статей
   Route::post('/img-article/{article}', 'Admin\ArticleController@updateImg'); // Добавление превью фото к статье
   Route::put('/article/del-img', 'Admin\ArticleController@delImg'); // Удаление превью фото
-  Route::get('/get-article/{category}', 'Admin\ArticleController@index')->name('admin.article.index'); // Получение статей по категориям
+  Route::get('/get-article/{category}/{subcategory?}', 'Admin\ArticleController@index')->name('admin.article.index'); // Получение статей по категориям
   Route::patch('/article/published/', 'Admin\ArticleController@published');  // Публикация статьи
   Route::put('/article/new-category/{article}', 'Admin\ArticleController@newCategory')->name('admin.new-category'); // Изменение категории статьи
   Route::resource('/article', 'Admin\ArticleController', [

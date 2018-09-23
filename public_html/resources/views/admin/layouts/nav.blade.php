@@ -41,6 +41,11 @@
                             @if(isset($categories) && $categories->isNotEmpty())
                             @foreach($categories as $category)
                             <a class="dropdown-item" href="{{ route('admin.article.index', $category->id) }}">{{ $category->menu_name }}</a>
+                            @if(isset($category->subcategories) && $category->subcategories->isNotEmpty())
+                              @foreach($category->subcategories as $subcategory)
+                              <a class="dropdown-item" href="{{ route('admin.article.index', [$category, $subcategory]) }}" style="font-size:90%"><i class="fa fa-genderless ml-4 mr-2" aria-hidden="true"></i> {{ $subcategory->title }} <span class="sr-only">(current)</span></a>
+                              @endforeach
+                            @endif
                             @endforeach
                             @endif
                         </div>

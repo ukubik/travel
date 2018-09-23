@@ -15,7 +15,7 @@ class CategoryController extends Controller
       if($subcategory) {
         $articles = Article::whereSubCategoryId($subcategory->id)->wherePublished('Опубликована')->orderBy('id', 'desc')->get();
       } else {
-        $articles = Article::whereCategoryId($category->id)->wherePublished('Опубликована')->orderBy('id', 'desc')->get();
+        $articles = Article::whereCategoryId($category->id)->whereSubCategoryId(null)->wherePublished('Опубликована')->orderBy('id', 'desc')->get();
       }
       // dd($articles);
       if(view()->exists('category.index')) {

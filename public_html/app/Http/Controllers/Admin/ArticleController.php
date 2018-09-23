@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Article;
 use App\Category;
+use App\SubCategory;
 use App\Events\NewArticle;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,12 +18,18 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Category $category)
+    public function index(Category $category, SubCategory $subcategory = null)
     {
         //
         $categories = Category::all();
-        $articles = Article::whereCategoryId($category->id)->orderBy('id', 'desc')->paginate(4);
-        return view('admin.articles.index', compact('articles', 'category', 'categories'));
+        // $subcategories = SubCategory::all();
+        if($subcategory) {
+          $articles = Article::whereSubCategoryId($subcategory->id)->orderBy('id', 'desc')->paginate(4);
+        } else {
+          $articles = Article::whereCategoryId($category->id)->whereSubCategoryId(null)->orderBy('id', 'desc')->paginate(4);
+        }
+
+        return view('admin.articles.index', compact('articles', 'category', 'categories', 'subcategory'));
     }
 
     /**
@@ -48,19 +55,31 @@ class ArticleController extends Controller
         //
         $user_id = Auth::user()->id;
         $this->validate($request, [
-          'category_id' => 'required|integer',
+          // 'category_id' => 'required|integer',
           'art_title' => 'required|string',
           'description' => 'required|string|max:120',
           'content' => 'required|string'
         ]);
 
-        $article = Article::create([
-          'user_id' => $user_id,
-          'category_id' => $request->category_id,
-          'title' => $request->art_title,
-          'description' => $request->description,
-          'content' => $request->content
-        ]);
+        if(strstr($request->category_id, '/')) {
+          $ids = explode('/', $request->category_id);
+          $article = Article::create([
+            'user_id' => $user_id,
+            'category_id' => $ids[0],
+            'sub_category_id' => $ids[1],
+            'title' => $request->art_title,
+            'description' => $request->description,
+            'content' => $request->content
+          ]);
+        } else {
+          $article = Article::create([
+            'user_id' => $user_id,
+            'category_id' => $request->category_id,
+            'title' => $request->art_title,
+            'description' => $request->description,
+            'content' => $request->content
+          ]);
+        }
         //
         return redirect()->route('admin.article.index', $request->category_id);
     }
@@ -172,13 +191,20 @@ class ArticleController extends Controller
     */
     public function newCategory(Request $request, Article $article)
     {
-      // dd($article);
-      $this->validate($request, [
-        'category_id' => 'required|integer'
-      ]);
-      $article->update([
-        'category_id' => $request->category_id
-      ]);
+      // dd($request);
+      if(strstr($request->category_id, '/')) {
+        $ids = explode('/', $request->category_id);
+        // dd($ids[1]);
+        $article->update([
+          'category_id' => $ids[0],
+          'sub_category_id' => $ids[1]
+        ]);
+      } else {
+        $article->update([
+          'category_id' => $request->category_id,
+          'sub_category_id' => null
+        ]);
+      }
       return redirect()->back()->with(['message' => 'Статья перенесена в новую категорию...']);
     }
 

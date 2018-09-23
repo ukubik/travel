@@ -6,6 +6,9 @@
   <div class="row my-3">
     <div class="col text-center">
       <h3>Список статей категории {{ $category->header }}</h3>
+      @if($subcategory)
+      <h5>Подкатегория {{ $subcategory->title }}</h5>
+      @endif
     </div>
   </div>
   @if(isset($articles) && $articles->isNotEmpty())
@@ -40,6 +43,11 @@
           <select class="form-control form-control-sm" name="category_id" value="{{ $article->category->name }}">
             @foreach($categories as $category)
             <option value="{{ $category->id }}">{{ $category->header }}</option>
+            @if(isset($category->subcategories) && $category->subcategories->isNotEmpty())
+            @foreach($category->subcategories as $subcategory)
+            <option value="{{ $category->id }}/{{ $subcategory->id }}" style="font-size:90%">&nbsp;&nbsp;&nbsp;->{{ $subcategory->title }}</option>
+            @endforeach
+            @endif
             @endforeach
           </select>
         </div>
@@ -52,6 +60,12 @@
   <div class="row">
     <div class="col">
       {!! $articles->render() !!}
+    </div>
+  </div>
+  @else
+  <div class="row">
+    <div class="col text-center">
+      <h3>В данной категории статьи не неайдены...</h3>
     </div>
   </div>
   @endif

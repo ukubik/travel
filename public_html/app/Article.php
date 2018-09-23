@@ -8,7 +8,7 @@ class Article extends Model
 {
     //
     protected $fillable = [
-      'user_id', 'category_id', 'img_prew_path', 'title', 'description', 'content', 'published'
+      'user_id', 'category_id', 'sub_category_id', 'img_prew_path', 'title', 'description', 'content', 'published'
     ];
 
     public function user()

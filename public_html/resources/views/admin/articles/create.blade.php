@@ -18,6 +18,11 @@
         <select class="form-control form-control-sm" name="category_id" value="{{ old('category_id') }}">
           @foreach($categories as $category)
           <option value="{{ $category->id }}">{{ $category->header }}</option>
+          @if(isset($category->subcategories) && $category->subcategories->isNotEmpty())
+          @foreach($category->subcategories as $subcategory)
+          <option value="{{ $category->id }}/{{ $subcategory->id }}" style="font-size:90%">&nbsp;&nbsp;&nbsp;->{{ $subcategory->title }}</option>
+          @endforeach
+          @endif
           @endforeach
         </select>
       </div>
