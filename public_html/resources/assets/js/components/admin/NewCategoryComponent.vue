@@ -38,10 +38,10 @@
                 <input type="file" id="file" ref="file" accept="image/*" v-on:change="handleFilesUpload()"/>
               </div>
             </div>
-            <div class="col">
+<!--             <div class="col">
               <label for="#validationLinkName"> <small>Ссылка на категорию</small>  <span class="red-text"><i class="fa fa-asterisk" aria-hidden="true"></i></span> </label>
               <input type="text" class="form-control" id="validationName" v-model="link_name">
-            </div>
+            </div> -->
             <div class="col">
               <label for="#validationMenuName"> <small>Имя в меню</small>  <span class="red-text"><i class="fa fa-asterisk" aria-hidden="true"></i></span> </label>
               <input type="text" class="form-control" id="validationMenuName" v-model="menu_name">
@@ -70,7 +70,7 @@
 export default {
   data() {
     return {
-      link_name: '',
+      // link_name: '',
       menu_name: '',
       header: '',
       description: '',
@@ -111,7 +111,7 @@ export default {
       // console.log(this.file);
       let formData = new FormData();
       formData.append('file', this.file);
-      formData.append('link_name', this.link_name);
+      // formData.append('link_name', this.link_name);
       formData.append('menu_name', this.menu_name);
       formData.append('header', this.header);
       formData.append('description', this.description);
@@ -120,7 +120,7 @@ export default {
           headers: {'Content-Type': 'multipart/form-data'}
       }).then(response => {
         this.file = '';
-        this.link_name = '';
+        // this.link_name = '';
         this.menu_name = '';
         this.header = '';
         this.description = '';

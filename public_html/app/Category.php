@@ -8,7 +8,7 @@ class Category extends Model
 {
     //
     protected $fillable = [
-      'link_name', 'menu_name', 'header', 'description', 'img_path', 'added_menu'
+      'menu_name', 'header', 'description', 'img_path', 'added_menu'
     ];
 
     public function articles()

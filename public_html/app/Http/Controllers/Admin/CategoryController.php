@@ -31,14 +31,14 @@ class CategoryController extends Controller
       // dd($request);
         $this->validate($request, [
           'file' => 'required|image|max:1500',
-          'link_name' => 'required|cyrillic|string|unique:categories',
+          // 'link_name' => 'required|cyrillic|string|unique:categories',
           'menu_name' => 'required|string|unique:categories',
           'header' => 'required|string',
           'description' => 'required|string',
         ]);
         $path = $request->file('file')->store('images/categories', 'public');
         Category::create([
-          'link_name' => $request->link_name,
+          // 'link_name' => $request->link_name,
           'menu_name' => $request->menu_name,
           'header' => $request->header,
           'description' => $request->description,
@@ -58,7 +58,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
       $this->validate($request, [
-        'link_name' => 'required|cyrillic|string',
+        // 'link_name' => 'required|cyrillic|string',
         'menu_name' => 'required|string',
         'header' => 'required|string',
 

@@ -34,11 +34,11 @@
       <div class="card">
         <div class="row px-4 my-3">
           <div class="col">
-            <img :src="'/public/storage/' + localCategory.img_path" :alt="localCategory.link_name" class="img-fluid z-depth-2" style="max-height:300px">
+            <img :src="'/public/storage/' + localCategory.img_path" :alt="localCategory.menu_name" class="img-fluid z-depth-2" style="max-height:300px">
           </div>
-          <div class="col border-bottom border-right">
+<!--           <div class="col border-bottom border-right">
             <input type="text" class="form-control form-control-sm mb-2" v-model="localCategory.link_name">
-          </div>
+          </div> -->
           <div class="col border-bottom border-right">
             <input type="text" class="form-control form-control-sm mb-2" v-model="localCategory.menu_name">
           </div>
@@ -46,7 +46,7 @@
             <input type="text" class="form-control form-control-sm mb-2" v-model="localCategory.header">
           </div>
           <div class="col border-bottom border-right">
-            <textarea class="form-control form-control-sm mb-1" rows="2" v-model="localCategory.description"></textarea>
+            <textarea class="form-control form-control-sm mb-1" rows="4" v-model="localCategory.description"></textarea>
           </div>
           <div class="col border-bottom border-right">
             <button class="btn btn-sm btn-default" v-if="localCategory.added_menu === 'Не в меню'" @click="updAddMenu(localCategory)">
@@ -114,7 +114,7 @@ export default {
 
     updateCat(category) {
       axios.patch('/admin/categories/' + category.id, {
-        link_name: category.link_name,
+        // link_name: category.link_name,
         menu_name: category.menu_name,
         header: category.header,
         description: category.description
