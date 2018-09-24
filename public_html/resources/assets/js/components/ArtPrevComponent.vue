@@ -4,7 +4,7 @@
       <div class="front" v-show="test">
         <img :src="'/public/storage/' + article.img_prew_path" class="img-prev" alt="preview">
         <div class="row preview-title">
-          <div class="col">
+          <div class="col text-center">
             <h4 class="h5-responsive">{{ article.title }}</h4>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default {
 .preview-title {
   position: absolute;
   top: 40%;
-  left: 10%;
+  /* left: 10%; */
   text-transform: uppercase;
   text-shadow: 1px 1px 2px black, 0 0 1em black;
 }

@@ -50825,7 +50825,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active {\r\n  -webkit-transition: all .2s ease;\r\n  transition: all .2s ease;\n}\n.slide-fade-leave-active {\r\n  -webkit-transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\r\n  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-fade-enter, .slide-fade-leave-to {\r\n  -webkit-transform: translateX(300px);\r\n          transform: translateX(300px);\r\n  opacity: 0;\n}\n.art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\r\n  min-height: 270px;\r\n  z-index: 1;\n}\n.img-prev {\r\n  height: 270px;\n}\n.art-prev:hover {\r\n  cursor: pointer;\n}\n.img-preview {\r\n  height: 100% !important;\r\n  vertical-align: middle;\n}\n.preview-title {\r\n  position: absolute;\r\n  top: 40%;\r\n  left: 10%;\r\n  text-transform: uppercase;\r\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  top:0;\r\n  background-color: #3E4551;\r\n  color: white;\r\n  z-index: 0;\n}\r\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active {\r\n  -webkit-transition: all .2s ease;\r\n  transition: all .2s ease;\n}\n.slide-fade-leave-active {\r\n  -webkit-transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\r\n  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-fade-enter, .slide-fade-leave-to {\r\n  -webkit-transform: translateX(300px);\r\n          transform: translateX(300px);\r\n  opacity: 0;\n}\n.art-prev {\r\n  overflow: hidden;\r\n  padding-right: 0px;\r\n  padding-left: 0px;\r\n  min-height: 270px;\r\n  z-index: 1;\n}\n.img-prev {\r\n  height: 270px;\n}\n.art-prev:hover {\r\n  cursor: pointer;\n}\n.img-preview {\r\n  height: 100% !important;\r\n  vertical-align: middle;\n}\n.preview-title {\r\n  position: absolute;\r\n  top: 40%;\r\n  /* left: 10%; */\r\n  text-transform: uppercase;\r\n  text-shadow: 1px 1px 2px black, 0 0 1em black;\n}\n.back {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  top:0;\r\n  background-color: #3E4551;\r\n  color: white;\r\n  z-index: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -50938,7 +50938,7 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("div", { staticClass: "row preview-title" }, [
-              _c("div", { staticClass: "col" }, [
+              _c("div", { staticClass: "col text-center" }, [
                 _c("h4", { staticClass: "h5-responsive" }, [
                   _vm._v(_vm._s(_vm.article.title))
                 ])
