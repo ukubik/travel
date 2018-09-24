@@ -93,3 +93,7 @@ ul {margin-left: -1rem;}
   font-weight: 300;
   color: #000 !important; */
 }
+
+.pluso-more {
+  visibility: hidden;
+}

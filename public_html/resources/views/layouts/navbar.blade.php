@@ -37,7 +37,7 @@
             </ul>
             @endif
 
-            <ul class="navbar-nav nav-flex-icons mr-5">
+            <ul class="navbar-nav nav-flex-icons mr-2">
               @guest
               <span data-toggle="tooltip" data-placement="bottom" title="Войти или зарегистрироваться">
                 <li class="nav-item" aria-hidden="true" data-toggle="modal" data-target="#auth">
@@ -60,7 +60,19 @@
               @endguest
             </ul>
 
-            <ul class="navbar-nav nav-flex-icons d-flex justify-content-center">
+            <script type="text/javascript">(function() {
+              if (window.pluso)if (typeof window.pluso.start == "function") return;
+              if (window.ifpluso==undefined) { window.ifpluso = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                var h=d[g]('body')[0];
+                h.appendChild(s);
+              }})();
+            </script>
+            <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=07" data-services="vkontakte,odnoklassniki,facebook,twitter,google"></div>
+
+            <!-- <ul class="navbar-nav nav-flex-icons d-flex justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link"><i class="fa fa-odnoklassniki"></i></a>
                 </li>
@@ -76,7 +88,7 @@
                 <li class="nav-item">
                     <a class="nav-link"><i class="fa fa-instagram"></i></a>
                 </li>
-            </ul>
+            </ul> -->
 
         </div>
     </nav>
