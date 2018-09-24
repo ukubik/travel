@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container-fluid">
+  <div class="container-fluid sticky-top">
 
     <div class="row my-4" v-for="article in articles">
       <div class="col">
@@ -56,5 +56,12 @@ export default {
 <style lang="css">
 .hoverable:hover {
   cursor: pointer;
+}
+
+.sticky-top {
+  /* position: -webkit-sticky;
+  position: sticky; */
+  top: 70px;
+  /* z-index: 1020; */
 }
 </style>

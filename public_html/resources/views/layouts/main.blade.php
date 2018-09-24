@@ -19,10 +19,9 @@
 </head>
   <body>
 
-
-
+    @include('layouts.navbar')
+    
     <div id="app">
-      @include('layouts.navbar')
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">

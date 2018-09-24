@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 pt-4 bg-dark white-text z-depth-3">
+    <div class="col-md-3 py-2 bg-dark white-text z-depth-3">
       <div class="row my-5">
         <div class="col text-center">
           <h4>Вам будет интересно</h4>
@@ -83,4 +83,16 @@
     /* background-color: #000; */
   }
 </style>
+@endpush
+
+@push('scripts')
+<!-- <script type="text/javascript">
+$(function () {
+  $(".sticky").sticky({
+      topSpacing: 90,
+      zIndex: 2,
+      // stopper: "#YourStopperId"
+  });
+});
+</script> -->
 @endpush

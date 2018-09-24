@@ -50084,7 +50084,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.hoverable:hover {\r\n  cursor: pointer;\n}\r\n", ""]);
+exports.push([module.i, "\n.hoverable:hover {\r\n  cursor: pointer;\n}\n.sticky-top {\r\n  /* position: -webkit-sticky;\r\n  position: sticky; */\r\n  top: 70px;\r\n  /* z-index: 1020; */\n}\r\n", ""]);
 
 // exports
 
@@ -50161,7 +50161,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container-fluid" },
+    { staticClass: "container-fluid sticky-top" },
     _vm._l(_vm.articles, function(article) {
       return _c("div", { staticClass: "row my-4" }, [
         _c("div", { staticClass: "col" }, [
