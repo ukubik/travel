@@ -103,7 +103,7 @@ export default {
 .preview-title {
   position: absolute;
   top: 40%;
-  /* left: 10%; */
+  left: 5%;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px black, 0 0 1em black;
 }
