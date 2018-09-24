@@ -20,8 +20,9 @@
   <body>
 
     @include('layouts.navbar')
-    
+
     <div id="app">
+
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
@@ -30,6 +31,18 @@
         </div>
       </div>
       @yield('content')
+
+      @guest
+      <!-- Side Modal Top Right -->
+      <auth-modal></auth-modal>
+      <register-modal></register-modal>
+      <!-- Side Modal Top Right -->
+      @else
+      <user-modal></user-modal>
+      <already-registered></already-registered>
+      <edit-profile></edit-profile>
+      @endguest
+
     </div>
 
     @include('layouts.footer')

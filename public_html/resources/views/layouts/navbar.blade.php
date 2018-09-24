@@ -1,6 +1,5 @@
 <!--Main Navigation-->
 <header>
-
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-grey">
         <a class="navbar-brand" href="{{ route('index') }}" data-toggle="tooltip" data-placement="bottom" title="На главную...">
           <img src="{{ asset('storage/images/site_0/globus.gif') }}" alt="Globus" class="img-fluid" style="max-height:40px;">
@@ -89,24 +88,10 @@
                     <a class="nav-link"><i class="fa fa-instagram"></i></a>
                 </li>
             </ul> -->
-
         </div>
     </nav>
-
 </header>
-<!--Main Navigation-->
-@guest
-<!-- Side Modal Top Right -->
-<auth-modal></auth-modal>
-<register-modal></register-modal>
-<!-- Side Modal Top Right -->
-@else
 
-<user-modal></user-modal>
-<already-registered></already-registered>
-<edit-profile></edit-profile>
-
-@endguest
 
 @push('scripts')
 <script type="text/javascript">
