@@ -2,7 +2,7 @@
   <div class="col-md-3 border art-prev" v-on:mouseenter="testF" v-on:mouseleave="testT">
     <transition name="slide-fade">
       <div class="front" v-show="test">
-        <img :src="'/public/storage/' + article.img_prew_path" class="img-fluid" alt="preview" style="min-height: 270px;">
+        <img :src="'/public/storage/' + article.img_prew_path" class="img-prev" alt="preview">
         <div class="row preview-title">
           <div class="col">
             <h4 class="h5-responsive">{{ article.title }}</h4>
@@ -83,8 +83,12 @@ export default {
   overflow: hidden;
   padding-right: 0px;
   padding-left: 0px;
-  min-height: 272px;
+  min-height: 270px;
   z-index: 1;
+}
+
+.img-prev {
+  height: 270px;
 }
 
 .art-prev:hover {
