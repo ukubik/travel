@@ -71,7 +71,7 @@
                         </label>
                       </div>
                     </div>
-                    <div class="col d-flex justify-content-end">
+                    <div class="col">
                       <button type="button" class="btn btn-sm btn-outline-elegant" :disabled="!agree" @click.prevent="register"><i class="fa fa-save mr-2" aria-hidden="true"></i>вперёд</button>
                     </div>
                   </div>

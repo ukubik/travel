@@ -53351,7 +53351,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "col d-flex justify-content-end" }, [
+                _c("div", { staticClass: "col" }, [
                   _c(
                     "button",
                     {
