@@ -72,7 +72,7 @@
                       </div>
                     </div>
                     <div class="col d-flex justify-content-end">
-                      <button type="button" class="btn btn-sm btn-outline-elegant" :disabled="!agree" @click.prevent="register">зарегистрироваться</button>
+                      <button type="button" class="btn btn-sm btn-outline-elegant" :disabled="!agree" @click.prevent="register"><i class="fa fa-save mr-2" aria-hidden="true"></i>вперёд</button>
                     </div>
                   </div>
               </div>
@@ -130,5 +130,7 @@ export default {
 </script>
 
 <style lang="css">
-
+label {
+  margin-bottom: 0;
+}
 </style>

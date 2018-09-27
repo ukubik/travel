@@ -52966,7 +52966,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\nlabel {\r\n  margin-bottom: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -53364,7 +53364,13 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("зарегистрироваться")]
+                    [
+                      _c("i", {
+                        staticClass: "fa fa-save mr-2",
+                        attrs: { "aria-hidden": "true" }
+                      }),
+                      _vm._v("вперёд")
+                    ]
                   )
                 ])
               ])

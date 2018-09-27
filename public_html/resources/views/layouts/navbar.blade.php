@@ -40,7 +40,7 @@
               @guest
               <span data-toggle="tooltip" data-placement="bottom" title="Войти или зарегистрироваться">
                 <li class="nav-item" aria-hidden="true" data-toggle="modal" data-target="#auth">
-                    <a class="nav-link"><i class="fa fa-users"></i></a>
+                    <a class="nav-link"><i class="fa fa-sign-in"></i></a>
                 </li>
               </span>
               @else
