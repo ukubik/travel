@@ -32,23 +32,40 @@
     <div class="row mb-2">
       <div class="col text-shadow">
         <h5>Вы можете оставить свой комметарий</h5>
-        <small>только для зарегистрированных пользователей.</small><small class="red-text"> (E-mail опубликован не будет!)</small>
+        <!-- <small>только для зарегистрированных пользователей.</small> -->
+        <small class="red-text"> (E-mail опубликован не будет!)</small>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-7">
-        <textarea class="form-control form-control-sm z-depth-1" rows="3" v-model="comment"></textarea>
+    <form class="border border-green p-2 m-2 rounded">
+      <div class="form-group">
+        <div class="col-md-5">
+          <input type="text" class="form-control form-control-sm z-depth-1" placeholder="Ваше имя" v-model="name">
+        </div>
       </div>
-    </div>
 
-    <div class="row my-3">
-      <div class="col-md-7 d-flex justify-content-end">
-        <button class="btn btn-outline-white btn-sm waves-effect" role="button" @click="storeComment" style="color: #e91e63 !important;" :disabled="send"> отправить
-          <i class="fa fa-angle-double-right fa-15x ml-2" aria-hidden="true"></i>
-        </button>
+      <div class="form-group">
+        <div class="col-md-5">
+          <input type="email" class="form-control form-control-sm z-depth-1" placeholder="Ваш Email" v-model="email">
+        </div>
       </div>
-    </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <textarea class="form-control form-control-sm z-depth-1" rows="5" v-model="comment"></textarea>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-md-7 d-flex justify-content-end">
+          <button class="btn btn-outline-white btn-sm waves-effect" role="button" @click.prevent="storeComment" style="color: #e91e63 !important;" :disabled="send"> отправить
+            <i class="fa fa-angle-double-right fa-15x ml-2" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+
 
   </div>
 
@@ -66,6 +83,8 @@ export default {
       errors: [],
       showMessage: true,
       messages: [],
+      name: '',
+      email: '',
       comment: '',
       send: false
     }
@@ -94,9 +113,13 @@ export default {
     storeComment() {
       this.send = true;
       axios.post('/comment/create/' + this.article_id, {
+        name: this.name,
+        email: this.email,
         content: this.comment
       }).then(response => {
         this.showMessage = true;
+        this.name = '';
+        this.email = '';
         this.comment = '';
         this.messages = response.data.message;
         this.hiddenTimeOutMess();

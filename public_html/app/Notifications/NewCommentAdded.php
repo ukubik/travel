@@ -43,7 +43,7 @@ class NewCommentAdded extends Notification
     {
         return (new MailMessage)
               ->subject('Новый комментарий к статье: "' . $this->comment->article->title . '".')
-              ->line('Пользователь <ins>' . $this->comment->user->login . '</ins> добавил комментарий: ')
+              ->line('Пользователь <ins>' . $this->comment->name . '</ins> добавил комментарий: ')
               ->line('<b>"' . $this->comment->content . '"</b>')
               ->action('Перейти в админку', url('/admin/comment'))
               ->line('Спасибо, что Вы с нами!');

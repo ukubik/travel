@@ -42,7 +42,7 @@
 					@foreach($comments as $comment)
 					<tr>
 						<td>{{ $comment->article->title }}</td>
-						<td>{{ $comment->user->login }} / {{ $comment->user->email }}</td>
+						<td>{{ $comment->name }} / {{ $comment->email }}</td>
 						<td>
 							<textarea form="update-{{ $comment->id }}" rows="2" class="form-control form-control-sm" name="content">{{ $comment->content }}</textarea>
 						</td>

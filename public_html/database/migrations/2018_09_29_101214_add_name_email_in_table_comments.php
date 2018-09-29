@@ -14,8 +14,8 @@ class AddNameEmailInTableComments extends Migration
     public function up()
     {
         Schema::table('comments', function (Blueprint $table) {
-            $table->string('name');
-            $table->string('email');
+            $table->string('name')->after('user_id');
+            $table->string('email')->after('name');
         });
     }
 

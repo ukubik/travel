@@ -22,14 +22,14 @@ Route::get('/get-random-art', 'ArticleController@getRandomArt');
 Route::get('rnd-article', 'ArticleController@rndArticle');
 
 // Вывод комментариев к статье (секция зарегистрированных пользователей)
-Route::group(['prefix' => 'comment', 'middleware' => ['auth']], function() {
+// Route::group(['prefix' => 'comment', 'middleware' => ['auth']], function() {
   // Создание комментария
-  Route::post('/create/{article}', 'CommentController@store');
+  Route::post('/comment/create/{article}', 'CommentController@store');
   // Изменение комментария
-  Route::put('/update/{comment}', 'CommentController@update');
+  Route::put('/comment/update/{comment}', 'CommentController@update');
   // Удаление комментария
-  Route::delete('/destroy/{comment}', 'CommentController@destroy');
-});
+  Route::delete('/comment/destroy/{comment}', 'CommentController@destroy');
+// });
 
 
 

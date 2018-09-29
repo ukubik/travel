@@ -8,7 +8,7 @@ class Comment extends Model
 {
     //
     protected $fillable = [
-      'user_id', 'article_id', 'content', 'published'
+      'user_id', 'article_id', 'content', 'published', 'name', 'email'
     ];
 
     public function user()
