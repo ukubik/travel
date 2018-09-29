@@ -16,7 +16,7 @@ Route::get('/category/{category}/{subcategory?}', 'CategoryController')->name('c
 Route::post('/sendmessage', 'IndexController@sendmessage')->name('sendmessage');
 
 // Получение рандомных статей в раздел интересное (компонент NowReadingComponent)
-Route::get('/get-random-art', 'ArticleController@getRandomArt');
+Route::get('/get-random-art/{article_id?}', 'ArticleController@getRandomArt');
 
 // Вывод рандомной статьи в блок на главной странице (SecondComponrnt.vue)
 Route::get('rnd-article', 'ArticleController@rndArticle');

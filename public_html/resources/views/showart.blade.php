@@ -55,7 +55,7 @@
 
         <div class="row d-flex justify-content-between">
             <div class="col">
-              <small>{{ $comment->user->role->name }}:</small> <b>{{ $comment->user->login }}</b>
+              <small><b>{{ $comment->name }}</b></small>
             </div>
             <div class="col d-flex justify-content-end">
                 {{ $comment->created_at }}
@@ -85,7 +85,7 @@
           <h3>Вам будет интересно</h3>
         </div>
       </div>
-      <now-reading></now-reading>
+      <now-reading :article_id="{{ $article->id }}"></now-reading>
     </div>
 
   </div>

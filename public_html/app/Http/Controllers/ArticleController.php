@@ -20,9 +20,13 @@ class ArticleController extends Controller
     }
 
     // Получение рандомных статей в раздел интересное (компонент NowReadingComponent)
-    public function getRandomArt()
+    public function getRandomArt($article_id = null)
     {
-      return Article::wherePublished("Опубликована")->inRandomOrder()->limit(3)->get();
+      if($article_id) {
+        return Article::wherePublished("Опубликована")->where('id', '!=', $article_id)->inRandomOrder()->limit(3)->get();
+      } else {
+        return Article::wherePublished("Опубликована")->inRandomOrder()->limit(3)->get();
+      }  
     }
 
     // Вывод в SecondComponent

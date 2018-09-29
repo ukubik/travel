@@ -33,6 +33,10 @@
 
 <script>
 export default {
+  props: [
+    'article_id'
+  ],
+
   data() {
     return {
       articles: {}
@@ -45,7 +49,9 @@ export default {
 
   methods: {
     getRandomArt() {
-      axios.get('/get-random-art').then(response => {
+      var id = this.article_id;
+      if(this.article_id === undefined) id = '';
+      axios.get('/get-random-art/' + id).then(response => {
         this.articles = response.data;
       });
     }

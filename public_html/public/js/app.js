@@ -50140,6 +50140,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['article_id'],
+
   data: function data() {
     return {
       articles: {}
@@ -50154,7 +50156,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getRandomArt: function getRandomArt() {
       var _this = this;
 
-      axios.get('/get-random-art').then(function (response) {
+      var id = this.article_id;
+      if (this.article_id === undefined) id = '';
+      axios.get('/get-random-art/' + id).then(function (response) {
         _this.articles = response.data;
       });
     }
