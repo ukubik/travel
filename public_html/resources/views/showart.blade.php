@@ -63,8 +63,8 @@
         </div>
 
         <div class="row border rounded mb-4">
-            <div class="col">
-                {{ $comment->content }}
+            <div class="col" style="font-size:90%">
+                <em>{{ $comment->content }}</em>
             </div>
         </div>
 
