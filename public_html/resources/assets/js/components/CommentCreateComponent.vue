@@ -52,6 +52,7 @@
 
       <div class="row">
         <div class="col-md-7">
+          <em v-bind:class="{ 'blue-text': result_count > 50, 'red-text': result_count <= 50 || result_count ===  'Вы ввели много '}">{{ result_count }} символов</em>
           <textarea class="form-control form-control-sm z-depth-1" rows="5" v-model="comment"></textarea>
         </div>
       </div>
@@ -86,7 +87,16 @@ export default {
       name: '',
       email: '',
       comment: '',
-      send: false
+      send: false,
+      count_simbols: 1000
+    }
+  },
+
+  computed: {
+    result_count() {
+      var count = this.count_simbols - this.comment.length;
+      if(count <= 0) count = 'Вы ввели много ';
+      return count;
     }
   },
 

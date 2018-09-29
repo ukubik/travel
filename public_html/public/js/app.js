@@ -51390,6 +51390,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['article_id'],
@@ -51403,10 +51404,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       name: '',
       email: '',
       comment: '',
-      send: false
+      send: false,
+      count_simbols: 1000
     };
   },
 
+
+  computed: {
+    result_count: function result_count() {
+      var count = this.count_simbols - this.comment.length;
+      if (count <= 0) count = 'Вы ввели много ';
+      return count;
+    }
+  },
 
   methods: {
     //скрытие окна ошибки
@@ -51616,6 +51626,19 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-md-7" }, [
+            _c(
+              "em",
+              {
+                class: {
+                  "blue-text": _vm.result_count > 50,
+                  "red-text":
+                    _vm.result_count <= 50 ||
+                    _vm.result_count === "Вы ввели много "
+                }
+              },
+              [_vm._v(_vm._s(_vm.result_count) + " символов")]
+            ),
+            _vm._v(" "),
             _c("textarea", {
               directives: [
                 {
