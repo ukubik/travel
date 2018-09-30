@@ -57,6 +57,7 @@
         </div>
       </div>
       <now-reading></now-reading>
+      <last-comments></last-comments>
     </div>
 
   </div>

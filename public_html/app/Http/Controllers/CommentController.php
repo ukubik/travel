@@ -50,4 +50,12 @@ class CommentController extends Controller
     {
 
     }
+
+    /**
+    * Последние три коммента в компонент
+    */
+    public function lastComments()
+    {
+      return Comment::wherePublished('Опубликован')->orderBy('created_at', 'desc')->limit(3)->get();
+    }
 }

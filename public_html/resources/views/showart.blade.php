@@ -86,6 +86,7 @@
         </div>
       </div>
       <now-reading :article_id="{{ $article->id }}"></now-reading>
+      <last-comments></last-comments>
     </div>
 
   </div>

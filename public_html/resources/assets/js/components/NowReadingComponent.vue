@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container-fluid sticky-top">
+  <div class="container-fluid">
 
     <div class="row my-4" v-for="article in articles">
       <div class="col">

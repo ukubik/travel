@@ -31,6 +31,8 @@ Route::get('rnd-article', 'ArticleController@rndArticle');
   Route::delete('/comment/destroy/{comment}', 'CommentController@destroy');
 // });
 
+// Вывод последних трех комментариев
+Route::get('/last-comments', 'CommentController@lastComments');
 
 
 Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
