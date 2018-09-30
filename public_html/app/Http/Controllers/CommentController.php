@@ -17,7 +17,7 @@ class CommentController extends Controller
     {
       // dd($request->email);
       $user_id = Auth::id();
-      $article = Article::whereId($id)->first();
+      // $article = Article::whereId($id)->first();
       $this->validate($request, [
         'name' => 'required|string|max:50',
         'email' => 'required|email',
@@ -32,7 +32,7 @@ class CommentController extends Controller
       ]);
       $comment = Comment::create([
         'user_id' => $user_id,
-        'article_id' => $article->id,
+        'article_id' => $id,
         'name' => $request->name,
         'email' => $request->email,
         'content' => $request->content

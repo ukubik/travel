@@ -53794,11 +53794,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       user: {
         login: '',
         email: ''
+        // avatar_path: '',
       },
       file: ''
     };
   },
-  mounted: function mounted() {
+  created: function created() {
     this.getUser();
   },
 

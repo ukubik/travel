@@ -94,12 +94,13 @@ export default {
       user: {
         login: '',
         email: '',
+        // avatar_path: '',
       },
       file: '',
     }
   },
 
-  mounted() {
+  created() {
     this.getUser();
   },
 
