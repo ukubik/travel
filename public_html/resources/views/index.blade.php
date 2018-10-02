@@ -2,6 +2,21 @@
 
 @section('content')
 
+@push('styles')
+
+<style media="screen">
+  .fix-bottom {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .mb-6 {
+    margin-bottom: 5rem !important;
+  }
+</style>
+
+@endpush
+
 @if($categories && $categories->isNotEmpty())
 
 <newheader-component v-bind:categories="{{ json_encode($categories) }}"></newheader-component>
@@ -50,9 +65,9 @@
                   <!-- Title -->
                   <h4 class="card-title">{{ $category->menu_name }}</h4>
                   <!-- Text -->
-                  <p class="card-text">{{ $category->description }}</p>
+                  <p class="card-text mb-6">{{ $category->description }}</p>
                   <!-- Button -->
-                  <a href="{{ route('category', $category) }}" class="btn btn-outline-white waves-effect" title="{{ $category->header }}">
+                  <a href="{{ route('category', $category) }}" class="btn btn-outline-white waves-effect fix-bottom" title="{{ $category->header }}">
                     подробнее...
                     <i class="fa fa-angle-double-right fa-15x ml-2" aria-hidden="true"></i>
                   </a>
