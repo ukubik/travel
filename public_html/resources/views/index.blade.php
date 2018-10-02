@@ -52,7 +52,10 @@
                   <!-- Text -->
                   <p class="card-text">{{ $category->description }}</p>
                   <!-- Button -->
-                  <a href="{{ route('category', $category) }}" class="btn btn-outline-pink waves-effect white-text" title="{{ $category->header }}">перейти к разделу</a>
+                  <a href="{{ route('category', $category) }}" class="btn btn-outline-white waves-effect" title="{{ $category->header }}">
+                    подробнее...
+                    <i class="fa fa-angle-double-right fa-15x ml-2" aria-hidden="true"></i>
+                  </a>
 
                 </div>
 
