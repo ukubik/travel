@@ -29,7 +29,7 @@
           <div class="row my-5 px-4">
             @if(isset($categories) && $categories->isNotEmpty())
             @foreach($categories as $category)
-            <div class="col-4 my-1 px-1 d-flex justify-content-strach">
+            <div class="col-md-4 my-1 px-1 d-flex justify-content-strach">
               <!-- Card -->
               <div class="card">
 
