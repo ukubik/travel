@@ -17,8 +17,52 @@
       </div>
 
       <div class="row" style="min-height:700px">
-        <div class="col d-flex justify-content-center text-shadow">
-          <second-component></second-component>
+        <div class="col">
+
+          <div class="row my-3 white-text px-4">
+            <div class="col text-uppercase border-bottom border-danger text-shadow">
+              <h2 class="h2-responsive">Наши рубрики</h2>
+              <h5 class="h5-responsive">основные разделы сайта</h5>
+            </div>
+          </div>
+
+          <div class="row my-5 px-4">
+            @if(isset($categories) && $categories->isNotEmpty())
+            @foreach($categories as $category)
+            <div class="col-4 my-1 px-1 d-flex justify-content-strach">
+              <!-- Card -->
+              <div class="card">
+
+                <!-- Card image -->
+                <div class="view overlay zoom">
+                  <img class="card-img-top" src="{{ asset('/public/storage/' . $category->img_path) }}" alt="{{ $category->header }}">
+                  <a href="{{ route('category', $category) }}">
+                    <!-- <div class="mask rgba-white-slight"></div> -->
+                    <div class="mask flex-center waves-effect waves-light">
+                      <p class="white-text text-shadow">{{ $category->header }}</p>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Card content -->
+                <div class="card-body elegant-color white-text rounded-bottom">
+
+                  <!-- Title -->
+                  <h4 class="card-title">{{ $category->menu_name }}</h4>
+                  <!-- Text -->
+                  <p class="card-text">{{ $category->description }}</p>
+                  <!-- Button -->
+                  <a href="{{ route('category', $category) }}" class="btn btn-outline-pink waves-effect white-text" title="{{ $category->header }}">перейти к разделу</a>
+
+                </div>
+
+              </div>
+              <!-- Card -->
+            </div>
+            @endforeach
+            @endif
+          </div>
+
         </div>
       </div>
 
