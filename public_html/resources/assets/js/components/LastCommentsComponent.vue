@@ -6,7 +6,9 @@
         <div class="col mb-2">
           <p class="font-weight-bold m-0">{{ comment.name }}</p>
           <p class="m-0 text-muted">{{ comment.created_at }}</p>
-          <em style="font-size:90%">{{ comment.content }}</em> <hr>
+          <em style="font-size:90%">{{ comment.content }}</em><br>
+          <a :href="'/article/' + comment.article_id" title="Статья комментария">Перейти к статье</a>
+          <hr>
         </div>
       </div>
     </div>
