@@ -49170,7 +49170,7 @@ var render = function() {
                                   "h1",
                                   {
                                     staticClass:
-                                      "display-4 text-uppercase white-text"
+                                      "display-3 text-uppercase white-text"
                                   },
                                   [
                                     _vm._v(

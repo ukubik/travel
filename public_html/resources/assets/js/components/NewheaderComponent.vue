@@ -13,7 +13,7 @@
                     <div class="col-md-7">
                       <div class="row d-flex justify-content-center">
                         <div class="col-md-9">
-                          <h1 class="display-4 text-uppercase white-text">
+                          <h1 class="display-3 text-uppercase white-text">
                             {{ category.header }}
                           </h1>
                           <h2 class="dispaly-5 text-uppercase white-text my-5">
