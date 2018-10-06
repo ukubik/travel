@@ -49277,10 +49277,9 @@ var staticRenderFns = [
       [
         _c("span", {
           staticClass: "carousel-control-prev-icon",
+          staticStyle: { display: "none" },
           attrs: { "aria-hidden": "true" }
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+        })
       ]
     )
   },
@@ -49301,10 +49300,9 @@ var staticRenderFns = [
       [
         _c("span", {
           staticClass: "carousel-control-next-icon",
+          staticStyle: { display: "none" },
           attrs: { "aria-hidden": "true" }
-        }),
-        _vm._v(" "),
-        _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+        })
       ]
     )
   },

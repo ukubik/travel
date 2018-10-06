@@ -33,12 +33,12 @@
               </div>
           </div>
           <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="display:none"></span>
+            <!-- <span class="sr-only">Previous</span> -->
           </a>
           <a class="carousel-control-next d-flex justify-content-end" href="#carousel-example-1z" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true" style="display:none"></span>
+            <!-- <span class="sr-only">Next</span> -->
           </a>
           <!--/.Slides-->
       </div>
