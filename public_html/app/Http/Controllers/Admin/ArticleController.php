@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Article;
+use App\MetaTag;
 use App\Category;
 use App\SubCategory;
 use App\Events\NewArticle;
@@ -58,7 +59,10 @@ class ArticleController extends Controller
           // 'category_id' => 'required|integer',
           'art_title' => 'required|string',
           'description' => 'required|string|max:120',
-          'content' => 'required|string'
+          'content' => 'required|string',
+          'tag_title' => 'required|string',
+          'tag_keywords' => 'required|string',
+          'tag_description' => 'required|string',
         ]);
 
         if(strstr($request->category_id, '/')) {
@@ -80,6 +84,13 @@ class ArticleController extends Controller
             'content' => $request->content
           ]);
         }
+
+        MetaTag::create([
+          'article_id' => $article->id,
+          'title' => $request->tag_title,
+          'keywords' => $request->tag_keywords,
+          'description' => $request->tag_description
+        ]);
         //
         return redirect()->route('admin.article.index', $request->category_id);
     }

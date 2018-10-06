@@ -51611,7 +51611,10 @@ var render = function() {
                 }
               ],
               staticClass: "form-control form-control-sm z-depth-1",
-              attrs: { type: "email", placeholder: "Ваш Email" },
+              attrs: {
+                type: "email",
+                placeholder: "Ваш Email (не обязятельно)"
+              },
               domProps: { value: _vm.email },
               on: {
                 input: function($event) {

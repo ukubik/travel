@@ -20,7 +20,7 @@ class CommentController extends Controller
       // $article = Article::whereId($id)->first();
       $this->validate($request, [
         'name' => 'required|string|max:50',
-        'email' => 'required|email',
+        'email' => 'email|nullable',
         'content' => 'required|string|max:1000'
       ],
       [

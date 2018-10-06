@@ -46,7 +46,7 @@
 
       <div class="form-group">
         <div class="col-md-5">
-          <input type="email" class="form-control form-control-sm z-depth-1" placeholder="Ваш Email" v-model="email">
+          <input type="email" class="form-control form-control-sm z-depth-1" placeholder="Ваш Email (не обязятельно)" v-model="email">
         </div>
       </div>
 
