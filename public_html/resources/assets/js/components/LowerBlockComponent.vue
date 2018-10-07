@@ -3,22 +3,28 @@
   <div class="container white-text">
     <div class="row my-5 pt-5">
       <div class="col">
-        <h1 class="display-3">Наши лучшие авторы</h1>
+        <h1 class="display-3">Что дает регистрация:</h1>
       </div>
     </div>
 
     <div class="row my-5">
       <p class="h3-responsive">
-        <ul>
-          <li class="my-4">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-          <li class="my-4">2. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-        </ul>
+        Господа, сделали этот сайт чтобы делиться впечатлениями, эмоциями и воспоминаниями о путешествиях.
+      </p>
+      <p class='h5-responsive'>
+        Маленьких и больших, далёких и не очень. Но очень важных и милых нашему сердцу. Потому что нет лучшего отдыха, чем путешествие. Любой из вас может написать историю о своем путешествии, о милых его сердцу местах. Любой из вас может оставить комментарий и помочь другим сформировать своё мнение относительно того или иного места.
+      </p>
+      <p class='h5-responsive'>
+        На сайте есть регистрация. Она не обязательна, но она даёт вам возможность предложить статью, а так же подписаться на обновления сайта. Вам будет приходить извещение о каждой новой статье на сайте на указанный emai. Мы очень надеемся,что сайт будет полезен и интересен вам.
+      </p>
+      <p class='h4-responsive'>
+        Благодарим за любое участие в жизни сайта. Ждем от вас ваших историй и комментариев!
       </p>
     </div>
 
     <div class="row my-5">
       <div class="col text-center">
-        <a href="#" class="btn btn-outline-white btn-lg waves-effect" role="button"> читать
+        <a href="#" class="btn btn-outline-white btn-lg waves-effect" role="button" data-toggle="modal" data-target="#registerModal"> регистрация
           <i class="fa fa-angle-double-right fa-15x ml-2" aria-hidden="true"></i>
         </a>
       </div>

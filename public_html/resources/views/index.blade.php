@@ -126,8 +126,8 @@
 
   <div class="row" style="min-height:700px">
     <div class="col text-shadow">
-      <!-- <lower-block></lower-block> -->
-      <second-component></second-component>
+      <lower-block></lower-block>
+      <!-- <second-component></second-component> -->
     </div>
   </div>
 
