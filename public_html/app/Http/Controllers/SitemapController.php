@@ -69,7 +69,7 @@ class SitemapController extends Controller
       // create new sitemap object
     	$sitemap = App::make('sitemap');
 
-    	$sitemap->setCache('laravel.sitemap-articles', 60);
+    	// $sitemap->setCache('laravel.sitemap-articles', 60);
 
     	if (!$sitemap->isCached()) {
     		// add item to the sitemap (url, date, priority, freq)
@@ -89,7 +89,7 @@ class SitemapController extends Controller
             foreach($images[0] as $image) {
               preg_match_all($src_pattern, $image, $img[$image]);
               $result[] = [
-                'url' => $img[$image][2][1],
+                'url' => trim($img[$image][2][1], '"'),
                 'title' => $img[$image][2][0],
               ];
 
