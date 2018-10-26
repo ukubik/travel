@@ -17,7 +17,7 @@ class SitemapController extends Controller
       $sitemap = App::make("sitemap");
 
       // set cache
-      $sitemap->setCache('laravel.sitemap-index', 3600);
+      $sitemap->setCache('laravel.sitemap-index', 60);
 
       // add sitemaps (loc, lastmod (optional))
       $sitemap->addSitemap(URL::to('sitemap-categories'));
@@ -35,7 +35,7 @@ class SitemapController extends Controller
       $sitemap_categories = App::make("sitemap");
 
       // set cache
-      $sitemap_categories->setCache('laravel.sitemap-categories', 3600);
+      $sitemap_categories->setCache('laravel.sitemap-categories', 60);
 
       // add items
       $categories = Category::whereAddedMenu('В меню')->orderBy('created_at', 'desc')->get();
@@ -109,7 +109,7 @@ class SitemapController extends Controller
     {
       $sitemap = App::make('sitemap');
 
-      $sitemap->setCache('laravel.sitemap-attachment', 3600);
+      $sitemap->setCache('laravel.sitemap-attachment', 60);
 
       if(!$sitemap->isCached()) {
 
