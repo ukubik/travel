@@ -2,6 +2,10 @@
 
 Route::get('sitemap.xml', 'SitemapController@index');
 
+Route::get('sitemap-articles', 'SitemapController@articles');
+
+Route::get('sitemap-categories', 'SitemapController@categories');
+
 Route::get('/', 'IndexController@index')->name('index');
 // Show article
 Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
