@@ -17,7 +17,7 @@ class SitemapController extends Controller
       $sitemap = App::make("sitemap");
 
       // set cache
-      $sitemap->setCache('laravel.sitemap-index', 3600);
+      // $sitemap->setCache('laravel.sitemap-index', 3600);
 
       // add sitemaps (loc, lastmod (optional))
       $sitemap->addSitemap(URL::to('sitemap-categories'));
