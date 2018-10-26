@@ -1,0 +1,1021 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/vendor/sitemap/styles/xml.xsl" type="text/xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+	<url>
+	<loc>https://puzzle-it.ru</loc>
+		<priority>1.0</priority>
+		<lastmod>2018-08-25T21:10:00+03:00</lastmod>
+		<changefreq>daily</changefreq>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/41</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-20T21:27:53+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb6d52070e3.jpg"</image:loc>
+			<image:title>"лоо"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb6da200c12.jpg"</image:loc>
+			<image:title>"станция Лоо"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb6e0b6078d.jpg"</image:loc>
+			<image:title>"plyaj Loo"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb6e5a3bc4b.jpg"</image:loc>
+			<image:title>"Magadan plyaj"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb6ed4eb2bd.jpg"</image:loc>
+			<image:title>"dikiy plyaj loo"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb6f4277d77.jpg"</image:loc>
+			<image:title>"пляж Дельфин"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb6f9816202.jpg"</image:loc>
+			<image:title>"chudo krasotka"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb6ff4acbd0.jpg"</image:loc>
+			<image:title>"ushelye vedm"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb703e84a50.jpg"</image:loc>
+			<image:title>"ruiny hrama loo"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb709d38efe.jpg"</image:loc>
+			<image:title>"aqualoo"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb7144a10f1.jpg"</image:loc>
+			<image:title>"muzey armyan"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb718507ab8.jpg"</image:loc>
+			<image:title>"rayskoe naslajdeniye"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb71d508abd.jpg"</image:loc>
+			<image:title>"cerkov simona"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcb7217d9812.jpg"</image:loc>
+			<image:title>"klub tornado"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/36</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-22T17:55:11+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcddadfaddf6.jpg"</image:loc>
+			<image:title>"Челябинск ночь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcddbcdbbb44.jpg"</image:loc>
+			<image:title>"погонщик верблюдов челябинск"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcddb32770bc.jpg"</image:loc>
+			<image:title>"челябинск аэс"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcddbc7bec22.jpg"</image:loc>
+			<image:title>"verblud chelyabinsk"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcde31f0cc62.jpg"</image:loc>
+			<image:title>"Челябинск церковь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcddb319eddb.jpg"</image:loc>
+			<image:title>"Челябинск люди"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcddbc18076b.jpg"</image:loc>
+			<image:title>"памятник курчатову челябинск"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bcddbc9d6215.jpg"</image:loc>
+			<image:title>"Челябинск"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/32</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-19T10:53:25+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc893b5cfc76.jpg"</image:loc>
+			<image:title>"Цаган-Сар кафе"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc8894269000.jpg"</image:loc>
+			<image:title>"Чайная"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc89c5e263ea.JPG"</image:loc>
+			<image:title>"чайная элиста закусочная"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc8891d9efb7.jpg"</image:loc>
+			<image:title>"menu chainaia"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc8894be292d.jpg"</image:loc>
+			<image:title>"меню напитки чайная"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc89ba7e6084.jpg"</image:loc>
+			<image:title>"меню чайная блинчики"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc8894bca6b4.jpg"</image:loc>
+			<image:title>"бёреки"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc88942157e6.jpg"</image:loc>
+			<image:title>"махн"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc897cb46420.JPG"</image:loc>
+			<image:title>"в чайной в элисте"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc8894bee8c4.jpg"</image:loc>
+			<image:title>"лагман"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc888f98b312.jpg"</image:loc>
+			<image:title>"кумыс калмыкия"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bc899db945d2.JPG"</image:loc>
+			<image:title>"КИТ Элиста"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/30</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-09T15:20:34+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbc9a8ddd72b.jpg"</image:loc>
+			<image:title>"сывтывкар сверху"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbc9a8a7e9ca.jpg"</image:loc>
+			<image:title>"кинотеатр сывтывкар"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbc9a8f25818.jpg"</image:loc>
+			<image:title>"национальная галерея республики коми"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbc9bcf1719f.jpg"</image:loc>
+			<image:title>"парк кирова сывтывкар"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbc9a8e5e4c1.jpg"</image:loc>
+			<image:title>"сывтывкар ночь"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/29</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-08T18:53:56+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbb7aa12601a.jpg"</image:loc>
+			<image:title>"флаг Абхазии"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbb7c18585ec.jpg"</image:loc>
+			<image:title>"абхазия особняк"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbb7be98c8f7.jpg"</image:loc>
+			<image:title>"абхазия море"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbb7b2f33baf.jpg"</image:loc>
+			<image:title>"пицунда"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbb7bb60dafb.jpg"</image:loc>
+			<image:title>"абхазия горы река"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbb7b6bc75a7.jpg"</image:loc>
+			<image:title>"озеро Рица Абхазия"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbb7c475604b.jpg"</image:loc>
+			<image:title>"абхазия пляж"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/28</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-07T09:50:30+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb9118733a4b.jpg"</image:loc>
+			<image:title>"озеро Байкал"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb912ded3ebd.jpg"</image:loc>
+			<image:title>"чайки байкал"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb9131967a65.jpg"</image:loc>
+			<image:title>"славное море священный Байкал"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb913526951a.jpg"</image:loc>
+			<image:title>"байкальская нерпа"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb913ae3338d.jpg"</image:loc>
+			<image:title>"Байкал"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb913f55a301.jpg"</image:loc>
+			<image:title>"байкал берег чайки"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb9148557b8d.jpg"</image:loc>
+			<image:title>"Байкал озеро"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb914280ba39.jpg"</image:loc>
+			<image:title>"на Байкале"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb91457811db.jpg"</image:loc>
+			<image:title>"байкал жизнь"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/27</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-09T18:14:28+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc2b0d6582.jpg"</image:loc>
+			<image:title>"Хибины горы"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc2b1ce005.jpg"</image:loc>
+			<image:title>"горы Хибины"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc267cfaed.jpg"</image:loc>
+			<image:title>"Кировск Мурманская область"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc2b5857a1.jpg"</image:loc>
+			<image:title>"хибины"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc2bf54dab.jpg"</image:loc>
+			<image:title>"хибины лес ягоды"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc1fb94814.jpg"</image:loc>
+			<image:title>"кафе Шоколад Кировск"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc1619ca48.jpg"</image:loc>
+			<image:title>"Кировск ресторан Северный"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc05b03adc.jpg"</image:loc>
+			<image:title>"Кировск Хибины озёра"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc1162ee0a.jpg"</image:loc>
+			<image:title>"Кировск Ботанический сад"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bbcc2b67fe86.jpg"</image:loc>
+			<image:title>"горы мурманская область"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/26</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-06T13:28:14+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/25</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-06T17:34:21+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb53e8abc9ae.jpg"</image:loc>
+			<image:title>"мы и пагода семи дней"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb53e7b47e84.jpg"</image:loc>
+			<image:title>"Пагода семи дней"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb53e8bef296.jpg"</image:loc>
+			<image:title>"дедушки играют в шахматы элиста"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb53e8b33682.jpg"</image:loc>
+			<image:title>"фонтан три лотоса элиста"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb541e84bedf.jpg"</image:loc>
+			<image:title>"Хурул Элиста"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb541e854fc7.jpg"</image:loc>
+			<image:title>"Хурул центральный вход Элиста"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c1710c966.jpg"</image:loc>
+			<image:title>"правила поведения в буддийском храме"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb541edcf1b8.jpg"</image:loc>
+			<image:title>"Нагарджуна Элиста Хурул"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb541e7776c9.jpg"</image:loc>
+			<image:title>"статуя элиста пандит"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb541f03aa3d.jpg"</image:loc>
+			<image:title>"Снежный Лев"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c2ffa9878.jpg"</image:loc>
+			<image:title>"молитвенный зал"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c3997ce4d.jpg"</image:loc>
+			<image:title>"роспись Далай-Ламы"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c3ffb0d0e.jpg"</image:loc>
+			<image:title>"роспись  стен  храма"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c49556c4a.jpg"</image:loc>
+			<image:title>"зал хурула "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c50d7be23.jpg"</image:loc>
+			<image:title>"Музей буддизма"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c58f3696d.jpg"</image:loc>
+			<image:title>"музей буддизм"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c5180b635.jpg"</image:loc>
+			<image:title>"буддийская библиотека"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c60d4cb61.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb5c7a88084b.jpg"</image:loc>
+			<image:title>"Будда Шакьямуни Budda Sakiamuni"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/24</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-04T11:12:59+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb4be56cf261.jpg"</image:loc>
+			<image:title>"Храм Золотая Обитель Будды Шакьямуни в Элисте "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb4be6279569.jpg"</image:loc>
+			<image:title>"Гостиница Элиста ночью"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb4be56dc52c.jpg"</image:loc>
+			<image:title>"Белый Старец в сквере Элиста"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb4be63a8813.jpg"</image:loc>
+			<image:title>"Пагода Семи Дней ночь Элиста"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb4be56cf270.jpg"</image:loc>
+			<image:title>"Хурул ночью Элиста"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb4be634dd7b.jpg"</image:loc>
+			<image:title>"улица Ленина Элиста ночью"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/23</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-03T16:24:37+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb057d571258.jpg"</image:loc>
+			<image:title>"озеро близнецы"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb057e958892.jpg"</image:loc>
+			<image:title>"близнецы"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb04eb5700f9.jpg"</image:loc>
+			<image:title>"Кирха королевы Луизы (Областной кукольный театр"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb04eff726dc.jpg"</image:loc>
+			<image:title>"Кирха королевы Луизы (Областной кукольный театр)"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb04f8213922.jpg"</image:loc>
+			<image:title>"вилла Шлегельбергер"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb04fb406485.jpg"</image:loc>
+			<image:title>"вилла Лео"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb051a05fac3.jpg"</image:loc>
+			<image:title>"вилла Лео"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb051d05203d.jpg"</image:loc>
+			<image:title>"вилла Лео"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb052127afa9.jpg"</image:loc>
+			<image:title>"вилла &amp;quot;Шмидт&amp;quot; 1903-1904"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb052379ee91.jpg"</image:loc>
+			<image:title>"вилла &amp;quot;Шмидт&amp;quot; 1903-1904"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb05259e0d42.jpg"</image:loc>
+			<image:title>"вилла &amp;quot;Шмидт&amp;quot; 1903-1904"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb05287b5011.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Винтер&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb052a5a40e3.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Винтер&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb052d253af4.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Хонкамп&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb052f39dbed.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Хонкамп&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0532101f7e.jpg"</image:loc>
+			<image:title>"Двойная вилла"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb053496b47b.jpg"</image:loc>
+			<image:title>"Двойная вилла"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0538553daa.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Иоахим&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb053bda1d92.jpg"</image:loc>
+			<image:title>"Маленькая вилла на Регентенштрассе"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb053f83a841.jpg"</image:loc>
+			<image:title>" приют Альбрехта 1890-е годы (ныне Дом художника)"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb05423f1c09.jpg"</image:loc>
+			<image:title>"приют Альбрехта 1890-е годы (ныне Дом художника)"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb05450cb100.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Маковски&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0547046e5e.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Маковски&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb05494c26f4.jpg"</image:loc>
+			<image:title>"Сельский дом &amp;quot;Рут&amp;quot; "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb054b171912.jpg"</image:loc>
+			<image:title>"Сельский дом &amp;quot;Рут&amp;quot; "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0551d0c422.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Мел&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb05556d9caa.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Арон&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0557c6bb75.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Штински&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb055970358c.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Штински&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb055b72ee26.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Штински&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb055db4df62.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Штайнкопф&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb055ffae426.jpg"</image:loc>
+			<image:title>"Вилла &amp;quot;Штайнкопф&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0562b8b298.jpg"</image:loc>
+			<image:title>"Угловая вилла "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb056585a966.jpg"</image:loc>
+			<image:title>"Здание Бургшколы"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb056630298d.jpg"</image:loc>
+			<image:title>"Здание Бургшколы"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb056af967f5.jpg"</image:loc>
+			<image:title>"Здание приюта Типольтов "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb056b0021d7.jpg"</image:loc>
+			<image:title>"Здание приюта Типольтов "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb056b037eef.jpg"</image:loc>
+			<image:title>"Здание приюта Типольтов "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0570a67738.jpg"</image:loc>
+			<image:title>"Здание общежития для малоимущих студентов &amp;quot;Резаниум&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0573c9aa3b.jpg"</image:loc>
+			<image:title>"Здание народной школы для мальчиков Краус-шуле"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0573c9425c.jpg"</image:loc>
+			<image:title>"Здание народной школы для мальчиков Краус-шуле"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0577f54f44.jpg"</image:loc>
+			<image:title>"Мужчина и женщина"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb0577f6b19f.jpg"</image:loc>
+			<image:title>"Мужчина и женщина"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/22</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-04T12:29:52+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/21</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-03T09:50:33+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b923624a9fbe.jpg"</image:loc>
+			<image:title>"Ялта"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9236a5ca073.jpg"</image:loc>
+			<image:title>"поляна сказок ялта"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b923715d4145.jpg"</image:loc>
+			<image:title>"ласточкино гнездо"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9237880cff3.jpg"</image:loc>
+			<image:title>"Воронцовский дворец"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b923802e8e58.jpg"</image:loc>
+			<image:title>"парк Парадиз"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9238ac5f0c1.jpg"</image:loc>
+			<image:title>"Воскресенская церковь крым"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/20</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-01T09:33:34+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9521ce39111.jpg"</image:loc>
+			<image:title>"Амалиенау "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb1bf96dd723.jpg"</image:loc>
+			<image:title>"Амалиенау 2"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b95237edc860.jpg"</image:loc>
+			<image:title>"Амалиенау 4"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b952261514d7.jpg"</image:loc>
+			<image:title>"Амалиенау 3"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/19</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-03T09:56:47+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b979e8d756ec.jpg"</image:loc>
+			<image:title>"вино"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b979f53cac31.jpeg"</image:loc>
+			<image:title>"винзавод Южный"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b979fe87ca49.jpg"</image:loc>
+			<image:title>"винзавод Абрау-Дюрсо"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b97a05f6dfcd.jpeg"</image:loc>
+			<image:title>"винзавод «Магарач»"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b97a0df0236a.jpg"</image:loc>
+			<image:title>"вино дегустация"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/18</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-22T22:24:25+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9bec40bd084.jpg"</image:loc>
+			<image:title>"ЗАГС Омск"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9bec8568c61.jpg"</image:loc>
+			<image:title>"омск музей"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9bed5dcd13a.jpg"</image:loc>
+			<image:title>"мамонт омск"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9beda13ce0a.jpg"</image:loc>
+			<image:title>"свято-успенский кафедральный собор"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9bee67738c0.jpeg"</image:loc>
+			<image:title>"Лютеранская церковь святой Екатерины"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9beea59f40d.jpg"</image:loc>
+			<image:title>"Омский музей Достоевского"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9beed7639bc.jpg"</image:loc>
+			<image:title>"Тарские ворота"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9beefcb19c7.jpg"</image:loc>
+			<image:title>"Юбилейный мост"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9bef2b1912f.jpg"</image:loc>
+			<image:title>"омский академический театр драмы"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/17</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-22T22:24:41+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca21121810.jpg"</image:loc>
+			<image:title>"Кремлёвский парк"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca254a095b.jpg"</image:loc>
+			<image:title>"Новгородский кремль"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca2ab31d5f.jpg"</image:loc>
+			<image:title>"Витославлицы"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca2e5009a5.jpg"</image:loc>
+			<image:title>"памятник &amp;quot;Тысячелетие России&amp;quot;"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca32faa712.jpg"</image:loc>
+			<image:title>"Софийский собор"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca3ba6277d.jpg"</image:loc>
+			<image:title>"Грановитая палата"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca3f9a2bc8.jpg"</image:loc>
+			<image:title>"Юрьев монастырь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca497e60bb.jpg"</image:loc>
+			<image:title>"Музей Заповедник"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca4c33bb55.jpg"</image:loc>
+			<image:title>"Дворище Ярославо"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca50273dae.jpg"</image:loc>
+			<image:title>"Церковь Спаса Преображения"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca545a0b6e.jpg"</image:loc>
+			<image:title>"Красная изба"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5b9ca57aa2b9f.jpeg"</image:loc>
+			<image:title>"Храм Параскевы Пятницы на Торгу"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/16</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-07T09:19:12+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5ba66ddad0ab9.jpg"</image:loc>
+			<image:title>"зёрна кофе"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb1d7cdb9c06.jpg"</image:loc>
+			<image:title>"санкт петербург музей кофе"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5ba66fdb70c40.jpg"</image:loc>
+			<image:title>"музей кофе"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5ba670209172b.jpg"</image:loc>
+			<image:title>"кофе музей"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5ba6709477ee0.jpg"</image:loc>
+			<image:title>"кофе молотый"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5ba670d65f3dc.jpg"</image:loc>
+			<image:title>"музей кофе питер"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5ba671185e80f.jpg"</image:loc>
+			<image:title>"музей кофе санкт петербург"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5ba671758e65f.jpg"</image:loc>
+			<image:title>"кофе арт"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/15</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-09-27T09:28:19+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac756443f5c.jpeg"</image:loc>
+			<image:title>"нижнекамск промышленность"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac75958fb79.jpg"</image:loc>
+			<image:title>"нижнекамск высотки"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac76a19a6bb.jpg"</image:loc>
+			<image:title>"нижнекамск мечеть"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac75d61cd84.jpg"</image:loc>
+			<image:title>"нижнекамск площадь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac7622123ca.jpg"</image:loc>
+			<image:title>"нижнекамск памятник"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac76579a3f9.jpg"</image:loc>
+			<image:title>"нижнекамск церковь"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/14</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-03T19:54:24+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb1a1dc58585.jpg"</image:loc>
+			<image:title>"царь-пушка"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb1a1114cd0e.jpg"</image:loc>
+			<image:title>"царь-пушка"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb1a11235718.jpg"</image:loc>
+			<image:title>"царь-пушка"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb1a114c2b0c.jpg"</image:loc>
+			<image:title>"царь-пушка"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb1a1e0b71ec.jpg"</image:loc>
+			<image:title>"царь-пушка"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb1a1de1f9fb.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/13</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-10-03T00:15:43+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac7bff09455.jpg"</image:loc>
+			<image:title>"Шавлинские озёра "</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac7d8be0823.jpg"</image:loc>
+			<image:title>"Шавлинские озёра"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac7e9d8ba1c.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac7f18f1dce.jpg"</image:loc>
+			<image:title>"озёра Алтай Шавлинские"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bac7f6278e58.jpg"</image:loc>
+			<image:title>"Алтай озёра"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/12</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-09-30T22:27:39+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11ebd2334d.jpg"</image:loc>
+			<image:title>"Холковский Свято-троицкий монастырь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11e8b4b8bb.jpg"</image:loc>
+			<image:title>"Холковский Свято-троицкий монастырь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11e32cd305.jpg"</image:loc>
+			<image:title>"Холковский Свято-троицкий монастырь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11ea813553.jpg"</image:loc>
+			<image:title>"Холковский Свято-троицкий монастырь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11fb2c4bad.jpg"</image:loc>
+			<image:title>"Холковский Свято-троицкий монастырь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11ebd3a82b.jpg"</image:loc>
+			<image:title>"Холковский Свято-троицкий монастырь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11fb2e16dd.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11ebdc7e6c.png"</image:loc>
+			<image:title>"Холковский Свято-троицкий монастырь"</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"https://puzzle-it.ru/storage/images/5bb11ea846861.jpg"</image:loc>
+			<image:title>"Холковский Свято-троицкий монастырь"</image:title>
+		</image:image>
+	</url>
+	<url>
+	<loc>https://puzzle-it.ru/article/4</loc>
+		<priority>0.5</priority>
+		<lastmod>2018-09-30T22:56:30+03:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803dddd4fde.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803dde07f81.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803dde157bf.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803ddfa2d0a.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803de005686.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803ddfac88d.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803dde4565b.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803dde87998.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803ddea7741.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803ddec964a.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803ddef1dcf.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803ddf61948.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803ddfb018c.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803de060be0.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>"http://puzzle-it.ru/storage/images/articles/5b803de05651b.jpg"</image:loc>
+			<image:title>""</image:title>
+		</image:image>
+	</url>
+</urlset>
