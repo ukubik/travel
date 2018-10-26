@@ -33,7 +33,7 @@
 
             <!-- Card image -->
             <a href="{{ '/article/' . $article->id  }}">
-              <img class="card-img-top hoverable" src="{{ $img_puth }}" alt="Card image cap">
+              <img class="card-img-top hoverable" src="{{ $img_puth }}" alt="Card image cap" title="{{ $article->title }}">
             </a>
 
             <!-- Card content -->
