@@ -42,10 +42,26 @@ class SitemapController extends Controller
 
     		// get all posts from db
     		$articles = DB::table('articles')->wherePublished('Опубликована')->orderBy('created_at', 'desc')->get();
-
+        $img_pattern = '/<img[^>]+>/i';
+        $src_pattern = '/(src|alt|title)=("[^"]*")/i';
     		// add every post to the sitemap
     		foreach ($articles as $article) {
-    			$sitemap->add(URL::to('article').'/'.$article->id, $article->updated_at, '0.5', 'monthly');
+          $img = [];
+          $result = [];
+          preg_match_all($img_pattern, $article->content, $images);
+          // dump($images);
+          if($images) {
+            foreach($images[0] as $image) {
+              preg_match_all($src_pattern, $image, $img[$image]);
+              $result[] = [
+                'url' => $img[$image][2][1],
+                'title' => $img[$image][2][0],
+              ];
+
+            }
+          }
+          // dump($result);
+    			$sitemap->add(URL::to('article').'/'.$article->id, $article->updated_at, '0.5', 'monthly', $result);
     		}
     	}
 
