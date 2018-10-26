@@ -21,8 +21,8 @@ class SitemapController extends Controller
     	// check if there is cached sitemap and build new only if is not
     	if (!$sitemap->isCached()) {
     		// add item to the sitemap (url, date, priority, freq)
-    		$sitemap->add(URL::to('/'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
-    		$sitemap->add(URL::to('page'), '2012-08-26T12:30:00+02:00', '0.9', 'monthly');
+    		$sitemap->add(URL::to('/'), '2018-08-25T20:10:00+02:00', '1.0', 'daily');
+    		// $sitemap->add(URL::to('page'), '2018-08-26T12:30:00+02:00', '0.9', 'monthly');
 
     		// // add item with translations (url, date, priority, freq, images, title, translations)
     		// $translations = [
