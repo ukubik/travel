@@ -17,7 +17,7 @@ class SitemapController extends Controller
       $sitemap = App::make("sitemap");
 
       // set cache
-      // $sitemap->setCache('laravel.sitemap-index', 60);
+      $sitemap->setCache('laravel.sitemap-index', 60);
 
       // add sitemaps (loc, lastmod (optional))
       $sitemap->addSitemap(URL::to('sitemap-categories'));
@@ -69,40 +69,40 @@ class SitemapController extends Controller
       // create new sitemap object
     	$sitemap = App::make('sitemap');
 
-    	// $sitemap->setCache('laravel.sitemap-articles', 60);
+    	$sitemap->setCache('laravel.sitemap-articles', 60);
 
     	if (!$sitemap->isCached()) {
     		// add item to the sitemap (url, date, priority, freq)
     		$sitemap->add(URL::to('/'), '2018-08-25T20:10:00+02:00', '1.0', 'daily');
-
     		// get all posts from db
     		$articles = DB::table('articles')->wherePublished('Опубликована')->orderBy('created_at', 'desc')->get();
+
         $img_pattern = '/<img[^>]+>/i';
         $src_pattern = '/(src|alt|title)=("[^"]*")/i';
     		// add every post to the sitemap
     		foreach ($articles as $article) {
+
           $img = [];
           $result = [];
+
           preg_match_all($img_pattern, $article->content, $images);
-          // dump($images);
+
           if($images) {
+
             foreach($images[0] as $image) {
+
               preg_match_all($src_pattern, $image, $img[$image]);
+
               $result[] = [
                 'url' => trim($img[$image][2][1], '"'),
                 'title' => $img[$image][2][0],
               ];
-
             }
           }
-          // dump($result);
     			$sitemap->add(URL::to('article').'/'.$article->id, $article->updated_at, '0.5', 'weekly', $result);
     		}
     	}
-
-    	// show your sitemap (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')
     	return $sitemap->render('xml');
-
     }
 
     public function attachment()
@@ -114,23 +114,24 @@ class SitemapController extends Controller
       if(!$sitemap->isCached()) {
 
         $articles = Article::wherePublished('Опубликована')->orderBy('updated_at', 'desc')->get();
+
         $img_pattern = '/<img[^>]+>/i';
         $src_pattern = '/(src|alt|title)=("[^"]*")/i';
 
         if(isset($articles) && $articles->isNotEmpty()) {
+
           foreach ($articles as $article) {
+
             $img = [];
-            $result = [];
+
             preg_match_all($img_pattern, $article->content, $images);
-            // dump($images);
+
             if($images) {
+
               foreach($images[0] as $image) {
+
                 preg_match_all($src_pattern, $image, $img[$image]);
-                $result[] = [
-                  'url' => $img[$image][2][1],
-                  'title' => $img[$image][2][0],
-                ];
-                // dump($img[$image][2][1]);
+
                 $sitemap->add(URL::to('attachment') . '/' . $article->id . '/' . trim($img[$image][2][1], '"'), $article->updated_at, '0.5', 'weekly');
               }
             }
