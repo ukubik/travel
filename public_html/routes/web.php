@@ -1,5 +1,7 @@
 <?php
 
+Route::get('sitemap.xml', 'SitemapController@index');
+
 Route::get('/', 'IndexController@index')->name('index');
 // Show article
 Route::get('/article/{id}', 'ArticleController@show')->name('article.show');
