@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -21,6 +22,7 @@ class SitemapController extends Controller
       // add sitemaps (loc, lastmod (optional))
       $sitemap->addSitemap(URL::to('sitemap-categories'));
       $sitemap->addSitemap(URL::to('sitemap-articles'));
+      $sitemap->addSitemap(URL::to('sitemap-attachment'));
 
       // show sitemap
       return $sitemap->render('sitemapindex');
@@ -102,4 +104,40 @@ class SitemapController extends Controller
     	return $sitemap->render('xml');
 
     }
+
+    public function attachment()
+    {
+      $sitemap = App::make('sitemap');
+
+      $sitemap->setCache('laravel.sitemap-attachment', 3600);
+
+      if(!$sitemap->isCached()) {
+
+        $articles = Article::wherePublished('Опубликована')->orderBy('updated_at', 'desc')->get();
+        $img_pattern = '/<img[^>]+>/i';
+        $src_pattern = '/(src|alt|title)=("[^"]*")/i';
+
+        if(isset($articles) && $articles->isNotEmpty()) {
+          foreach ($articles as $article) {
+            $img = [];
+            $result = [];
+            preg_match_all($img_pattern, $article->content, $images);
+            // dump($images);
+            if($images) {
+              foreach($images[0] as $image) {
+                preg_match_all($src_pattern, $image, $img[$image]);
+                $result[] = [
+                  'url' => $img[$image][2][1],
+                  'title' => $img[$image][2][0],
+                ];
+                // dump($img[$image][2][1]);
+                $sitemap->add(URL::to('attachment') . '/' . $article->id . '/' . trim($img[$image][2][1], '"'), $article->updated_at, '0.5', 'weekly');
+              }
+            }
+          }
+        }
+      }
+      return $sitemap->render('xml');
+    }
+
 }

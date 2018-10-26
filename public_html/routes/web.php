@@ -6,6 +6,10 @@ Route::get('sitemap-articles', 'SitemapController@articles');
 
 Route::get('sitemap-categories', 'SitemapController@categories');
 
+Route::get('sitemap-attachment', 'SitemapController@attachment');
+
+Route::get('/attachment/{article}/{img_puth}', 'IndexController@attachment')->where('img_puth', '.*');
+
 Route::get('/', 'IndexController@index')->name('index');
 // Show article
 Route::get('/article/{id}', 'ArticleController@show')->name('article.show');

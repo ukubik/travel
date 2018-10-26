@@ -24,6 +24,13 @@ class IndexController extends Controller
       return view('index', compact('categories', 'previews1', 'previews2'));
     }
 
+    public function attachment(Article $article, $img_puth)
+    {
+      // dump($article);
+      // dd($img_puth);
+      return view('attachment', compact('article', 'img_puth'));
+    }
+
     public function rules()
     {
       if(view()->exists('rules')) {
