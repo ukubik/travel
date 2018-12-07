@@ -79,6 +79,6 @@ class IndexController extends Controller
         'message' => $request->message,
       ]);
       event(new Message($message));
-      return redirect()->back()->with('message', 'Ваше сообщение отправлено администратору ресурса.');
+      return response(['messages' => ['message' => 'Ваше сообщение отправлено администратору ресурса.']], 200);
     }
 }
