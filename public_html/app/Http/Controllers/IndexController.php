@@ -53,9 +53,13 @@ class IndexController extends Controller
 
     public function contacts()
     {
+      $captcha_key = config('captcha.captcha.key');
+
+      $captcha_secret = config('captcha.captcha.secret');
+
       if(view()->exists('contacts')) {
 
-        return view('contacts');
+        return view('contacts', compact('captcha_key', 'captcha_secret'));
       }
 
       abort(404);

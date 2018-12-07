@@ -33,6 +33,7 @@ window.Vue = require('vue');
   Vue.component('edit-profile', require('./components/EditProfileComponent.vue'));
   Vue.component('already-registered', require('./components/AlreadyRegisteredComponent.vue'));
   Vue.component('last-comments', require('./components/LastCommentsComponent.vue'));
+  Vue.component('contacts-component', require('./components/ContactsComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));
