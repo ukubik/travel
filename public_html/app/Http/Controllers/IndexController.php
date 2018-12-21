@@ -17,7 +17,7 @@ class IndexController extends Controller
     {
       $categories = Category::all();
       // Получение последних восьми статей для вывода на главной
-      $previews1 = Article::wherePublished('Опубликована')->orderBy('id', 'desc')->limit(8)->get();
+      $previews1 = Article::wherePublished('Опубликована')->orderByDesc('updated_at')->limit(12)->get();
       $previews2 = $previews1->splice(4);
       // dump($articles);
       // dd($preview);
