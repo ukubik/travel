@@ -45,7 +45,7 @@
       <!--/.Carousel Wrapper-->
       <div class="row globus" v-if="screenWidth">
         <div class="col-auto">
-          <img src="/public/storage/images/site_0/Russia-2.png" class="img-fluid" style="max-height:450px" alt="Rossia">
+          <img src="/public/storage/images/site_0/Russia-2.png" class="img-fluid" style="max-height:450px" alt="Russia">
         </div>
       </div>
     </div>
