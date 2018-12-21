@@ -5,7 +5,7 @@
 <div class="container-fluid">
   <div class="row my-3">
     <div class="col text-center">
-      <h3>Список статей категории {{ $category->header }}</h3>
+      <h3>Список статей категории {{ $category->header or 'Не опубликовано' }}</h3>
       @if($subcategory)
       <h5>Подкатегория {{ $subcategory->title }}</h5>
       @endif

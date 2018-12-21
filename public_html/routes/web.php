@@ -71,6 +71,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function() {
 
   Route::get('/', 'Admin\IndexController@index')->name('admin.index');
+  // Преход к неопубликованным статьям
+  Route::get('/articles/no-publish', 'Admin\IndexController@noPublish')->name('admin.articles.no-publish');
   // Фотографии для главной страницы сайта
   Route::resource('/images', 'Admin\ImagesController', ['only' => [
         'index', 'store', 'update', 'destroy', 'show'],
