@@ -93,7 +93,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
                 'update' => 'admin.img-categories.update',
                 'destroy' => 'admin.img-categories.destroy',
     ]]);
-  // Ресурс обработки категрий статей
+  // Ресурс обработки категoрий статей
   Route::resource('/categories', 'Admin\CategoryController', ['only' => ['index', 'store', 'update', 'destroy']]);
   // Обновление added_menu
   Route::put('/category/added_menu/{id}', 'Admin\CategoryController@updAddMenu');
@@ -127,8 +127,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
       'destroy' => 'admin.metatag.destroy'
     ]
   ]);
+  // Неопубликованные комменты
+  Route::get('/comment/{published?}', 'Admin\CommentController@index')->name('comment.index');
   // Ресурс обработки комментариев к статьям
-  Route::resource('/comment', 'Admin\CommentController', ['only' => ['index', 'update', 'destroy']]);
+  Route::resource('/comment', 'Admin\CommentController', ['only' => ['update', 'destroy']]);
   // Guest message Controller
   Route::get('/get-messages', 'Admin\GuestMessageController@getMessages'); // Возвращает гостевые сообщения в компонент
   Route::delete('/destroy-all', 'Admin\GuestMessageController@destroyAll'); // удаление всех сообщений

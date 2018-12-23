@@ -15,12 +15,24 @@ class CommentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($published = null)
     {
-      $comments = Comment::orderBy('id', 'desc')->paginate(5);
+      if($published) {
+
+        $comments = Comment::wherePublished($published)->orderBy('id', 'desc')->paginate(5);
+
+      } else {
+
+        $comments = Comment::orderBy('id', 'desc')->paginate(5);
+
+      }
+
         if(view()->exists('admin.comments.index')) {
+
             return view('admin.comments.index', compact('comments'));
+
         }
+
         abort(404);
     }
 
