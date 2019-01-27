@@ -1,6 +1,6 @@
 <!--Main Navigation-->
 <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-grey">
+    <nav class="navbar fixed-top navbar-expand-xl navbar-dark scrolling-navbar bg-grey">
         <a class="navbar-brand" href="{{ route('index') }}" data-toggle="tooltip" data-placement="bottom" title="На главную...">
           <img src="{{ asset('storage/images/site_0/globus.gif') }}" alt="Globus" class="img-fluid" style="max-height:40px;">
         </a>
@@ -70,24 +70,6 @@
               }})();
             </script>
             <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=07" data-services="vkontakte,odnoklassniki,facebook,twitter,google"></div>
-
-            <!-- <ul class="navbar-nav nav-flex-icons d-flex justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-odnoklassniki"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-vk"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"><i class="fa fa-instagram"></i></a>
-                </li>
-            </ul> -->
         </div>
     </nav>
 </header>
@@ -96,10 +78,10 @@
 @push('scripts')
 <script type="text/javascript">
 
-  if(window.screen.width < 990) $('nav').addClass('pink');
+  if(window.screen.width < 1366) $('nav').addClass('pink');
 
   window.onscroll = function() {
-    if(window.screen.width >= 990) {
+    if(window.screen.width >= 1366) {
       var scrolled = window.pageYOffset || document.documentElement.scrollTop;
       if(scrolled > 20) {
         $('nav').addClass('pink');
