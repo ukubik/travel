@@ -87,23 +87,16 @@
       <div class="row art-preview" id="art-preview">
         <div class="col z-depth-3">
           <div class="container-fluid p-5">
-            @if($previews1 && $previews1->isNotEmpty())
+            @if($previews && $previews->isNotEmpty())
             <div class="row my-3">
               <div class="col text-uppercase border-bottom border-danger">
                 <h2 class="h2-responsive">Свежие статьи</h2>
                 <h5 class="h5-responsive">новости из разных уголков россии</h5>
               </div>
             </div>
-            <div class="row white-text" style="min-height: 272px">
-              @foreach($previews1 as $preview)
-                <article-preview :article="{{ json_encode($preview) }}"></article-preview>
-              @endforeach
-            </div>
-            @endif
-            @if($previews2 && $previews2->isNotEmpty())
-            <div class="row white-text" style="min-height: 272px">
-              @foreach($previews2 as $preview)
-                <article-preview :article="{{ json_encode($preview) }}"></article-preview>
+            <div class="row white-text my-2" style="min-height: 272px">
+              @foreach($previews as $preview)
+                <articles-preview :article="{{ json_encode($preview) }}"></articles-preview>
               @endforeach
             </div>
             @endif

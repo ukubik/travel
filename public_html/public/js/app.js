@@ -14371,6 +14371,7 @@ Vue.component('second-component', __webpack_require__(59));
 Vue.component('now-reading', __webpack_require__(64));
 Vue.component('preview-component', __webpack_require__(69));
 Vue.component('article-preview', __webpack_require__(74));
+Vue.component('articles-preview', __webpack_require__(184));
 Vue.component('lower-block', __webpack_require__(79));
 Vue.component('comment-create', __webpack_require__(84));
 Vue.component('show-comments', __webpack_require__(89));
@@ -60586,6 +60587,207 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(185)
+}
+var normalizeComponent = __webpack_require__(2)
+/* script */
+var __vue_script__ = __webpack_require__(187)
+/* template */
+var __vue_template__ = __webpack_require__(188)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-2b6fe8a9"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/ArticlesPreviewComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2b6fe8a9", Component.options)
+  } else {
+    hotAPI.reload("data-v-2b6fe8a9", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(186);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(1)("46cbaac5", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2b6fe8a9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ArticlesPreviewComponent.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2b6fe8a9\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./ArticlesPreviewComponent.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 186 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\np[data-v-2b6fe8a9] {\n    font-size: 1rem;\n}\n.cols[data-v-2b6fe8a9]{\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.inner-container[data-v-2b6fe8a9]{\n    cursor: pointer;\n}\n.inner-container[data-v-2b6fe8a9]{\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n\t-webkit-perspective: 1000px;\n\t        perspective: 1000px;\n}\n.front[data-v-2b6fe8a9],\n.back[data-v-2b6fe8a9]{\n  background-size: cover;\n\tbackground-position: center;\n\t-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);\n\ttransition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);\n\ttransition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);\n\ttransition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);\n\t-webkit-backface-visibility: hidden;\n\t        backface-visibility: hidden;\n\ttext-align: center;\n\tmin-height: 280px;\n\theight: auto;\n\tborder-radius: 10px;\n\tcolor: #fff;\n\tfont-size: 1.5rem;\n}\n.back[data-v-2b6fe8a9]{\n  background: #cedce7;\n  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);\n}\n.front[data-v-2b6fe8a9]:after{\n\tposition: absolute;\n    top: 0;\n    left: 0;\n    z-index: 1;\n    width: 100%;\n    height: 100%;\n    content: '';\n    display: block;\n    opacity: .6;\n    background-color: #000;\n    -webkit-backface-visibility: hidden;\n            backface-visibility: hidden;\n    border-radius: 10px;\n}\n.inner-container:hover .front[data-v-2b6fe8a9],\n.inner-container:hover .back[data-v-2b6fe8a9]{\n    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);\n    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);\n    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);\n    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);\n}\n.back[data-v-2b6fe8a9] {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n}\n.inner[data-v-2b6fe8a9] {\n    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);\n            transform: translateY(-50%) translateZ(60px) scale(0.94);\n    top: 50%;\n    position: absolute;\n    left: 0;\n    width: 100%;\n    padding: 2rem;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n    outline: 1px solid transparent;\n    -webkit-perspective: inherit;\n            perspective: inherit;\n    z-index: 2;\n}\n.inner-container .back[data-v-2b6fe8a9] {\n    -webkit-transform: rotateY(180deg);\n            transform: rotateY(180deg);\n    -webkit-transform-style: preserve-3d;\n            transform-style: preserve-3d;\n}\n.inner-container .front[data-v-2b6fe8a9] {\n    -webkit-transform: rotateY(0deg);\n            transform: rotateY(0deg);\n    -webkit-transform-style: preserve-3d;\n            transform-style: preserve-3d;\n}\n.inner-container:hover .back[data-v-2b6fe8a9] {\n  -webkit-transform: rotateY(0deg);\n          transform: rotateY(0deg);\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n}\n.inner-container:hover .front[data-v-2b6fe8a9]{\n  -webkit-transform: rotateY(-180deg);\n          transform: rotateY(-180deg);\n  -webkit-transform-style: preserve-3d;\n          transform-style: preserve-3d;\n}\n.front .inner p[data-v-2b6fe8a9] {\n  font-size: 1.2rem;\n  margin-bottom: 2rem;\n  position: relative;\n}\n.front .inner p[data-v-2b6fe8a9]:after{\n  content: '';\n  width: 4rem;\n  height: 2px;\n  position: absolute;\n  background: #C6D4DF;\n  display: block;\n  left: 0;\n  right: 0;\n  margin: 0 auto;\n  bottom: -.75rem;\n}\n.front .inner span[data-v-2b6fe8a9]{\n  color: rgba(255,255,255,0.7);\n  font-family: 'Montserrat';\n  font-weight: 300;\n}\n@media screen and (max-width: 64rem){\n.col[data-v-2b6fe8a9]{\n    width: calc(33.333333% - 2rem);\n}\n}\n@media screen and (max-width: 48rem){\n.col[data-v-2b6fe8a9]{\n    width: calc(50% - 2rem);\n}\n}\n@media screen and (max-width: 32rem){\n.col[data-v-2b6fe8a9]{\n    width: 100%;\n    margin: 0 0 2rem 0;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 187 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['article']
+});
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "col-md-3 services-bordered my-3" }, [
+    _c("div", { attrs: { ontouchstart: "this.classList.toggle('hover');" } }, [
+      _c("div", { staticClass: "inner-container" }, [
+        _c(
+          "div",
+          {
+            staticClass: "front",
+            style:
+              "background-image: url(/public/storage/" +
+              _vm.article.img_prew_path +
+              ")"
+          },
+          [
+            _c("div", { staticClass: "inner" }, [
+              _c("p", [_vm._v(_vm._s(_vm.article.title))])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "back" }, [
+          _c("div", { staticClass: "inner" }, [
+            _c("p", [_vm._v(_vm._s(_vm.article.description))]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col text-center" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-outline-white btn-lg waves-effect",
+                    attrs: {
+                      href: "/article/" + _vm.article.id,
+                      role: "button"
+                    }
+                  },
+                  [
+                    _vm._v(" читать\n                                "),
+                    _c("i", {
+                      staticClass: "fa fa-angle-double-right fa-15x ml-2",
+                      attrs: { "aria-hidden": "true" }
+                    })
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2b6fe8a9", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

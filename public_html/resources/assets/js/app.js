@@ -24,6 +24,7 @@ window.Vue = require('vue');
   Vue.component('now-reading', require('./components/NowReadingComponent.vue'));
   Vue.component('preview-component', require('./components/PreviewComponent.vue'));
   Vue.component('article-preview', require('./components/ArtPrevComponent.vue'));
+  Vue.component('articles-preview', require('./components/ArticlesPreviewComponent.vue'));
   Vue.component('lower-block', require('./components/LowerBlockComponent.vue'));
   Vue.component('comment-create', require('./components/CommentCreateComponent.vue'));
   Vue.component('show-comments', require('./components/ShowCommentsComponent.vue'));
