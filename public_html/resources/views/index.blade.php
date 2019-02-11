@@ -85,7 +85,7 @@
       </div>
 
       <div class="row art-preview" id="art-preview">
-        <div class="col z-depth-3">
+        <div class="col z-depth-3 px-0">
           <div class="container-fluid p-5">
             @if($previews && $previews->isNotEmpty())
             <div class="row my-3">

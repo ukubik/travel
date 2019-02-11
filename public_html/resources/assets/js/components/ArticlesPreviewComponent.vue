@@ -1,6 +1,6 @@
 <template lang="html">
 
-    <div class="col-md-3 services-bordered my-3">
+    <div class="col-md-3 services-bordered my-1 px-1">
         <div ontouchstart="this.classList.toggle('hover');">
             <div class="inner-container">
                 <div class="front" :style="'background-image: url(/public/storage/' + article.img_prew_path + ')'">
