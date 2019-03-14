@@ -49739,6 +49739,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -49859,6 +49860,14 @@ var staticRenderFns = [
               _c("a", { attrs: { href: "#art-preview" } }, [
                 _vm._v("В путь...")
               ])
+            ]),
+            _vm._v(" "),
+            _c("small", { staticClass: "text-muted" }, [
+              _vm._v("Читайте также дружественный сайт: "),
+              _c("a", { attrs: { href: "http://itparadise.ru/" } }, [
+                _vm._v("Огромный и прекрасный мир вокруг нас. ")
+              ]),
+              _vm._v("Сайт о путешествиях и туризме.  ")
             ])
           ])
         ])
