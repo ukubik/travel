@@ -49,7 +49,7 @@ class ImagesController extends Controller
       // dd($request->files);
       $this->validate($request, [
         'img_category_id' => 'required|integer',
-        'files.*' => 'required|image|max:1000',
+        'files.*' => 'required|image|max:5000',
         'description' => 'string|nullable'
       ],
       [
@@ -59,6 +59,7 @@ class ImagesController extends Controller
       if(is_array($request->file('files'))) {
       foreach($request->file('files') as $file) {
           $path = $file->store('images/site_' . $request->img_category_id, 'public');
+          $this->imageResizeWidth($path);
           Image::create([
             'img_category_id' => $request->img_category_id,
             'description' => $request->description,

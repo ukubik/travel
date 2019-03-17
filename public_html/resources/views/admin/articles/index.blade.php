@@ -30,7 +30,7 @@
     </div>
   </div>
   @foreach($articles as $article)
-  <div class="row border-top">
+  <div class="row border-top border-dark">
     <div class="col-md-auto p-2 font-weight-bold">
       {{ $article->title }}
     </div>

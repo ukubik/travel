@@ -57137,7 +57137,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col p-2 border-right border-bottom" }, [
-        _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card z-depth-0" }, [
           _c("div", { staticClass: "row px-4 my-3" }, [
             _c("div", { staticClass: "col" }, [
               _c("img", {
@@ -57680,7 +57680,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "row m-2 border rounded z-depth-2" },
+    { staticClass: "row m-2 border rounded" },
     [
       _c("transition", { attrs: { name: "fade" } }, [
         this.errors.length > 0

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Intervention\Image\Facades\Image;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -26,5 +27,16 @@ class Controller extends BaseController
         $enum = array_add($enum, $v, $v);
       }
       return $enum;
+    }
+
+    /**
+    * Сжатие изображения по ширине
+    */
+    public function imageResizeWidth($path)
+    {
+        // dd(public_path() . '/storage/' . $path);
+        $img = Image::make(public_path() . '/storage/' . $path)->orientate()->widen(1280, function ($constraint) {
+            $constraint->upsize();
+        })->save();
     }
 }

@@ -31,7 +31,7 @@
     </transition>
 
     <div class="col p-2 border-right border-bottom">
-      <div class="card">
+      <div class="card z-depth-0">
         <div class="row px-4 my-3">
           <div class="col">
             <img :src="'/public/storage/' + localCategory.img_path" :alt="localCategory.menu_name" class="img-fluid z-depth-2" style="max-height:300px">

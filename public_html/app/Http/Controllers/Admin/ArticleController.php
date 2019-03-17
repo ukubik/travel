@@ -153,10 +153,11 @@ class ArticleController extends Controller
         $article = Article::whereId($id)->first();
 
         $this->validate($request, [
-          'file' => 'required|image|max:1500',
+          'file' => 'required|image|max:5000',
         ]);
 
         $path = $request->file('file')->store('images/articles', 'public');
+        $this->imageResizeWidth($path);
         $article->update(['img_prew_path' => $path]);
 
         return $article;

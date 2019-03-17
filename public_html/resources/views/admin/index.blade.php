@@ -111,7 +111,13 @@
           });
           @endphp
 
-          Последняя опубликованная статья - <a href="{{ route('admin.article.show', $articles->values()->last()) }}">{{ $articles->values()->last()->title }}</a>
+          @if($articles->isNotEmpty())
+            Последняя опубликованная статья - <a href="{{ route('admin.article.show', $articles->values()->last()) }}">{{ $articles->values()->last()->title }}</a>
+          @else
+            Статьи не найдены
+          @endif
+
+
           <div class="card-footer">
             <a href="{{ route('admin.article.index', $category) }}" class="btn btn-default">Перейти к категории</a>
           </div>
@@ -136,7 +142,12 @@
           });
           @endphp
 
-          Последняя опубликованная статья - <a href="{{ route('admin.article.show', $articles->values()->last()) }}">{{ $articles->values()->last()->title }}</a>
+          @if($articles->isNotEmpty())
+            Последняя опубликованная статья - <a href="{{ route('admin.article.show', $articles->values()->last()) }}">{{ $articles->values()->last()->title }}</a>
+          @else
+            Статьи не найдены
+          @endif
+
           <div class="card-footer">
             <a href="{{ route('admin.article.index', [$category, $subcategory]) }}" class="btn btn-default">Перейти к подкатегории</a>
           </div>

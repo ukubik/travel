@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="row m-2 border rounded z-depth-2">
+  <div class="row m-2 border rounded">
     <!-- Errors -->
     <transition name="fade">
       <div class="alert alert-danger z-depth-3" v-if="this.errors.length > 0" v-show="showError" id="alert">

@@ -30,13 +30,15 @@ class CategoryController extends Controller
     {
       // dd($request);
         $this->validate($request, [
-          'file' => 'required|image|max:1500',
+          'file' => 'required|image|max:5000',
           // 'link_name' => 'required|cyrillic|string|unique:categories',
           'menu_name' => 'required|string|unique:categories',
           'header' => 'required|string',
           'description' => 'required|string',
         ]);
         $path = $request->file('file')->store('images/categories', 'public');
+        
+        $this->imageResizeWidth($path);
         Category::create([
           // 'link_name' => $request->link_name,
           'menu_name' => $request->menu_name,
