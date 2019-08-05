@@ -31,7 +31,8 @@
               <div class="modal-body mx-3">
                 <div class="mb-1 text-center">
                   <label for="file-upload" data-toggle="tooltip" data-placement="bottom" title="Изменить аватар (не более 200 Кб)">
-                    <img :src="'/public/storage/' + user.avatar_path" class="rounded-circle img-fluid cursor-hand" alt="Avatar" style="max-height:100px">
+                    <img v-if="user.avatar_path" :src="'/public/storage/' + user.avatar_path" class="rounded-circle img-fluid cursor-hand" alt="Avatar" style="max-height:100px">
+                    <img v-else src="/public/storage/images/avatars/default.png" class="rounded-circle img-fluid cursor-hand" alt="Avatar" style="max-height:100px">
                   </label>
                   <input id="file-upload" type="file" ref="file" accept="image/*" v-on:change="handleFilesUpload()">
                 </div>
