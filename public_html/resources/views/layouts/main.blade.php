@@ -17,7 +17,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/my-styles.css') }}" rel="stylesheet">
     <!-- Yandex.Metrika counter -->
-    <!-- <script type="text/javascript" >
+    <script type="text/javascript" >
         (function (d, w, c) {
             (w[c] = w[c] || []).push(function() {
                 try {
@@ -41,8 +41,8 @@
                 d.addEventListener("DOMContentLoaded", f, false);
             } else { f(); }
         })(document, window, "yandex_metrika_callbacks2");
-    </script> -->
-    <!-- <noscript><div><img src="https://mc.yandex.ru/watch/50497918" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/50497918" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     @stack('styles')
 </head>

@@ -50808,7 +50808,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.btn .fa-15x {\n  font-size: 1.5em !important;\n}\n.slogan {\n  z-index: 0;\n  position: absolute;\n  width: 100%;\n  top: 20%;\n  left: 4%;\n}\n.globus {\n  z-index: 0;\n  position: absolute;\n  width: 20%;\n  top: 20%;\n  right: 20%;\n  opacity: 0.7;\n}\n.d-block {\n  min-height: 300px;\n  overflow: hidden;\n}\n.rgba-black-strong, .rgba-black-strong::after {\n  background-color: rgba(0,0,0,.29);\n}\n.carousel-control-prev, .carousel-control-next {\n  z-index: 999;\n}\n.carousel-control-prev-icon, .carousel-control-next-icon {\n  width: 100px !important;\n  height: 100px !important;\n}\n", ""]);
+exports.push([module.i, "\n.btn .fa-15x {\n  font-size: 1.5em !important;\n}\n.slogan {\n  z-index: 0;\n  position: absolute;\n  width: 100%;\n  top: 20%;\n  left: 4%;\n}\n.globus {\n  z-index: 1;\n  position: absolute;\n  width: 20%;\n  top: 20%;\n  right: 20%;\n  opacity: 0.7;\n}\n.d-block {\n  min-height: 300px;\n  overflow: hidden;\n}\n.rgba-black-strong, .rgba-black-strong::after {\n  background-color: rgba(0,0,0,.29);\n}\n.carousel-control-prev, .carousel-control-next {\n  z-index: 999;\n}\n.carousel-control-prev-icon, .carousel-control-next-icon {\n  width: 100px !important;\n  height: 100px !important;\n}\n", ""]);
 
 // exports
 

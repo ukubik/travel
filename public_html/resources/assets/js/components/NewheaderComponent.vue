@@ -101,7 +101,7 @@ export default {
 }
 
 .globus {
-  z-index: 0;
+  z-index: 1;
   position: absolute;
   width: 20%;
   top: 20%;
