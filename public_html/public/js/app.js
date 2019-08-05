@@ -51972,6 +51972,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['article_id'],
@@ -52013,7 +52022,7 @@ var render = function() {
     _vm._l(_vm.articles, function(article) {
       return _c("div", { staticClass: "row my-4" }, [
         _c("div", { staticClass: "col" }, [
-          _c("div", { staticClass: "card hoverable" }, [
+          _c("div", { staticClass: "card" }, [
             _c("a", { attrs: { href: "/article/" + article.id } }, [
               _c("img", {
                 staticClass: "card-img-top hoverable",
@@ -52026,21 +52035,49 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _c("h4", { staticClass: "card-title" }, [
-                _c("a", [_vm._v(_vm._s(article.title))])
+                _c(
+                  "a",
+                  {
+                    staticClass: "text-dark",
+                    attrs: { href: "/article/" + article.id }
+                  },
+                  [_vm._v(_vm._s(article.title))]
+                )
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(_vm._s(article.description))
               ]),
               _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-pink btn-lg waves-effect",
-                  attrs: { href: "/article/" + article.id }
-                },
-                [_vm._v("читать")]
-              )
+              _c("div", { staticClass: "row d-flex justify-content-between" }, [
+                _c("div", { staticClass: "col-auto text-muted" }, [
+                  _c("i", { staticClass: "fa fa-eye" }),
+                  _vm._v(
+                    " " +
+                      _vm._s(
+                        article.article_view ? article.article_view.count : 0
+                      ) +
+                      "\n                  "
+                  ),
+                  _c("i", { staticClass: "fa fa-comment ml-3" }),
+                  _vm._v(
+                    " " +
+                      _vm._s(article.comments ? article.comments.length : 0) +
+                      "\n              "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-auto" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-pink btn-lg waves-effect",
+                      attrs: { href: "/article/" + article.id }
+                    },
+                    [_vm._v("читать")]
+                  )
+                ])
+              ])
             ])
           ])
         ])
@@ -52981,6 +53018,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['article']
@@ -53008,7 +53053,35 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "inner" }, [
-              _c("p", [_vm._v(_vm._s(_vm.article.title))])
+              _c("p", [_vm._v(_vm._s(_vm.article.title))]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row d-flex justify-content-center" }, [
+                _c("div", { staticClass: "col-auto border-right pr-2" }, [
+                  _c("small", [
+                    _c("i", { staticClass: "fa fa-eye" }),
+                    _vm._v(
+                      " " +
+                        _vm._s(
+                          _vm.article.article_view
+                            ? _vm.article.article_view.count
+                            : 0
+                        )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-auto" }, [
+                  _c("small", [
+                    _c("i", { staticClass: "fa fa-comment" }),
+                    _vm._v(
+                      " " +
+                        _vm._s(
+                          _vm.article.comments ? _vm.article.comments.length : 0
+                        )
+                    )
+                  ])
+                ])
+              ])
             ])
           ]
         ),

@@ -20,7 +20,7 @@ class ArticleController extends Controller
             $article->article_view ?  $article->article_view->update(['count' => $article->article_view->count + 1]) : ArticleView::create(['article_id' => $article->id, 'count' => 1]);
         }
 
-        return view('showart', compact('article'));
+        return view('showart', ['article' => $article->load('article_view')]);
       }
       abort(404);
     }
@@ -29,9 +29,9 @@ class ArticleController extends Controller
     public function getRandomArt($article_id = null)
     {
       if($article_id) {
-        return Article::wherePublished("Опубликована")->where('id', '!=', $article_id)->inRandomOrder()->limit(3)->get();
+        return Article::wherePublished("Опубликована")->where('id', '!=', $article_id)->inRandomOrder()->with(['article_view', 'comments'])->limit(3)->get();
       } else {
-        return Article::wherePublished("Опубликована")->inRandomOrder()->limit(3)->get();
+        return Article::wherePublished("Опубликована")->inRandomOrder()->with(['article_view', 'comments'])->limit(3)->get();
       }
     }
 

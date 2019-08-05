@@ -6,6 +6,14 @@
                 <div class="front" :style="'background-image: url(/public/storage/' + article.img_prew_path + ')'">
                     <div class="inner">
                         <p>{{ article.title }}</p>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-auto border-right pr-2">
+                                <small><i class="fa fa-eye"></i> {{ article.article_view ? article.article_view.count : 0 }}</small>
+                            </div>
+                            <div class="col-auto">
+                                <small><i class="fa fa-comment"></i> {{ article.comments ? article.comments.length : 0 }}</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="back">

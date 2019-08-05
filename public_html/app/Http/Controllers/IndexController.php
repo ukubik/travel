@@ -16,18 +16,14 @@ class IndexController extends Controller
     public function index()
     {
       $categories = Category::all();
-      // Получение последних восьми статей для вывода на главной
-      $previews = Article::wherePublished('Опубликована')->orderByDesc('updated_at')->limit(12)->get();
-      // $previews2 = $previews1->splice(4);
-      // dump($articles);
-      // dd($preview);
+      // Получение последних двенадцати статей для вывода на главной
+      $previews = Article::wherePublished('Опубликована')->orderByDesc('updated_at')->with(['article_view', 'comments'])->limit(12)->get();
+
       return view('index', compact('categories', 'previews'));
     }
 
     public function attachment(Article $article, $img_puth)
     {
-      // dump($article);
-      // dd($img_puth);
       return view('attachment', compact('article', 'img_puth'));
     }
 

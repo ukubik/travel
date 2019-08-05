@@ -136,19 +136,6 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: #000; */
   }
 </style>
-@endpush
-
-@push('scripts')
-<!-- <script type="text/javascript">
-$(function () {
-  $(".sticky").sticky({
-      topSpacing: 90,
-      zIndex: 2,
-      // stopper: "#YourStopperId"
-  });
-});
-</script> -->
 @endpush
