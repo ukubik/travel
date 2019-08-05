@@ -35,4 +35,19 @@ class Article extends Model
     {
       return $this->belongsTo('App\SubCategory');
     }
+
+    public function article_likes()
+    {
+        return $this->hasMany('App\ArticleLike');
+    }
+
+    public function article_dislikes()
+    {
+        return $this->hasMany('App\ArticleDislike');
+    }
+
+    public function article_view()
+    {
+        return $this->hasOne('App\ArticleView');
+    }
 }

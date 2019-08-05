@@ -59,7 +59,7 @@
               @endguest
             </ul>
 
-            <script type="text/javascript">(function() {
+            <!-- <script type="text/javascript">(function() {
               if (window.pluso)if (typeof window.pluso.start == "function") return;
               if (window.ifpluso==undefined) { window.ifpluso = 1;
                 var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
@@ -69,7 +69,7 @@
                 h.appendChild(s);
               }})();
             </script>
-            <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=07" data-services="vkontakte,odnoklassniki,facebook,twitter,google"></div>
+            <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=07" data-services="vkontakte,odnoklassniki,facebook,twitter,google"></div> -->
         </div>
     </nav>
 </header>

@@ -32,11 +32,26 @@
           </div>
         </div>
 
-        <div class="row mb-5">
-          <div class="col-auto border-bottom">
+        <div class="row mb-5 d-flex justify-content-between border-top border-bottom">
+          <div class="col-auto d-flex align-items-center">
             Автор: <em class="font-weight-bold">{{ $article->user->login }}</em>
           </div>
+
+          <div class="col-auto">
+              <div class="row py-3 d-flex justify-content-end">
+                  <div class="col-auto d-flex align-items-center border-right pr-2">
+                      <i class="fa fa-eye fa-2x mr-2"></i> {{ $article->article_view ? $article->article_view->count : 0 }}
+                  </div>
+                  <div class="col-auto pl-2">
+
+                      <likes-component :user="{{ Auth::user() ?: 0 }}" :article="{{ $article }}"></likes-component>
+
+                  </div>
+              </div>
+          </div>
         </div>
+
+
       </div>
 
       @if($article->comments->isNotEmpty())

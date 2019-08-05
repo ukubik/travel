@@ -60,6 +60,9 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth']], function() {
   Route::post('/new-autor', 'Autor\ArticleController@newClaim')->name('user.new.autor');
 });
 
+// Like or Dislike for articles
+Route::post('/article-like/store/{article}', 'ArticleLikeController@store')->middleware(['auth'])->name('article-like.store');
+
 // Ресурс для работы со статьями авторов
 Route::resource('/userarticle', 'Autor\ArticlesController')->middleware(['auth', 'author']);
 
@@ -77,12 +80,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
   Route::resource('/images', 'Admin\ImagesController', ['only' => [
         'index', 'store', 'update', 'destroy', 'show'],
         'names' => [
-        'index' => 'admin.images.index',
-        'store' => 'admin.images.store',
-        'update' => 'admin.image.update',
-        'destroy' => 'admin.image.destroy',
-        'show' => 'admin.image.show'
-    ]]);
+            'index' => 'admin.images.index',
+            'store' => 'admin.images.store',
+            'update' => 'admin.image.update',
+            'destroy' => 'admin.image.destroy',
+            'show' => 'admin.image.show'
+        ]]);
   // Получение каринок в компонент ImagesComponent
   Route::get('/get-images/{cat_id}', 'Admin\ImagesController@getImages');
   // Категории фотографий

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $article->metatag->title or config('app.name') }}</title>
-    <meta name="yandex-verification" content="8e987aee4724a7b7" />
+    <!-- <meta name="yandex-verification" content="8e987aee4724a7b7" /> -->
     <meta name="description" content="{{ $article->metatag->description or 'Все о путешествиях по России. Статьи о людях, городах, обычаях самой большой страны. Заметки путешественников, всевозможные идеи для тех, что любит свою страну и планирует поездки по России или только мечтает о них' }}">
     <meta name="keywords" content="{{ $article->metatag->keywords or 'путешествия по России, туризм, интересные статьи, заметки путешественников, полезные советы для туристов' }}">
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image/x-icon">
@@ -17,7 +17,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/my-styles.css') }}" rel="stylesheet">
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
+    <!-- <script type="text/javascript" >
         (function (d, w, c) {
             (w[c] = w[c] || []).push(function() {
                 try {
@@ -41,8 +41,8 @@
                 d.addEventListener("DOMContentLoaded", f, false);
             } else { f(); }
         })(document, window, "yandex_metrika_callbacks2");
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/50497918" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    </script> -->
+    <!-- <noscript><div><img src="https://mc.yandex.ru/watch/50497918" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
     <!-- /Yandex.Metrika counter -->
     @stack('styles')
 </head>

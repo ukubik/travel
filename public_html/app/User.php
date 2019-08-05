@@ -46,4 +46,14 @@ class User extends Authenticatable
     {
       return $this->hasOne('App\ClaimAuthor');
     }
+
+    public function article_likes()
+    {
+        return $this->hasMany('App\ArticleLike');
+    }
+
+    public function article_dislikes()
+    {
+        return $this->hasMany('App\ArticleDilike');
+    }
 }

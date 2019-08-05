@@ -35,6 +35,7 @@ window.Vue = require('vue');
   Vue.component('already-registered', require('./components/AlreadyRegisteredComponent.vue'));
   Vue.component('last-comments', require('./components/LastCommentsComponent.vue'));
   Vue.component('contacts-component', require('./components/ContactsComponent.vue'));
+  Vue.component('likes-component', require('./components/LikesComponent.vue'));
 
   // Секция админа
   Vue.component('img-category', require('./components/admin/ImgCategory.vue'));
