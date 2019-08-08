@@ -25,9 +25,9 @@ class ArticleController extends Controller
         $categories = Category::all();
         // $subcategories = SubCategory::all();
         if($subcategory) {
-          $articles = Article::whereSubCategoryId($subcategory->id)->orderBy('id', 'desc')->paginate(4);
+          $articles = Article::whereSubCategoryId($subcategory->id)->orderBy('id', 'desc')->with(['article_view', 'article_likes', 'article_dislikes'])->paginate(4);
         } else {
-          $articles = Article::whereCategoryId($category->id)->whereSubCategoryId(null)->orderBy('id', 'desc')->paginate(4);
+          $articles = Article::whereCategoryId($category->id)->whereSubCategoryId(null)->orderBy('id', 'desc')->with(['article_view', 'article_likes', 'article_dislikes'])->paginate(4);
         }
 
         return view('admin.articles.index', compact('articles', 'category', 'categories', 'subcategory'));

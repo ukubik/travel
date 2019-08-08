@@ -59577,7 +59577,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -59588,6 +59588,9 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
 //
 //
 //
@@ -59673,6 +59676,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }
     };
   },
+
+
+  computed: {
+    likes: function likes() {
+      return this.localArticle.article_likes ? this.localArticle.article_likes.length : 0;
+    },
+    dislikes: function dislikes() {
+      return this.localArticle.article_dislikes ? this.localArticle.article_dislikes.length : 0;
+    },
+    red_text: function red_text() {
+      return Math.sign(this.likes - this.dislikes) === -1;
+    },
+    green_text: function green_text() {
+      return Math.sign(this.likes - this.dislikes) === 1;
+    }
+  },
+
   mounted: function mounted() {
     this.getMeta();
   },
@@ -60065,6 +60085,33 @@ var render = function() {
           }
         })
       ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "col-1 border m-1 d-flex align-items-center justify-content-center"
+        },
+        [
+          _vm._v(
+            "\n      " +
+              _vm._s(
+                _vm.article.article_view ? _vm.article.article_view.count : 0
+              ) +
+              " /  "
+          ),
+          _c(
+            "span",
+            {
+              class: {
+                "text-danger": _vm.red_text,
+                "text-success": _vm.green_text
+              }
+            },
+            [_vm._v(_vm._s(_vm.likes - _vm.dislikes))]
+          )
+        ]
+      ),
       _vm._v(" "),
       _c("div", { staticClass: "col border m-1" }, [
         _vm.localArticle.published === "Не опубликована"

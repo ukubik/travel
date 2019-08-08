@@ -51,6 +51,9 @@
       <label for="description"> <small>Введите или измените значение</small> </label>
       <textarea class="form-control form-control-sm" rows="5" v-model="meta.description"></textarea>
     </div>
+    <div class="col-1 border m-1 d-flex align-items-center justify-content-center">
+        {{ article.article_view ? article.article_view.count : 0 }} /&nbsp; <span :class="{ 'text-danger': red_text, 'text-success': green_text }">{{ likes - dislikes }}</span>
+    </div>
     <div class="col border m-1">
       <button class="btn btn-sm btn-success" v-if="localArticle.published === 'Не опубликована'" @click.prevent="published('Опубликована')">опубликовать</button>
       <button class="btn btn-sm btn-success" v-if="localArticle.published === 'Опубликована'" @click.prevent="published('Не опубликована')">снять с публикации</button>
@@ -84,6 +87,24 @@ export default {
         description: '',
       }
     }
+  },
+
+  computed: {
+      likes() {
+          return this.localArticle.article_likes ? this.localArticle.article_likes.length : 0;
+      },
+
+      dislikes() {
+          return this.localArticle.article_dislikes ? this.localArticle.article_dislikes.length : 0;
+      },
+
+      red_text() {
+          return Math.sign(this.likes - this.dislikes) === -1;
+      },
+
+      green_text() {
+          return Math.sign(this.likes - this.dislikes) === 1;
+      },
   },
 
   mounted() {

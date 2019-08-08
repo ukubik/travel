@@ -25,6 +25,9 @@
     <div class="col">
       Meta description
     </div>
+    <div class="col-1 pl-0">
+        Просмотры/Лаки
+    </div>
     <div class="col">
       Action
     </div>
